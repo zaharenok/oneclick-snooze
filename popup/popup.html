@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OneClick Snooze</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="app-header">
+      <h1 class="app-title">🦉 OneClick Snooze <span class="badge">Free</span></h1>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="nav-tabs">
+      <button class="nav-tab active" data-tab="dashboard">
+        <span class="nav-icon">🎯</span>
+        <span class="nav-label" data-i18n="nav.dashboard">Dashboard</span>
+      </button>
+      <button class="nav-tab" data-tab="snoozed">
+        <span class="nav-icon">💤</span>
+        <span class="nav-label" data-i18n="nav.snoozed">Snoozed</span>
+        <span id="nav-count-snoozed" class="nav-count">0</span>
+      </button>
+      <button class="nav-tab" data-tab="history">
+        <span class="nav-icon">📜</span>
+        <span class="nav-label" data-i18n="nav.history">History</span>
+        <span id="nav-count-history" class="nav-count">0</span>
+      </button>
+      <button class="nav-tab" data-tab="settings">
+        <span class="nav-icon">⚙️</span>
+        <span class="nav-label" data-i18n="nav.settings">Settings</span>
+      </button>
+    </div>
+
+    <!-- Tab Content: Dashboard -->
+    <div class="tab-content active" id="dashboard-content">
+      <!-- Quick Hour Presets -->
+      <div class="section-title" data-i18n="section.quickPresets">Quick Presets</div>
+      <div class="quick-presets">
+        <button class="quick-preset-btn" data-minutes="60">
+          <span class="icon">⏰</span>
+          <span class="label" data-i18n="preset.1hour">1 Hour</span>
+        </button>
+        <button class="quick-preset-btn" data-minutes="180">
+          <span class="icon">⏰</span>
+          <span class="label" data-i18n="preset.3hours">3 Hours</span>
+        </button>
+        <button class="quick-preset-btn" data-minutes="360">
+          <span class="icon">⏰</span>
+          <span class="label" data-i18n="preset.6hours">6 Hours</span>
+        </button>
+      </div>
+
+      <!-- Smart Presets -->
+      <div class="section-title" data-i18n="section.smartPresets">Smart Presets</div>
+      <div class="smart-presets">
+        <button class="smart-preset-btn" data-preset="later-today">
+          <span class="icon">🌅</span>
+          <span class="label" data-i18n="preset.laterToday">Later Today</span>
+        </button>
+        <button class="smart-preset-btn" data-preset="this-evening">
+          <span class="icon">🌆</span>
+          <span class="label" data-i18n="preset.thisEvening">This Evening</span>
+        </button>
+        <button class="smart-preset-btn" data-preset="tomorrow">
+          <span class="icon">📅</span>
+          <span class="label" data-i18n="preset.tomorrow">Tomorrow</span>
+        </button>
+        <button class="smart-preset-btn" data-preset="next-weekend">
+          <span class="icon">🏖️</span>
+          <span class="label" data-i18n="preset.nextWeekend">Next Weekend</span>
+        </button>
+        <button class="smart-preset-btn" data-preset="next-week">
+          <span class="icon">📆</span>
+          <span class="label" data-i18n="preset.nextWeek">Next Week</span>
+        </button>
+        <button class="smart-preset-btn" data-preset="in-a-month">
+          <span class="icon">🗓️</span>
+          <span class="label" data-i18n="preset.inMonth">In a Month</span>
+        </button>
+        <button class="smart-preset-btn" data-preset="someday">
+          <span class="icon">💭</span>
+          <span class="label" data-i18n="preset.someday">Someday</span>
+        </button>
+        <button class="smart-preset-btn" data-preset="pick-date">
+          <span class="icon">📇</span>
+          <span class="label" data-i18n="preset.pickDate">Pick Date</span>
+        </button>
+      </div>
+
+      <!-- Custom Presets -->
+      <div class="section-title" data-i18n="section.customPresets">Custom Presets</div>
+      <div class="presets" id="presets-container">
+        <!-- Preset buttons will be rendered dynamically -->
+      </div>
+    </div>
+
+    <!-- Tab Content: Snoozed -->
+    <div class="tab-content" id="snoozed-content">
+      <div class="snoozed-list">
+        <div id="snoozed-tabs" class="tabs-container">
+          <div class="empty-state">
+            <span class="empty-icon">💤</span>
+            <p data-i18n="empty.noSnoozed">No snoozed tabs</p>
+            <small data-i18n="empty.goToDashboard">Go to Dashboard to snooze this tab</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Content: History -->
+    <div class="tab-content" id="history-content">
+      <div class="history-list">
+        <div class="history-header-section">
+          <span data-i18n="history.title">📜 Recently Opened Tabs</span>
+          <button id="clear-history" class="clear-btn" data-i18n="history.clear">Clear</button>
+        </div>
+        <div id="history-tabs" class="tabs-container">
+          <!-- History tabs will be rendered here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Content: Settings -->
+    <div class="tab-content" id="settings-content">
+      <div class="settings-list">
+        <!-- Settings will be rendered here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Tab Modal -->
+  <div id="edit-modal" class="modal">
+    <div class="modal-content edit-modal-content">
+      <div class="modal-header">
+        <h2>Edit Snoozed Tab</h2>
+        <button id="close-edit-modal" class="close-btn">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="edit-tab-info">
+          <div class="edit-favicon" id="edit-favicon">
+            <span>📄</span>
+          </div>
+          <div class="edit-tab-details">
+            <div class="edit-title" id="edit-title">Tab Title</div>
+            <div class="edit-url" id="edit-url">https://example.com</div>
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <h3>Reschedule</h3>
+          <div class="quick-reschedule" id="quick-reschedule">
+            <!-- Quick preset buttons -->
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <h3>Custom Time</h3>
+          <div class="custom-time-inputs">
+            <div class="date-display-group" id="edit-date-display">
+              <label class="date-label">📅 Scheduled for:</label>
+              <span class="date-value" id="edit-date-value">--</span>
+            </div>
+            <div class="time-input-group">
+              <label>Today at</label>
+              <input type="number" id="custom-hour" min="0" max="23" placeholder="21">
+              <span>:</span>
+              <input type="number" id="custom-minute" min="0" max="59" placeholder="00">
+            </div>
+            <div class="date-input-group">
+              <label>Or pick date</label>
+              <input type="date" id="custom-date">
+            </div>
+          </div>
+        </div>
+
+        <div class="edit-actions">
+          <button id="open-now" class="open-now-btn">🚀 Open Now</button>
+          <button id="save-edit" class="save-btn">💾 Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Emoji Picker -->
+  <div id="emoji-picker" class="emoji-picker" style="display: none;">
+    <div class="emoji-picker-header">
+      <span>Choose an emoji</span>
+      <button id="close-emoji-picker" class="close-emoji-btn">✕</button>
+    </div>
+    <div class="emoji-grid" id="emoji-grid">
+      <!-- Emojis will be rendered here -->
+    </div>
+  </div>
+
+  <!-- Settings Modal -->
+  <div id="settings-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Settings</h2>
+        <button id="close-modal" class="close-btn">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="settings-section">
+          <h3>Preset Buttons</h3>
+          <div id="preset-settings" class="preset-settings">
+            <!-- Preset settings will be rendered dynamically -->
+          </div>
+          <button id="add-preset" class="add-btn">+ Add Preset</button>
+        </div>
+
+        <div class="settings-section">
+          <h3>Completed Tabs</h3>
+          <label class="setting-label">
+            <input type="checkbox" id="show-completed">
+            <span>Show completed tabs briefly</span>
+          </label>
+          <div class="setting-row" id="completed-duration-row">
+            <label>Duration (seconds):</label>
+            <input type="number" id="completed-duration" min="1" max="60" value="5">
+          </div>
+        </div>
+
+        <div class="settings-actions">
+          <button id="reset-settings" class="reset-btn">Reset to Default</button>
+          <button id="save-settings" class="save-btn">Save Settings</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="locales.js"></script>
+  <script src="sounds.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "OneClick Snooze",
+  "version": "1.0.0",
+  "description": "Snooze tabs to reopen later - reduce tab clutter with one click",
+  "icons": {
+    "128": "icons/icon.svg"
+  },
+  "permissions": [
+    "alarms",
+    "storage",
+    "tabs",
+    "notifications"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background/background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Snooze this tab",
+    "default_icon": {
+      "128": "icons/icon.svg"
+    }
+  }
+}
