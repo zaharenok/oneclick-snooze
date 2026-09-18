@@ -1,133 +1,58 @@
-// Sound effects system for Tab Snooze Extension
+// Sound effects: file-based audio via fetch + AudioContext
+// (new Audio() is unreliable in MV3 extension popups)
 
 class SoundManager {
   constructor() {
     this.enabled = true;
-    this.audioContext = null;
+    this.cache = {};
+    this.ctx = null;
   }
 
-  init() {
-    // Initialize Web Audio API
-    if (!this.audioContext) {
-      this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  _getContext() {
+    if (!this.ctx) {
+      this.ctx = new (window.AudioContext || window.webkitAudioContext)();
     }
+    if (this.ctx.state === 'suspended') {
+      this.ctx.resume();
+    }
+    return this.ctx;
   }
 
-  playSound(type) {
+  _load(src) {
+    if (this.cache[src]) return Promise.resolve(this.cache[src]);
+    return fetch(chrome.runtime.getURL(src))
+      .then(r => r.arrayBuffer())
+      .then(buf => {
+        const ctx = this._getContext();
+        return ctx.decodeAudioData(buf).then(data => {
+          this.cache[src] = data;
+          return data;
+        });
+      });
+  }
+
+  playSound(type, volume = 0.2) {
     if (!this.enabled) return;
 
-    this.init();
+    const sounds = {
+      snooze: 'sounds/snooze.wav',
+      restore: 'sounds/restore.wav'
+    };
 
-    // Create different sounds for different actions
-    switch (type) {
-      case 'snooze':
-        this.playSnoozeSound();
-        break;
-      case 'cancel':
-        this.playCancelSound();
-        break;
-      case 'open':
-        this.playOpenSound();
-        break;
-      case 'success':
-        this.playSuccessSound();
-        break;
-      default:
-        this.playDefaultSound();
-    }
-  }
+    const src = sounds[type];
+    if (!src) return;
 
-  playSnoozeSound() {
-    // Gentle "whoosh" sound for snoozing
-    this.createOscillatorSound(440, 0.1, 'sine', [
-      { time: 0, frequency: 523.25, gain: 0.3 },  // C5
-      { time: 0.05, frequency: 659.25, gain: 0.2 },  // E5
-      { time: 0.1, frequency: 783.99, gain: 0.1 }    // G5
-    ]);
-  }
+    this._load(src).then(data => {
+      const ctx = this._getContext();
+      const gain = ctx.createGain();
+      gain.gain.value = volume;
+      gain.connect(ctx.destination);
 
-  playCancelSound() {
-    // Short "pop" sound for cancel
-    this.createOscillatorSound(0.08, 0.05, 'triangle', [
-      { time: 0, frequency: 800, gain: 0.2 },
-      { time: 0.04, frequency: 600, gain: 0.1 }
-    ]);
-  }
-
-  playOpenSound() {
-    // Pleasant "ding" sound for opening
-    this.createOscillatorSound(0.15, 0.1, 'sine', [
-      { time: 0, frequency: 880, gain: 0.3 },     // A5
-      { time: 0.05, frequency: 1108.73, gain: 0.2 } // C#6
-    ]);
-  }
-
-  playSuccessSound() {
-    // Happy chord for success
-    this.playChord([523.25, 659.25, 783.99], 0.2);  // C major
-  }
-
-  playDefaultSound() {
-    // Simple beep
-    this.createOscillatorSound(0.1, 0.05, 'sine', [
-      { time: 0, frequency: 600, gain: 0.2 }
-    ]);
-  }
-
-  createOscillatorSound(duration, volume, type, frequencyChanges = []) {
-    try {
-      const oscillator = this.audioContext.createOscillator();
-      const gainNode = this.audioContext.createGain();
-
-      oscillator.connect(gainNode);
-      gainNode.connect(this.audioContext.destination);
-
-      oscillator.type = type;
-
-      // Apply frequency changes if provided
-      if (frequencyChanges.length > 0) {
-        const now = this.audioContext.currentTime;
-        frequencyChanges.forEach(change => {
-          oscillator.frequency.setValueAtTime(change.frequency, now + change.time);
-          if (change.gain !== undefined) {
-            gainNode.gain.setValueAtTime(change.gain, now + change.time);
-          }
-        });
-      } else {
-        oscillator.frequency.setValueAtTime(600, this.audioContext.currentTime);
-        gainNode.gain.setValueAtTime(volume, this.audioContext.currentTime);
-      }
-
-      gainNode.gain.setValueAtTime(volume, this.audioContext.currentTime);
-      gainNode.gain.exponentialRampToValueAtTime(0.01, this.audioContext.currentTime + duration);
-
-      oscillator.start(this.audioContext.currentTime);
-      oscillator.stop(this.audioContext.currentTime + duration);
-    } catch (e) {
-      console.warn('Could not play sound:', e);
-    }
-  }
-
-  playChord(frequencies, duration) {
-    try {
-      const now = this.audioContext.currentTime;
-      const gainNode = this.audioContext.createGain();
-
-      gainNode.connect(this.audioContext.destination);
-      gainNode.gain.setValueAtTime(0.2, now);
-      gainNode.gain.exponentialRampToValueAtTime(0.01, now + duration);
-
-      frequencies.forEach((freq, index) => {
-        const osc = this.audioContext.createOscillator();
-        osc.connect(gainNode);
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(freq, now);
-        osc.start(now);
-        osc.stop(now + duration);
-      });
-    } catch (e) {
-      console.warn('Could not play chord:', e);
-    }
+      const source = ctx.createBufferSource();
+      source.buffer = data;
+      source.connect(gain);
+      source.start();
+    }).catch(e => console.warn('Could not play sound:', e));
   }
 
   toggle() {
@@ -140,5 +65,4 @@ class SoundManager {
   }
 }
 
-// Create global sound manager instance
 const soundManager = new SoundManager();

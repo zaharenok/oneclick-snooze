@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="620" height="440" font-family="Helvetica, Arial, sans-serif">
+  <rect width="620" height="440" fill="#141518"/>
+  <text x="20" y="36" fill="#adb5bd" font-size="14" font-weight="bold">Concept preview — real sizes (128 / 48 / 32 / 16 + 16px x8 zoom)</text>
+
+  <!-- Row A -->
+  <text x="20" y="90" fill="#fbbf24" font-size="18" font-weight="bold">A</text>
+  <text x="40" y="90" fill="#f8f9fa" font-size="15">Moon</text>
+  <image x="100" y="38" width="128" height="128" xlink:href="a-moon-128.png"/>
+  <image x="250" y="78" width="48" height="48" xlink:href="a-moon-48.png"/>
+  <image x="318" y="86" width="32" height="32" xlink:href="a-moon-32.png"/>
+  <image x="370" y="94" width="16" height="16" xlink:href="a-moon-16.png"/>
+  <image x="406" y="38" width="128" height="128" xlink:href="a-moon-16.png" image-rendering="pixelated"/>
+
+  <!-- Row B -->
+  <text x="20" y="230" fill="#fbbf24" font-size="18" font-weight="bold">B</text>
+  <text x="40" y="230" fill="#f8f9fa" font-size="15">Snooze clock</text>
+  <image x="100" y="178" width="128" height="128" xlink:href="b-snooze-clock-128.png"/>
+  <image x="250" y="218" width="48" height="48" xlink:href="b-snooze-clock-48.png"/>
+  <image x="318" y="226" width="32" height="32" xlink:href="b-snooze-clock-32.png"/>
+  <image x="370" y="234" width="16" height="16" xlink:href="b-snooze-clock-16.png"/>
+  <image x="406" y="178" width="128" height="128" xlink:href="b-snooze-clock-16.png" image-rendering="pixelated"/>
+
+  <!-- Row C -->
+  <text x="20" y="370" fill="#fbbf24" font-size="18" font-weight="bold">C</text>
+  <text x="40" y="370" fill="#f8f9fa" font-size="15">Snoozing tab</text>
+  <image x="100" y="318" width="128" height="128" xlink:href="c-snoozing-tab-128.png"/>
+  <image x="250" y="358" width="48" height="48" xlink:href="c-snoozing-tab-48.png"/>
+  <image x="318" y="366" width="32" height="32" xlink:href="c-snoozing-tab-32.png"/>
+  <image x="370" y="374" width="16" height="16" xlink:href="c-snoozing-tab-16.png"/>
+  <image x="406" y="318" width="128" height="128" xlink:href="c-snoozing-tab-16.png" image-rendering="pixelated"/>
+</svg>

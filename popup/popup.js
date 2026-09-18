@@ -388,16 +388,17 @@ async function snoozeTab(preset) {
     chrome.storage.local.set({ snoozedTabs: snoozedTabs }, () => {
       chrome.alarms.create(`snooze_${tabData.id}`, { when: scheduledTime });
 
-      // Play sound
+      // Play sound then close tab after brief delay so audio starts
       if (typeof soundManager !== 'undefined') {
         soundManager.playSound('snooze');
       }
 
-      chrome.tabs.remove(tab.id);
-
-      updateAllNavCounts();
-      renderSnoozedTabs();
-      renderHistory();
+      setTimeout(() => {
+        chrome.tabs.remove(tab.id);
+        updateAllNavCounts();
+        renderSnoozedTabs();
+        renderHistory();
+      }, 300);
     });
   });
 }
@@ -628,9 +629,9 @@ function updateTabSchedule(tabId, newTime, preset) {
 function openTabNow(tabId, url) {
   chrome.tabs.create({ url: url });
 
-  // Play open sound
+  // Play restore sound
   if (typeof soundManager !== 'undefined') {
-    soundManager.playSound('open');
+    soundManager.playSound('restore');
   }
 
   chrome.storage.local.get('snoozedTabs', (result) => {
@@ -754,11 +755,6 @@ function cancelSnooze(id) {
 
     if (tab) {
       chrome.alarms.clear(`snooze_${id}`);
-
-      // Play cancel sound
-      if (typeof soundManager !== 'undefined') {
-        soundManager.playSound('cancel');
-      }
 
       const updated = snoozedTabs.filter(t => t.id !== id);
       chrome.storage.local.set({ snoozedTabs: updated }, () => {
@@ -1009,11 +1005,7 @@ function renderSettingsNav() {
         <span class="label" data-i18n="settings.sound">Sound Effects</span>
         <span class="description" data-i18n="settings.soundEnabled">${currentSettings.soundEnabled ? 'Sounds ON' : 'Sounds OFF'}</span>
       </button>
-      <button class="settings-nav-btn" data-settings-page="appearance">
-        <span class="icon">🎨</span>
-        <span class="label" data-i18n="settings.appearance">Appearance</span>
-        <span class="description" data-i18n="settingsPage.appearanceDesc">Customize the look and feel</span>
-      </button>
+
       <button class="settings-nav-btn" data-settings-page="notifications">
         <span class="icon">🔔</span>
         <span class="label" data-i18n="settings.notifications">Notifications</span>
@@ -1057,8 +1049,6 @@ function openSettingsPage(page) {
     openLanguageSettings();
   } else if (page === 'sound') {
     toggleSoundSettings();
-  } else if (page === 'appearance') {
-    openAppearanceSettings();
   } else if (page === 'notifications') {
     openNotificationSettings();
   } else if (page === 'completed') {
@@ -1090,71 +1080,6 @@ function toggleSoundSettings() {
     // Re-render settings nav to show updated icon
     renderSettingsNav();
   });
-}
-
-function openAppearanceSettings() {
-  const modal = document.getElementById('settings-modal');
-  modal.classList.add('open');
-
-  // Initialize modal handlers
-  initModalHandlers();
-
-  // Show theme selection
-  const modalBody = modal.querySelector('.modal-body');
-  const currentTheme = currentSettings.theme || 'auto';
-
-  modalBody.innerHTML = `
-    <div class="settings-section">
-      <h3>🎨 ${i18n.get('settings.theme')}</h3>
-      <div class="theme-options">
-        <button class="theme-option ${currentTheme === 'light' ? 'active' : ''}" data-theme="light">
-          <span class="theme-icon">☀️</span>
-          <span class="theme-name">${i18n.get('settings.themeLight')}</span>
-          ${currentTheme === 'light' ? '<span class="check">✓</span>' : ''}
-        </button>
-        <button class="theme-option ${currentTheme === 'dark' ? 'active' : ''}" data-theme="dark">
-          <span class="theme-icon">🌙</span>
-          <span class="theme-name">${i18n.get('settings.themeDark')}</span>
-          ${currentTheme === 'dark' ? '<span class="check">✓</span>' : ''}
-        </button>
-        <button class="theme-option ${currentTheme === 'auto' ? 'active' : ''}" data-theme="auto">
-          <span class="theme-icon">🔄</span>
-          <span class="theme-name">${i18n.get('settings.themeAuto')}</span>
-          ${currentTheme === 'auto' ? '<span class="check">✓</span>' : ''}
-        </button>
-      </div>
-    </div>
-  `;
-
-  // Attach event listeners
-  modalBody.querySelectorAll('.theme-option').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const newTheme = btn.dataset.theme;
-      currentSettings.theme = newTheme;
-      chrome.storage.local.set({ settings: currentSettings }, () => {
-        applyTheme(newTheme);
-        closeSettings();
-      });
-    });
-  });
-}
-
-function applyTheme(theme) {
-  const body = document.body;
-
-  body.classList.remove('theme-light', 'theme-dark', 'theme-auto');
-
-  if (theme === 'auto') {
-    // Check system preference
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      body.classList.add('theme-dark');
-    } else {
-      body.classList.add('theme-light');
-    }
-    body.classList.add('theme-auto');
-  } else {
-    body.classList.add(`theme-${theme}`);
-  }
 }
 
 function openNotificationSettings() {
@@ -1220,7 +1145,7 @@ function openNotificationSettings() {
       if (Notification.permission === 'granted') {
         new Notification('🦉 OneClick Snooze', {
           body: 'Test notification - your tab is ready!',
-          icon: 'icons/icon.svg'
+          icon: 'icons/icon128.png'
         });
       }
     });
@@ -1242,7 +1167,7 @@ function openAboutSettings() {
       <div style="font-size: 48px; margin-bottom: 16px;">🦉</div>
       <h2 style="margin: 0 0 8px 0; color: #212529;">OneClick Snooze</h2>
       <p style="margin: 0 0 16px 0; color: #868e96; font-size: 13px;">
-        ${i18n.get('settings.version')}: 1.0.0
+        ${i18n.get('settings.version')}: ${chrome.runtime.getManifest().version}
       </p>
       <div style="padding: 16px; background: #f8f9fa; border-radius: 8px; margin-bottom: 16px;">
         <p style="margin: 0; font-size: 12px; color: #495057; line-height: 1.6;">
@@ -1263,11 +1188,11 @@ function openAboutSettings() {
 
   // Attach event listeners
   document.getElementById('rate-extension')?.addEventListener('click', () => {
-    chrome.tabs.create({ url: 'https://chrome.google.com/webstore/detail/oneclick-snooze/YOUR_EXTENSION_ID' });
+    chrome.tabs.create({ url: `https://chrome.google.com/webstore/detail/oneclick-snooze/${chrome.runtime.id}` });
   });
 
   document.getElementById('share-extension')?.addEventListener('click', () => {
-    const shareUrl = 'https://chrome.google.com/webstore/detail/oneclick-snooze/YOUR_EXTENSION_ID';
+    const shareUrl = `https://chrome.google.com/webstore/detail/oneclick-snooze/${chrome.runtime.id}`;
 
     if (navigator.share) {
       navigator.share({
@@ -1462,15 +1387,17 @@ async function snoozeForMinutes(minutes) {
     chrome.storage.local.set({ snoozedTabs: snoozedTabs }, () => {
       chrome.alarms.create(`snooze_${tabData.id}`, { when: scheduledTime });
 
-      // Play sound
+      // Play sound then close tab after brief delay so audio starts
       if (typeof soundManager !== 'undefined') {
         soundManager.playSound('snooze');
       }
 
-      chrome.tabs.remove(tab.id);
-      updateAllNavCounts();
-      renderSnoozedTabs();
-      renderHistory();
+      setTimeout(() => {
+        chrome.tabs.remove(tab.id);
+        updateAllNavCounts();
+        renderSnoozedTabs();
+        renderHistory();
+      }, 300);
     });
   });
 }
@@ -1506,15 +1433,17 @@ async function snoozeWithSmartPreset(presetType) {
     chrome.storage.local.set({ snoozedTabs: snoozedTabs }, () => {
       chrome.alarms.create(`snooze_${tabData.id}`, { when: scheduledTime });
 
-      // Play sound
+      // Play sound then close tab after brief delay so audio starts
       if (typeof soundManager !== 'undefined') {
         soundManager.playSound('snooze');
       }
 
-      chrome.tabs.remove(tab.id);
-      updateAllNavCounts();
-      renderSnoozedTabs();
-      renderHistory();
+      setTimeout(() => {
+        chrome.tabs.remove(tab.id);
+        updateAllNavCounts();
+        renderSnoozedTabs();
+        renderHistory();
+      }, 300);
     });
   });
 }

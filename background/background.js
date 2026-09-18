@@ -35,7 +35,8 @@ chrome.alarms.onAlarm.addListener(async (alarm) => {
           iconUrl: '../icons/icon48.png',
           title: 'Tab Snooze',
           message: `"${tabData.title}" has been restored.`
-        }).catch(() => {});
+        }, () => void chrome.runtime.lastError);
+        playRestoreSound();
       });
 
     } catch (error) {
@@ -43,6 +44,43 @@ chrome.alarms.onAlarm.addListener(async (alarm) => {
     }
   });
 });
+
+// Play the "pu-boop" through an offscreen document (service workers have no AudioContext)
+let creatingOffscreen;
+async function playRestoreSound() {
+  try {
+    const { settings } = await chrome.storage.local.get('settings');
+    if (settings && settings.soundEnabled === false) {
+      return;
+    }
+
+    const contexts = await chrome.runtime.getContexts({
+      contextTypes: ['OFFSCREEN_DOCUMENT']
+    });
+
+    if (contexts.length === 0) {
+      // Shared in-flight promise: concurrent restores must not create the document twice
+      creatingOffscreen = creatingOffscreen || chrome.offscreen.createDocument({
+        url: 'offscreen/offscreen.html',
+        reasons: ['AUDIO_PLAYBACK'],
+        justification: 'Play a sound when a snoozed tab is restored'
+      });
+      await creatingOffscreen.catch(() => {});
+      creatingOffscreen = null;
+    }
+
+
+    chrome.runtime.sendMessage({ type: 'play-sound' }).catch(() => {});
+
+    // Free the document after the sound finishes
+    setTimeout(() => {
+      chrome.offscreen.closeDocument().catch(() => {});
+    }, 1500);
+  } catch (e) {
+    console.warn('Could not play restore sound:', e);
+  }
+}
+
 
 chrome.runtime.onInstalled.addListener(() => {
   console.log('Tab Snooze extension installed');

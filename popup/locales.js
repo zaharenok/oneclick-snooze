@@ -56,17 +56,12 @@ const locales = {
       reset: 'Reset to Default',
       save: 'Save Settings',
       language: 'Language',
-      appearance: 'Appearance',
       notifications: 'Notifications',
       about: 'About',
       community: 'Community & Support',
       sound: 'Sound Effects',
       soundEnabled: 'Enable sounds',
       soundDesc: 'Play sounds when snoozing tabs',
-      theme: 'Theme',
-      themeLight: 'Light',
-      themeDark: 'Dark',
-      themeAuto: 'Auto (system)',
       desktopNotifications: 'Desktop Notifications',
       desktopNotificationsDesc: 'Show notification when tab reopens',
       version: 'Version',
@@ -79,8 +74,6 @@ const locales = {
       presetsDesc: 'Customize your quick snooze buttons',
       languageTitle: 'Language',
       languageDesc: 'Choose your preferred language',
-      appearanceTitle: 'Appearance',
-      appearanceDesc: 'Customize the look and feel',
       notificationsTitle: 'Notifications',
       notificationsDesc: 'Manage how you receive alerts',
       aboutTitle: 'About',
@@ -166,13 +159,16 @@ const locales = {
       reset: 'Сбросить',
       save: 'Сохранить',
       language: 'Язык',
-      appearance: 'Внешний вид',
       notifications: 'Уведомления',
       about: 'О программе',
       community: 'Сообщество',
       sound: 'Звуковые эффекты',
       soundEnabled: 'Включить звуки',
-      soundDesc: 'Воспроизводить звуки при откладывании вкладок'
+      soundDesc: 'Воспроизводить звуки при откладывании вкладок',
+      desktopNotifications: 'Уведомления на рабочем столе',
+      desktopNotificationsDesc: 'Показывать уведомление при повторном открытии вкладки',
+      version: 'Версия',
+      author: 'Сделано с'
     },
 
     // Settings pages
@@ -181,8 +177,6 @@ const locales = {
       presetsDesc: 'Настройте кнопки быстрого откладывания',
       languageTitle: 'Язык',
       languageDesc: 'Выберите предпочитаемый язык',
-      appearanceTitle: 'Внешний вид',
-      appearanceDesc: 'Настройте внешний вид',
       notificationsTitle: 'Уведомления',
       notificationsDesc: 'Управление оповещениями',
       aboutTitle: 'О программе',
@@ -267,8 +261,11 @@ const locales = {
       duration: 'Dauer (Sekunden):',
       reset: 'Zurücksetzen',
       save: 'Speichern',
+      desktopNotifications: 'Desktop-Benachrichtigungen',
+      desktopNotificationsDesc: 'Benachrichtigung zeigen, wenn der Tab wieder geöffnet wird',
+      version: 'Version',
+      author: 'Gemacht mit',
       language: 'Sprache',
-      appearance: 'Darstellung',
       notifications: 'Benachrichtigungen',
       about: 'Über',
       community: 'Community',
@@ -283,8 +280,6 @@ const locales = {
       presetsDesc: 'Passe deine Schnell-Wiedereröffnungs-Buttons an',
       languageTitle: 'Sprache',
       languageDesc: 'Wähle deine bevorzugte Sprache',
-      appearanceTitle: 'Darstellung',
-      appearanceDesc: 'Passe das Aussehen an',
       notificationsTitle: 'Benachrichtigungen',
       notificationsDesc: 'Verwalte deine Warnungen',
       aboutTitle: 'Über',
@@ -370,13 +365,16 @@ const locales = {
       reset: 'Restablecer',
       save: 'Guardar',
       language: 'Idioma',
-      appearance: 'Apariencia',
       notifications: 'Notificaciones',
       about: 'Acerca de',
       community: 'Comunidad',
       sound: 'Efectos de sonido',
       soundEnabled: 'Activar sonidos',
-      soundDesc: 'Reproducir sonidos al posponer pestañas'
+      soundDesc: 'Reproducir sonidos al posponer pestañas',
+      desktopNotifications: 'Notificaciones de escritorio',
+      desktopNotificationsDesc: 'Mostrar notificación al reabrir la pestaña',
+      version: 'Versión',
+      author: 'Hecho con'
     },
 
     // Settings pages
@@ -385,8 +383,6 @@ const locales = {
       presetsDesc: 'Personaliza tus botones de posposición rápida',
       languageTitle: 'Idioma',
       languageDesc: 'Elige tu idioma preferido',
-      appearanceTitle: 'Apariencia',
-      appearanceDesc: 'Personaliza el aspecto',
       notificationsTitle: 'Notificaciones',
       notificationsDesc: 'Gestiona tus alertas',
       aboutTitle: 'Acerca de',
@@ -472,13 +468,16 @@ const locales = {
       reset: '重置',
       save: '保存设置',
       language: '语言',
-      appearance: '外观',
       notifications: '通知',
       about: '关于',
       community: '社区',
       sound: '音效',
       soundEnabled: '启用音效',
-      soundDesc: '暂停标签页时播放声音'
+      soundDesc: '暂停标签页时播放声音',
+      desktopNotifications: '桌面通知',
+      desktopNotificationsDesc: '重新打开标签页时显示通知',
+      version: '版本',
+      author: '由',
     },
 
     // Settings pages
@@ -487,8 +486,6 @@ const locales = {
       presetsDesc: '自定义快速暂停按钮',
       languageTitle: '语言',
       languageDesc: '选择你的首选语言',
-      appearanceTitle: '外观',
-      appearanceDesc: '自定义外观',
       notificationsTitle: '通知',
       notificationsDesc: '管理提醒方式',
       aboutTitle: '关于',
@@ -519,102 +516,7 @@ const locales = {
     }
   }
 };
-    // Navigation
-    nav: {
-      dashboard: '仪表板',
-      snoozed: '已暂停',
-      history: '历史记录',
-      settings: '设置'
-    },
 
-    // Sections
-    section: {
-      quickPresets: '快速预设',
-      smartPresets: '智能预设',
-      customPresets: '自定义预设'
-    },
-
-    // Presets
-    preset: {
-      '1hour': '1小时',
-      '3hours': '3小时',
-      '6hours': '6小时',
-      laterToday: '今天稍后',
-      thisEvening: '今晚',
-      tomorrow: '明天',
-      nextWeekend: '下周末',
-      nextWeek: '下周',
-      inMonth: '一个月后',
-      someday: '某天',
-      pickDate: '选择日期'
-    },
-
-    // Empty states
-    empty: {
-      noSnoozed: '没有暂停的标签页',
-      goToDashboard: '前往仪表板暂停此标签页',
-      noHistory: '暂无历史记录',
-      noHistoryDesc: '完成的标签页将显示在这里'
-    },
-
-    // History
-    history: {
-      title: '📜 最近打开',
-      clear: '清除'
-    },
-
-    // Settings
-    settings: {
-      presets: '预设按钮',
-      addPreset: '+ 添加预设',
-      completed: '已完成的标签页',
-      showCompleted: '短暂显示已完成的标签页',
-      duration: '持续时间（秒）：',
-      reset: '重置',
-      save: '保存设置',
-      language: '语言',
-      appearance: '外观',
-      notifications: '通知',
-      about: '关于',
-      community: '社区'
-    },
-
-    // Settings pages
-    settingsPage: {
-      presetsTitle: '管理预设',
-      presetsDesc: '自定义快速暂停按钮',
-      languageTitle: '语言',
-      languageDesc: '选择你的首选语言',
-      appearanceTitle: '外观',
-      appearanceDesc: '自定义外观',
-      notificationsTitle: '通知',
-      notificationsDesc: '管理提醒方式',
-      aboutTitle: '关于',
-      aboutDesc: '版本和信息',
-      communityTitle: '社区',
-      communityDesc: '获取帮助并加入我们'
-    },
-
-    // Edit modal
-    edit: {
-      title: '编辑暂停的标签页',
-      reschedule: '重新安排',
-      customTime: '自定义时间',
-      scheduledFor: '📅 计划于：',
-      todayAt: '今天',
-      orPickDate: '或选择日期',
-      openNow: '🚀 立即打开',
-      saveChanges: '💾 保存更改'
-    },
-
-    // Time formats
-    time: {
-      today: '今天',
-      tomorrow: '明天',
-      at: '在'
-    }
-  }
-};
 
 class I18n {
   constructor() {

@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="24" fill="#228be6"/>
-  <path d="M64 32c-17.7 0-32 14.3-32 32v16c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32zm0 12c11 0 20 9 20 20v16c0 11-9 20-20 20s-20-9-20-20V64c0-11 9-20 20-20z" fill="#fff"/>
-  <circle cx="64" cy="64" r="8" fill="#fff" opacity="0.9"/>
-  <text x="64" y="108" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#fff" text-anchor="middle">Zzz</text>
-</svg>
