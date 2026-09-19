@@ -83,10 +83,15 @@ async function playRestoreSound() {
 
 
 chrome.runtime.onInstalled.addListener(() => {
-  console.log('Tab Snooze extension installed');
+  console.log('OneClick Snooze installed');
+  // Keep service worker alive: periodic alarm ensures Chrome doesn't forget pending snooze alarms
+  chrome.alarms.create('keepalive', { periodInMinutes: 0.5 });
 });
 
 chrome.runtime.onStartup.addListener(() => {
+  // Ensure keepalive alarm persists across service worker restarts
+  chrome.alarms.create('keepalive', { periodInMinutes: 0.5 });
+
   chrome.storage.local.get('snoozedTabs', (result) => {
     const snoozedTabs = result.snoozedTabs || [];
     const now = Date.now();
