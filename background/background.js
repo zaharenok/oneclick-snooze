@@ -23,6 +23,7 @@ async function restoreOverdueTabs() {
         : t
     );
     await chrome.storage.local.set({ snoozedTabs: updated });
+    playRestoreSound();
   }
 }
 
