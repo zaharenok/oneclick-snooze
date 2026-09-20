@@ -112,7 +112,7 @@ async function playRestoreSound() {
 
 // ── Lifecycle ──
 function ensureCatchupAlarm() {
-  chrome.alarms.create('catchup', { periodInMinutes: 1 });
+  chrome.alarms.create('catchup', { periodInMinutes: 5 });
 }
 
 chrome.runtime.onInstalled.addListener(() => {
