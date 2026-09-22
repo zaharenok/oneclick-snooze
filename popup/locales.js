@@ -29,7 +29,9 @@ const locales = {
       nextWeek: 'Next Week',
       inMonth: 'In a Month',
       someday: 'Someday',
-      pickDate: 'Pick Date'
+      pickDate: 'Pick Date',
+      custom: 'Custom',
+      minutes: '{n} minutes'
     },
 
     // Empty states
@@ -132,7 +134,9 @@ const locales = {
       nextWeek: 'Следующая неделя',
       inMonth: 'Через месяц',
       someday: 'Когда-нибудь',
-      pickDate: 'Выбрать дату'
+      pickDate: 'Выбрать дату',
+      custom: 'Своё',
+      minutes: '{n} минут'
     },
 
     // Empty states
@@ -235,7 +239,9 @@ const locales = {
       nextWeek: 'Nächste Woche',
       inMonth: 'In einem Monat',
       someday: 'Irgendwann',
-      pickDate: 'Datum wählen'
+      pickDate: 'Datum wählen',
+      custom: 'Eigene',
+      minutes: '{n} Minuten'
     },
 
     // Empty states
@@ -338,7 +344,9 @@ const locales = {
       nextWeek: 'Próxima semana',
       inMonth: 'En un mes',
       someday: 'Algún día',
-      pickDate: 'Elegir fecha'
+      pickDate: 'Elegir fecha',
+      custom: 'Personalizado',
+      minutes: '{n} minutos'
     },
 
     // Empty states
@@ -441,7 +449,9 @@ const locales = {
       nextWeek: '下周',
       inMonth: '一个月后',
       someday: '某天',
-      pickDate: '选择日期'
+      pickDate: '选择日期',
+      custom: '自定义',
+      minutes: '{n}分钟'
     },
 
     // Empty states

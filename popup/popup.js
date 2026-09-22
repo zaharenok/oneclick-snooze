@@ -197,7 +197,7 @@ function openEditModalForCurrentTab() {
         scheduledTime: Date.now() + 3600000, // Default 1 hour
         createdTime: Date.now(),
         preset: 'custom',
-        presetLabel: 'Custom',
+        presetLabel: i18n.get('preset.custom'),
         status: 'active',
         isCurrentTab: true
       };
@@ -341,7 +341,7 @@ function renderPresetButtons() {
   container.innerHTML = enabledPresets.map(preset => `
     <button class="preset-btn" data-preset="${preset.id}">
       <span class="icon">${preset.icon}</span>
-      <span class="label">${preset.label}</span>
+      <span class="label">${getPresetLocaleLabel(preset.id) || preset.label}</span>
       <span class="time">${formatTime(preset.hour, preset.minute)}</span>
     </button>
   `).join('');
@@ -590,7 +590,7 @@ function updateTabSchedule(tabId, newTime, preset) {
             scheduledTime: newTime,
             createdTime: Date.now(),
             preset: preset || 'custom',
-            presetLabel: preset ? formatPresetLabel(preset) : 'Custom',
+            presetLabel: preset ? formatPresetLabel(preset) : i18n.get('preset.custom'),
             status: 'active'
           };
 
@@ -736,6 +736,27 @@ function clearHistory() {
   });
 }
 
+// ── Locale-aware preset label resolution ──
+// Maps preset id → locale key under 'preset.*'
+const PRESET_LOCALE_KEYS = {
+  evening: 'thisEvening',
+  tomorrow: 'tomorrow',
+  nextweek: 'nextWeek',
+  custom: 'custom',
+  // Smart presets (used by formatPresetLabel)
+  'this-evening': 'thisEvening',
+  'next-weekend': 'nextWeekend',
+  'next-week': 'nextWeek',
+  'later-today': 'laterToday',
+  'in-a-month': 'inMonth',
+  'someday': 'someday'
+};
+
+function getPresetLocaleLabel(presetId) {
+  const key = PRESET_LOCALE_KEYS[presetId];
+  return key ? i18n.get('preset.' + key) : null;
+}
+
 function truncate(str, length) {
   return str.length > length ? str.substr(0, length) + '...' : str;
 }
@@ -860,7 +881,7 @@ function renderPresetSettings() {
         <button class="emoji-picker-btn" data-index="${index}" data-emoji="${preset.icon}" title="Choose emoji">
           ${preset.icon}
         </button>
-        <input type="text" class="preset-label" value="${preset.label}" placeholder="Evening">
+        <input type="text" class="preset-label" value="${preset.label}" placeholder="${getPresetLocaleLabel(preset.id) || 'Evening'}">
         <input type="number" class="preset-hour" value="${preset.hour}" min="0" max="23">
         <span>:</span>
         <input type="number" class="preset-minute" value="${preset.minute}" min="0" max="59">
@@ -896,7 +917,7 @@ function renderPresetSettings() {
 function addPreset() {
   const newPreset = {
     id: 'custom_' + Date.now(),
-    label: 'Custom',
+    label: i18n.get('preset.custom'),
     icon: '⏰',
     hour: 12,
     minute: 0,
@@ -915,7 +936,7 @@ function saveSettingsFromModal() {
     return {
       ...existingPreset,
       icon: emojiBtn?.dataset.emoji || '⏰',
-      label: item.querySelector('.preset-label').value || 'Custom',
+      label: item.querySelector('.preset-label').value || i18n.get('preset.custom'),
       hour: parseInt(item.querySelector('.preset-hour').value) || 0,
       minute: parseInt(item.querySelector('.preset-minute').value) || 0,
       enabled: item.querySelector('.preset-enabled').checked
@@ -1376,7 +1397,7 @@ async function snoozeForMinutes(minutes) {
     scheduledTime: scheduledTime,
     createdTime: Date.now(),
     preset: `minutes_${minutes}`,
-    presetLabel: `${minutes} minutes`,
+    presetLabel: i18n.get('preset.minutes').replace('{n}', minutes),
     status: 'active'
   };
 
@@ -1449,16 +1470,7 @@ async function snoozeWithSmartPreset(presetType) {
 }
 
 function formatPresetLabel(presetType) {
-  const labels = {
-    'later-today': 'Later Today',
-    'this-evening': 'This Evening',
-    'tomorrow': 'Tomorrow',
-    'next-weekend': 'Next Weekend',
-    'next-week': 'Next Week',
-    'in-a-month': 'In a Month',
-    'someday': 'Someday'
-  };
-  return labels[presetType] || presetType;
+  return getPresetLocaleLabel(presetType) || presetType;
 }
 
 // Event Listeners
