@@ -341,7 +341,7 @@ function renderPresetButtons() {
   container.innerHTML = enabledPresets.map(preset => `
     <button class="preset-btn" data-preset="${preset.id}">
       <span class="icon">${preset.icon}</span>
-      <span class="label">${getPresetLocaleLabel(preset.id) || preset.label}</span>
+      <span class="label">${resolvePresetLabel(preset)}</span>
       <span class="time">${formatTime(preset.hour, preset.minute)}</span>
     </button>
   `).join('');
@@ -752,9 +752,25 @@ const PRESET_LOCALE_KEYS = {
   'someday': 'someday'
 };
 
+// Default English labels — only use locale if preset label still matches these
+const DEFAULT_PRESET_LABELS = {
+  evening: 'Evening',
+  tomorrow: 'Tomorrow',
+  nextweek: 'Next Week'
+};
+
 function getPresetLocaleLabel(presetId) {
   const key = PRESET_LOCALE_KEYS[presetId];
   return key ? i18n.get('preset.' + key) : null;
+}
+
+/** Returns locale label only if user hasn't customized it. */
+function resolvePresetLabel(preset) {
+  const defaultLabel = DEFAULT_PRESET_LABELS[preset.id];
+  if (defaultLabel && preset.label === defaultLabel) {
+    return getPresetLocaleLabel(preset.id) || preset.label;
+  }
+  return preset.label;
 }
 
 function truncate(str, length) {
@@ -881,7 +897,7 @@ function renderPresetSettings() {
         <button class="emoji-picker-btn" data-index="${index}" data-emoji="${preset.icon}" title="Choose emoji">
           ${preset.icon}
         </button>
-        <input type="text" class="preset-label" value="${preset.label}" placeholder="${getPresetLocaleLabel(preset.id) || 'Evening'}">
+        <input type="text" class="preset-label" value="${preset.label}" placeholder="${resolvePresetLabel(preset)}">
         <input type="number" class="preset-hour" value="${preset.hour}" min="0" max="23">
         <span>:</span>
         <input type="number" class="preset-minute" value="${preset.minute}" min="0" max="59">
@@ -1477,6 +1493,10 @@ function formatPresetLabel(presetType) {
 document.addEventListener('DOMContentLoaded', async () => {
   try {
     await loadSettings();
+    // Wait for locale to load before rendering — buttons use i18n.get()
+    if (typeof i18n !== 'undefined') {
+      await i18n.ready;
+    }
     renderPresetButtons();
     updateAllNavCounts();
     renderSnoozedTabs();

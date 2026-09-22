@@ -531,28 +531,32 @@ const locales = {
 class I18n {
   constructor() {
     this.currentLocale = 'en';
-    this.loadLocale();
+    this._ready = this.loadLocale();
   }
 
+  /** Await this before using i18n.get() for non-English locales. */
+  get ready() { return this._ready; }
+
   loadLocale() {
-    // Try to load from storage
-    chrome.storage.local.get('locale', (result) => {
-      if (result.locale && locales[result.locale]) {
-        this.currentLocale = result.locale;
-      } else {
-        // Try to detect from browser
-        const browserLang = navigator.language || navigator.userLanguage;
-        if (browserLang.startsWith('ru')) {
-          this.currentLocale = 'ru';
-        } else if (browserLang.startsWith('de')) {
-          this.currentLocale = 'de';
-        } else if (browserLang.startsWith('es')) {
-          this.currentLocale = 'es';
-        } else if (browserLang.startsWith('zh')) {
-          this.currentLocale = 'zh';
+    return new Promise((resolve) => {
+      chrome.storage.local.get('locale', (result) => {
+        if (result.locale && locales[result.locale]) {
+          this.currentLocale = result.locale;
+        } else {
+          const browserLang = navigator.language || navigator.userLanguage;
+          if (browserLang.startsWith('ru')) {
+            this.currentLocale = 'ru';
+          } else if (browserLang.startsWith('de')) {
+            this.currentLocale = 'de';
+          } else if (browserLang.startsWith('es')) {
+            this.currentLocale = 'es';
+          } else if (browserLang.startsWith('zh')) {
+            this.currentLocale = 'zh';
+          }
         }
-      }
-      this.updateUI();
+        this.updateUI();
+        resolve();
+      });
     });
   }
 
