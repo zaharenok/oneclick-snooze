@@ -3,27 +3,37 @@
 importScripts('alarmManager.js');
 
 // ── Restore overdue tabs (used by onStartup, periodic catch-up, and alarms) ──
+// Mutex prevents concurrent restores (onStartup + catchup alarm + individual alarms)
+let _restoreLock = false;
+
 async function restoreOverdueTabs() {
-  const { snoozedTabs = [] } = await chrome.storage.local.get('snoozedTabs');
-  const now = Date.now();
-  const overdue = snoozedTabs.filter(t => t.status === 'active' && t.scheduledTime <= now);
+  if (_restoreLock) return;
+  _restoreLock = true;
+  try {
+    const { snoozedTabs = [] } = await chrome.storage.local.get('snoozedTabs');
+    const now = Date.now();
+    const overdue = snoozedTabs.filter(t => t.status === 'active' && t.scheduledTime <= now);
 
-  for (const tab of overdue) {
-    try {
-      await chrome.tabs.create({ url: tab.url });
-    } catch (e) {
-      console.warn('Failed to restore tab:', tab.id, e);
-    }
-  }
+    if (overdue.length === 0) return;
 
-  if (overdue.length > 0) {
+    // Mark expired BEFORE opening — prevents duplicate opens from concurrent alarms
+    const overdueIds = new Set(overdue.map(t => t.id));
     const updated = snoozedTabs.map(t =>
-      t.status === 'active' && t.scheduledTime <= now
-        ? { ...t, status: 'expired', completedAt: now }
-        : t
+      overdueIds.has(t.id) ? { ...t, status: 'expired', completedAt: now } : t
     );
     await chrome.storage.local.set({ snoozedTabs: updated });
+
+    for (const tab of overdue) {
+      try {
+        await chrome.tabs.create({ url: tab.url });
+      } catch (e) {
+        console.warn('Failed to restore tab:', tab.id, e);
+      }
+    }
+
     playRestoreSound();
+  } finally {
+    _restoreLock = false;
   }
 }
 
@@ -41,40 +51,51 @@ chrome.alarms.onAlarm.addListener(async (alarm) => {
 
   const tabId = alarm.name.replace('snooze_', '');
 
-  chrome.storage.local.get('snoozedTabs', async (result) => {
-    const snoozedTabs = result.snoozedTabs || [];
-    const tabData = snoozedTabs.find(t => t.id === tabId);
+  // Acquire mutex for read→mark→write (atomic status flip)
+  while (_restoreLock) await new Promise(r => setTimeout(r, 50));
+  _restoreLock = true;
+
+  let tabData;
+  try {
+    const { snoozedTabs = [] } = await chrome.storage.local.get('snoozedTabs');
+    tabData = snoozedTabs.find(t => t.id === tabId);
 
     if (!tabData || tabData.status !== 'active') {
+      _restoreLock = false;
       return;
     }
 
-    try {
-      await chrome.tabs.create({ url: tabData.url });
+    // Mark expired BEFORE any async gap — persisted, survives SW crash
+    const updatedTabs = snoozedTabs.map(t =>
+      t.id === tabId ? { ...t, status: 'expired', completedAt: Date.now() } : t
+    );
+    await chrome.storage.local.set({ snoozedTabs: updatedTabs });
+  } catch (error) {
+    console.error('Failed to mark tab expired:', error);
+    _restoreLock = false;
+    return;
+  }
+  _restoreLock = false;
 
-      const updatedTabs = snoozedTabs.map(t =>
-        t.id === tabId ? { ...t, status: 'expired', completedAt: Date.now() } : t
-      );
+  // Tab is already 'expired' in storage — safe to do async work without lock
+  try {
+    await chrome.tabs.create({ url: tabData.url });
 
-      chrome.storage.local.set({ snoozedTabs: updatedTabs }, () => {
-        chrome.runtime.sendMessage({
-          type: 'tabRestored',
-          tabId: tabId
-        }).catch(() => {});
+    chrome.runtime.sendMessage({
+      type: 'tabRestored',
+      tabId: tabId
+    }).catch(() => {});
 
-        chrome.notifications.create({
-          type: 'basic',
-          iconUrl: '../icons/icon48.png',
-          title: 'Tab Snooze',
-          message: `"${tabData.title}" has been restored.`
-        }, () => void chrome.runtime.lastError);
-        playRestoreSound();
-      });
-
-    } catch (error) {
-      console.error('Failed to restore tab:', error);
-    }
-  });
+    chrome.notifications.create({
+      type: 'basic',
+      iconUrl: '../icons/icon48.png',
+      title: 'Tab Snooze',
+      message: `"${tabData.title}" has been restored.`
+    }, () => void chrome.runtime.lastError);
+    playRestoreSound();
+  } catch (error) {
+    console.error('Failed to restore tab:', error);
+  }
 });
 
 // ── Offscreen audio ──
@@ -100,11 +121,14 @@ async function playRestoreSound() {
       creatingOffscreen = null;
     }
 
-    chrome.runtime.sendMessage({ type: 'play-sound' }).catch(() => {});
+    // sendMessage now waits for sendResponse from offscreen listener
+    await chrome.runtime.sendMessage({ type: 'play-sound' }).catch(e => {
+      console.warn('play-sound message failed:', e);
+    });
 
     setTimeout(() => {
       chrome.offscreen.closeDocument().catch(() => {});
-    }, 1500);
+    }, 3000);
   } catch (e) {
     console.warn('Could not play restore sound:', e);
   }

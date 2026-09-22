@@ -1463,97 +1463,100 @@ function formatPresetLabel(presetType) {
 
 // Event Listeners
 document.addEventListener('DOMContentLoaded', async () => {
-  await loadSettings();
-  renderPresetButtons();
-  updateAllNavCounts();
-  renderSnoozedTabs();
-  renderHistory();
-  startCountdown();
+  try {
+    await loadSettings();
+    renderPresetButtons();
+    updateAllNavCounts();
+    renderSnoozedTabs();
+    renderHistory();
+    startCountdown();
 
-  // Initialize modal handlers
-  initModalHandlers();
+    // Initialize modal handlers
+    initModalHandlers();
 
-  // Initialize i18n
-  if (typeof i18n !== 'undefined') {
-    i18n.updateUI();
-  }
-
-  // Navigation tabs
-  document.querySelectorAll('.nav-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      switchTab(tab.dataset.tab);
-    });
-  });
-
-  // Quick presets (hour buttons)
-  document.querySelectorAll('.quick-preset-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const minutes = parseInt(btn.dataset.minutes);
-      snoozeForMinutes(minutes);
-    });
-  });
-
-  // Smart presets
-  document.querySelectorAll('.smart-preset-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      snoozeWithSmartPreset(btn.dataset.preset);
-    });
-  });
-
-  // History controls
-  document.getElementById('clear-history')?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    clearHistory();
-  });
-
-  // Edit modal controls
-  document.getElementById('close-edit-modal').addEventListener('click', closeEditModal);
-  document.getElementById('edit-modal').addEventListener('click', (e) => {
-    if (e.target.id === 'edit-modal') {
-      closeEditModal();
+    // Initialize i18n
+    if (typeof i18n !== 'undefined') {
+      i18n.updateUI();
     }
-  });
-  document.getElementById('save-edit').addEventListener('click', saveTabEdit);
-  document.getElementById('open-now').addEventListener('click', () => {
-    if (editingTabId) {
-      chrome.storage.local.get('snoozedTabs', (result) => {
-        const tab = result.snoozedTabs?.find(t => t.id === editingTabId);
-        if (tab) {
-          if (tab.isCurrentTab) {
-            // Just open the tab, don't remove from storage
-            chrome.tabs.create({ url: tab.url });
-          } else {
-            openTabNow(editingTabId, tab.url);
-          }
-        }
-        closeEditModal();
+
+    // Navigation tabs
+    document.querySelectorAll('.nav-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        switchTab(tab.dataset.tab);
       });
-    }
-  });
+    });
 
-  // Time/Date input change handlers for live preview
-  const updateDatePreview = () => {
-    const hour = parseInt(document.getElementById('custom-hour').value) || 0;
-    const minute = parseInt(document.getElementById('custom-minute').value) || 0;
-    const dateStr = document.getElementById('custom-date').value || null;
-    const newTime = calculateCustomTime(hour, minute, dateStr);
-    updateEditDateDisplay(newTime);
-  };
+    // Quick presets (hour buttons)
+    document.querySelectorAll('.quick-preset-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const minutes = parseInt(btn.dataset.minutes);
+        snoozeForMinutes(minutes);
+      });
+    });
 
-  document.getElementById('custom-hour')?.addEventListener('change', updateDatePreview);
-  document.getElementById('custom-minute')?.addEventListener('change', updateDatePreview);
-  document.getElementById('custom-date')?.addEventListener('change', updateDatePreview);
+    // Smart presets
+    document.querySelectorAll('.smart-preset-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        snoozeWithSmartPreset(btn.dataset.preset);
+      });
+    });
 
-  // Emoji picker controls
-  document.getElementById('close-emoji-picker').addEventListener('click', closeEmojiPicker);
-  document.addEventListener('click', (e) => {
-    const picker = document.getElementById('emoji-picker');
-    if (picker.style.display === 'block' &&
-        !picker.contains(e.target) &&
-        !e.target.classList.contains('emoji-picker-btn')) {
-      closeEmojiPicker();
-    }
-  });
+    // History controls
+    document.getElementById('clear-history')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      clearHistory();
+    });
+
+    // Edit modal controls
+    document.getElementById('close-edit-modal')?.addEventListener('click', closeEditModal);
+    document.getElementById('edit-modal')?.addEventListener('click', (e) => {
+      if (e.target.id === 'edit-modal') {
+        closeEditModal();
+      }
+    });
+    document.getElementById('save-edit')?.addEventListener('click', saveTabEdit);
+    document.getElementById('open-now')?.addEventListener('click', () => {
+      if (editingTabId) {
+        chrome.storage.local.get('snoozedTabs', (result) => {
+          const tab = result.snoozedTabs?.find(t => t.id === editingTabId);
+          if (tab) {
+            if (tab.isCurrentTab) {
+              chrome.tabs.create({ url: tab.url });
+            } else {
+              openTabNow(editingTabId, tab.url);
+            }
+          }
+          closeEditModal();
+        });
+      }
+    });
+
+    // Time/Date input change handlers for live preview
+    const updateDatePreview = () => {
+      const hour = parseInt(document.getElementById('custom-hour')?.value) || 0;
+      const minute = parseInt(document.getElementById('custom-minute')?.value) || 0;
+      const dateStr = document.getElementById('custom-date')?.value || null;
+      const newTime = calculateCustomTime(hour, minute, dateStr);
+      updateEditDateDisplay(newTime);
+    };
+
+    document.getElementById('custom-hour')?.addEventListener('change', updateDatePreview);
+    document.getElementById('custom-minute')?.addEventListener('change', updateDatePreview);
+    document.getElementById('custom-date')?.addEventListener('change', updateDatePreview);
+
+    // Emoji picker controls
+    document.getElementById('close-emoji-picker')?.addEventListener('click', closeEmojiPicker);
+    document.addEventListener('click', (e) => {
+      const picker = document.getElementById('emoji-picker');
+      if (picker && picker.style.display === 'block' &&
+          !picker.contains(e.target) &&
+          !e.target.classList.contains('emoji-picker-btn')) {
+        closeEmojiPicker();
+      }
+    });
+  } catch (e) {
+    console.error('OneClick Snooze popup init error:', e);
+  }
 });
 
 document.addEventListener('visibilitychange', () => {
