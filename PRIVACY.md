@@ -21,6 +21,7 @@ The extension requests the minimum permissions required for its single purpose (
 - `alarms` — to schedule the exact time a tab comes back.
 - `storage` — to save your snoozed tabs and settings locally.
 - `notifications` — to let you know when a snoozed tab has been restored.
+- `offscreen` — to play an audio notification (restore sound) when a tab comes back. Service workers cannot play audio in MV3; an offscreen document is the only available mechanism. No data is collected or transmitted.
 - Host access (`<all_urls>`) — so you can snooze any tab, regardless of the website. The extension never reads page content.
 
 ## Third parties
