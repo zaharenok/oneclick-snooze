@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "OneClick Snooze",
   "version": "1.2.1",
-  "description": "Snooze tabs to reopen later - reduce tab clutter with one click",
+  "description": "Snooze tabs with a tab timer: close now, reopen later. Cut tab clutter, free memory.",
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
