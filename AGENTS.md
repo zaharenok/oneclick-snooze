@@ -71,7 +71,12 @@ Quick syntax check from CLI: `node --check <file.js>` (works because all files a
 
 ## Testing & QA
 
-- Zero automated tests, zero CI, zero test framework. The CommonJS guards in `lib/` and `background/alarmManager.js` exist for future Node testing but no harness consumes them.
+One automated test, no CI, no test framework:
+
+- `tests/check-locales.js` — key-parity check for `popup/locales.js`: all 5 UI locales (en/ru/de/es/zh) must have exactly the same key set as `en`, no empty values, no rogue locales. Run: `node tests/check-locales.js`. Optional arg: path to a locales file (used for negative testing). Exit 1 on any mismatch.
+- `store-listing/build.py` — validates the 17-locale Web Store listing table in `store-listing/master.py` (title ≤45, short ≤132 chars, per-locale CTA present, script sanity markers, manifest.json parses) and generates paste-ready `store-listing/out/<lang>.md`. Run: `python3 store-listing/build.py`.
+
+The CommonJS guards in `lib/` and `background/alarmManager.js` exist for future Node testing but no harness consumes them.
 - Test-eligible pure logic (no `chrome.*`): `Settings.calculateScheduledTime`, `AlarmManager.calculateScheduledTime`, `AlarmManager.formatCountdown`.
 - Manual QA matrix: `PLAN.md` «Приоритет 2» (presets, all 5 languages, sounds, navigation/counters); «Приоритет 4.2» = pre-publish browser matrix (Chrome, Brave, Edge). All items unchecked.
 
