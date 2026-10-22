@@ -325,5 +325,14 @@
   },
   "notif_autoSnoozedN": {
     "message": "🤖 Snooze otomatis: $1 tab ditidurkan"
+  },
+  "dash_autoOff": {
+    "message": "Mati — ketuk untuk mengatur"
+  },
+  "dash_autoEnable": {
+    "message": "Aktifkan"
+  },
+  "dash_autoNext": {
+    "message": "pemeriksaan berikutnya $1"
   }
 }

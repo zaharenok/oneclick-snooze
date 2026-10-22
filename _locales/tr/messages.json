@@ -325,5 +325,14 @@
   },
   "notif_autoSnoozedN": {
     "message": "🤖 Otomatik erteleme: $1 sekme ertelendi"
+  },
+  "dash_autoOff": {
+    "message": "Kapalı — kurmak için dokun"
+  },
+  "dash_autoEnable": {
+    "message": "Aç"
+  },
+  "dash_autoNext": {
+    "message": "sonraki kontrol $1"
   }
 }

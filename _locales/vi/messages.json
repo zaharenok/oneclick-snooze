@@ -325,5 +325,14 @@
   },
   "notif_autoSnoozedN": {
     "message": "🤖 Tự động ngủ tạm: đã hoãn $1 tab"
+  },
+  "dash_autoOff": {
+    "message": "Đang tắt — chạm để thiết lập"
+  },
+  "dash_autoEnable": {
+    "message": "Bật"
+  },
+  "dash_autoNext": {
+    "message": "kiểm tra lúc $1"
   }
 }

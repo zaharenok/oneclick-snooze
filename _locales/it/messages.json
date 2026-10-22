@@ -325,5 +325,14 @@
   },
   "notif_autoSnoozedN": {
     "message": "🤖 Auto-snooze: $1 schede sospese"
+  },
+  "dash_autoOff": {
+    "message": "Disattivato — tocca per configurare"
+  },
+  "dash_autoEnable": {
+    "message": "Attiva"
+  },
+  "dash_autoNext": {
+    "message": "prossimo controllo alle $1"
   }
 }

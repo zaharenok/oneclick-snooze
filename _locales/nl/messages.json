@@ -325,5 +325,14 @@
   },
   "notif_autoSnoozedN": {
     "message": "🤖 Auto-snooze: $1 tabs gesnoozt"
+  },
+  "dash_autoOff": {
+    "message": "Uit — tik om in te stellen"
+  },
+  "dash_autoEnable": {
+    "message": "Inschakelen"
+  },
+  "dash_autoNext": {
+    "message": "controle om $1"
   }
 }

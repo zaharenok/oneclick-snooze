@@ -434,5 +434,17 @@
   "notif_autoSnoozedN": {
     "message": "🤖 Auto Snooze: $1 tabs snoozed",
     "description": "Desktop notification when auto snooze closes several tabs. $1 is the tab count."
+  },
+  "dash_autoOff": {
+    "message": "Off — tap to set up",
+    "description": "Dashboard auto snooze strip text when the mode is disabled. Tapping the strip opens its settings."
+  },
+  "dash_autoEnable": {
+    "message": "Turn on",
+    "description": "Action hint on the dashboard auto snooze strip when the mode is disabled."
+  },
+  "dash_autoNext": {
+    "message": "next check $1",
+    "description": "Dashboard auto snooze strip: when the next automatic check runs. $1 is a formatted clock time like 14:05."
   }
 }

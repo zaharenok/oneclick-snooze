@@ -325,5 +325,14 @@
   },
   "notif_autoSnoozedN": {
     "message": "🤖 Soneca automática: $1 abas adiadas"
+  },
+  "dash_autoOff": {
+    "message": "Desligado — toque para configurar"
+  },
+  "dash_autoEnable": {
+    "message": "Ativar"
+  },
+  "dash_autoNext": {
+    "message": "próxima verificação às $1"
   }
 }

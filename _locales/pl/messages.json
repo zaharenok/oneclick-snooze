@@ -325,5 +325,14 @@
   },
   "notif_autoSnoozedN": {
     "message": "🤖 Auto-drzemka: uśpiono kart: $1"
+  },
+  "dash_autoOff": {
+    "message": "Wyłączone — dotknij, aby skonfigurować"
+  },
+  "dash_autoEnable": {
+    "message": "Włącz"
+  },
+  "dash_autoNext": {
+    "message": "następne sprawdzenie o $1"
   }
 }

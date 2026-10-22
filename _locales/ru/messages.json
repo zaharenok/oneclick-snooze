@@ -325,5 +325,14 @@
   },
   "notif_autoSnoozedN": {
     "message": "🤖 Авто-снуз: отложено вкладок: $1"
+  },
+  "dash_autoOff": {
+    "message": "Выключен — нажмите, чтобы настроить"
+  },
+  "dash_autoEnable": {
+    "message": "Включить"
+  },
+  "dash_autoNext": {
+    "message": "проверка в $1"
   }
 }

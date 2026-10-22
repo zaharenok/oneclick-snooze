@@ -325,5 +325,14 @@
   },
   "notif_autoSnoozedN": {
     "message": "🤖 Auto-snooze: $1 pestañas pospuestas"
+  },
+  "dash_autoOff": {
+    "message": "Desactivado — toca para configurar"
+  },
+  "dash_autoEnable": {
+    "message": "Activar"
+  },
+  "dash_autoNext": {
+    "message": "próxima revisión $1"
   }
 }

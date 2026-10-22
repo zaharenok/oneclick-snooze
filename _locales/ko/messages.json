@@ -325,5 +325,14 @@
   },
   "notif_autoSnoozedN": {
     "message": "🤖 자동 스누즈: 탭 $1개를 스누즈했습니다"
+  },
+  "dash_autoOff": {
+    "message": "꺼짐 — 탭하여 설정"
+  },
+  "dash_autoEnable": {
+    "message": "켜기"
+  },
+  "dash_autoNext": {
+    "message": "다음 확인 $1"
   }
 }

@@ -325,5 +325,14 @@
   },
   "notif_autoSnoozedN": {
     "message": "🤖 自動休眠：已休眠 $1 個分頁"
+  },
+  "dash_autoOff": {
+    "message": "已關閉 — 點擊設定"
+  },
+  "dash_autoEnable": {
+    "message": "開啟"
+  },
+  "dash_autoNext": {
+    "message": "下次檢查 $1"
   }
 }

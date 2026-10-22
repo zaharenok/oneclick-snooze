@@ -325,5 +325,14 @@
   },
   "notif_autoSnoozedN": {
     "message": "🤖 自动休眠：已休眠 $1 个标签页"
+  },
+  "dash_autoOff": {
+    "message": "已关闭 — 点击设置"
+  },
+  "dash_autoEnable": {
+    "message": "开启"
+  },
+  "dash_autoNext": {
+    "message": "下次检查 $1"
   }
 }

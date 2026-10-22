@@ -1013,7 +1013,54 @@ function switchTab(tabName) {
     renderSnoozedTabs();
   } else if (tabName === 'history') {
     renderHistory();
+  } else if (tabName === 'dashboard') {
+    renderAutoStrip();
   }
+}
+
+// Auto Snooze status strip on the Dashboard: ON → rules summary + next check time,
+// OFF → invite to set up. Whole strip opens the Auto Snooze settings modal.
+function renderAutoStrip() {
+  const strip = document.getElementById('auto-strip');
+  if (!strip || !currentSettings) return;
+
+  const auto = currentSettings.autoMode || { enabled: false, maxTabs: 10, idleHours: 2, snoozePreset: '6h' };
+  strip.style.display = 'flex';
+
+  if (!auto.enabled) {
+    strip.className = 'auto-strip';
+    strip.innerHTML = `
+      <span class="auto-dot"></span>
+      <span class="auto-text"><strong>🤖 ${i18n.get('settings.auto')}</strong> · ${i18n.get('dash.autoOff')}</span>
+      <span class="auto-side">${i18n.get('dash.autoEnable')}</span>
+    `;
+    return;
+  }
+
+  const durationKeys = {
+    '1h': 'preset.1hour',
+    '3h': 'preset.3hours',
+    '6h': 'preset.6hours',
+    'tomorrow': 'preset.tomorrow',
+    'nextweek': 'preset.nextWeek'
+  };
+  const durationLabel = i18n.get(durationKeys[auto.snoozePreset] || 'preset.6hours');
+
+  // Next periodic check time from the live alarm (hidden if not scheduled yet)
+  chrome.alarms.get('automode', (alarm) => {
+    let sideHtml = '<span class="auto-side">🟢</span>';
+    if (alarm && alarm.scheduledTime) {
+      const time = new Intl.DateTimeFormat(i18n.currentLocale, { hour: '2-digit', minute: '2-digit' })
+        .format(new Date(alarm.scheduledTime));
+      sideHtml = `<span class="auto-side">⏱ ${i18n.get('dash.autoNext', [time])}</span>`;
+    }
+    strip.innerHTML = `
+      <span class="auto-dot"></span>
+      <span class="auto-text"><strong>🤖 ${i18n.get('settings.auto')}</strong> · ≤${auto.maxTabs} · ${auto.idleHours}h · ${durationLabel}</span>
+      ${sideHtml}
+    `;
+  });
+  strip.className = 'auto-strip on';
 }
 
 function renderSettingsNav() {
@@ -1262,6 +1309,7 @@ function openAutoModeSettings() {
     };
     // saveSettings notifies the service worker to re-arm the periodic alarm
     saveSettings(currentSettings).then(() => {
+      renderAutoStrip();
       // Re-render: reveals the rule fields after enabling, hides them after disabling
       openAutoModeSettings();
     });
@@ -1588,6 +1636,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     updateAllNavCounts();
     renderSnoozedTabs();
     renderHistory();
+    renderAutoStrip();
     startCountdown();
 
     // Initialize modal handlers
@@ -1603,6 +1652,11 @@ document.addEventListener('DOMContentLoaded', async () => {
       tab.addEventListener('click', () => {
         switchTab(tab.dataset.tab);
       });
+    });
+
+    // Auto Snooze strip → settings modal (listener on the container survives re-renders)
+    document.getElementById('auto-strip')?.addEventListener('click', () => {
+      openAutoModeSettings();
     });
 
     // Quick presets (hour buttons)

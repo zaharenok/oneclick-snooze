@@ -325,5 +325,14 @@
   },
   "notif_autoSnoozedN": {
     "message": "🤖 自動スヌーズ: $1個のタブをスヌーズしました"
+  },
+  "dash_autoOff": {
+    "message": "オフ — タップして設定"
+  },
+  "dash_autoEnable": {
+    "message": "オンにする"
+  },
+  "dash_autoNext": {
+    "message": "次のチェック $1"
   }
 }

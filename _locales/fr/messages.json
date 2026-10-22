@@ -325,5 +325,14 @@
   },
   "notif_autoSnoozedN": {
     "message": "🤖 Auto-snooze : $1 onglets mis en veille"
+  },
+  "dash_autoOff": {
+    "message": "Désactivé — appuyez pour configurer"
+  },
+  "dash_autoEnable": {
+    "message": "Activer"
+  },
+  "dash_autoNext": {
+    "message": "prochaine vérification à $1"
   }
 }
