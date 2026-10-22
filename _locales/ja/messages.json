@@ -1,0 +1,329 @@
+{
+  "extName": {
+    "message": "あとで読む・タブを後で開く (Tab Snooze)"
+  },
+  "extDescription": {
+    "message": "ワンクリックでタブをスヌーズ：今閉じて、Chrome が後で自動的に開きます。あとで読む、タブ整理。"
+  },
+  "actionTitle": {
+    "message": "このタブをスヌーズ"
+  },
+  "nav_dashboard": {
+    "message": "ダッシュボード"
+  },
+  "nav_snoozed": {
+    "message": "スヌーズ中"
+  },
+  "nav_history": {
+    "message": "履歴"
+  },
+  "nav_settings": {
+    "message": "設定"
+  },
+  "section_quickPresets": {
+    "message": "クイックプリセット"
+  },
+  "section_smartPresets": {
+    "message": "スマートプリセット"
+  },
+  "section_customPresets": {
+    "message": "マイプリセット"
+  },
+  "preset_1hour": {
+    "message": "1時間"
+  },
+  "preset_3hours": {
+    "message": "3時間"
+  },
+  "preset_6hours": {
+    "message": "6時間"
+  },
+  "preset_laterToday": {
+    "message": "今日は後で"
+  },
+  "preset_thisEvening": {
+    "message": "今夜"
+  },
+  "preset_tomorrow": {
+    "message": "明日"
+  },
+  "preset_nextWeekend": {
+    "message": "来週末"
+  },
+  "preset_nextWeek": {
+    "message": "来週"
+  },
+  "preset_inMonth": {
+    "message": "1か月後"
+  },
+  "preset_someday": {
+    "message": "いつか"
+  },
+  "preset_pickDate": {
+    "message": "日付を選ぶ"
+  },
+  "preset_custom": {
+    "message": "カスタム"
+  },
+  "preset_minutes": {
+    "message": "$1分"
+  },
+  "empty_noSnoozed": {
+    "message": "スヌーズ中のタブはありません"
+  },
+  "empty_goToDashboard": {
+    "message": "ダッシュボードでこのタブをスヌーズ"
+  },
+  "empty_noHistory": {
+    "message": "履歴はまだありません"
+  },
+  "empty_noHistoryDesc": {
+    "message": "完了したタブがここに表示されます"
+  },
+  "history_title": {
+    "message": "📜 最近開いたタブ"
+  },
+  "history_clear": {
+    "message": "クリア"
+  },
+  "history_clearConfirm": {
+    "message": "履歴をすべてクリアしますか？この操作は元に戻せません。"
+  },
+  "settings_presets": {
+    "message": "プリセットボタン"
+  },
+  "settings_addPreset": {
+    "message": "+ プリセットを追加"
+  },
+  "settings_completed": {
+    "message": "完了したタブ"
+  },
+  "settings_showCompleted": {
+    "message": "完了したタブを一時的に表示"
+  },
+  "settings_duration": {
+    "message": "表示時間 (秒):"
+  },
+  "settings_reset": {
+    "message": "初期設定に戻す"
+  },
+  "settings_save": {
+    "message": "設定を保存"
+  },
+  "settings_resetConfirm": {
+    "message": "すべての設定を初期値に戻しますか？"
+  },
+  "settings_notifications": {
+    "message": "通知"
+  },
+  "settings_about": {
+    "message": "この拡張機能について"
+  },
+  "settings_community": {
+    "message": "コミュニティ＆サポート"
+  },
+  "settings_sound": {
+    "message": "サウンド"
+  },
+  "settings_soundEnabled": {
+    "message": "サウンドを有効にする"
+  },
+  "settings_soundDesc": {
+    "message": "タブをスヌーズするときにサウンドを再生"
+  },
+  "settings_soundsOn": {
+    "message": "サウンド: オン"
+  },
+  "settings_soundsOff": {
+    "message": "サウンド: オフ"
+  },
+  "settings_desktopNotifications": {
+    "message": "デスクトップ通知"
+  },
+  "settings_desktopNotificationsDesc": {
+    "message": "タブが再開されたときに通知を表示"
+  },
+  "settings_version": {
+    "message": "バージョン"
+  },
+  "settings_author": {
+    "message": "お作りしました"
+  },
+  "settingsPage_presetsTitle": {
+    "message": "プリセットを管理"
+  },
+  "settingsPage_presetsDesc": {
+    "message": "クイックスヌーズボタンをカスタマイズ"
+  },
+  "settingsPage_notificationsTitle": {
+    "message": "通知"
+  },
+  "settingsPage_notificationsDesc": {
+    "message": "通知の受け取り方を管理"
+  },
+  "settingsPage_aboutTitle": {
+    "message": "この拡張機能について"
+  },
+  "settingsPage_aboutDesc": {
+    "message": "バージョンと情報"
+  },
+  "settingsPage_communityTitle": {
+    "message": "コミュニティ"
+  },
+  "settingsPage_communityDesc": {
+    "message": "ヘルプを見るかコミュニティに参加"
+  },
+  "settingsPage_soundTitle": {
+    "message": "サウンド"
+  },
+  "settingsPage_soundDesc": {
+    "message": "サウンドあり／なしを選択"
+  },
+  "edit_title": {
+    "message": "スヌーズ中のタブを編集"
+  },
+  "edit_reschedule": {
+    "message": "再スケジュール"
+  },
+  "edit_customTime": {
+    "message": "カスタム時刻"
+  },
+  "edit_scheduledFor": {
+    "message": "📅 再開予定:"
+  },
+  "edit_todayAt": {
+    "message": "今日"
+  },
+  "edit_orPickDate": {
+    "message": "または日付を選ぶ"
+  },
+  "edit_openNow": {
+    "message": "🚀 今すぐ開く"
+  },
+  "edit_saveChanges": {
+    "message": "💾 変更を保存"
+  },
+  "time_today": {
+    "message": "今日"
+  },
+  "time_tomorrow": {
+    "message": "明日"
+  },
+  "time_at": {
+    "message": "に"
+  },
+  "time_now": {
+    "message": "今"
+  },
+  "status_opened": {
+    "message": "✓ 開きました"
+  },
+  "status_comingSoon": {
+    "message": "近日公開！"
+  },
+  "error_invalidUrl": {
+    "message": "このページはスヌーズできません。通常のウェブページのみスヌーズできます。"
+  },
+  "error_invalidPreset": {
+    "message": "プリセットの設定が無効です"
+  },
+  "error_minPresets": {
+    "message": "プリセットは最低1つ必要です"
+  },
+  "error_allowNotifications": {
+    "message": "この機能を使うには通知を許可してください。"
+  },
+  "tooltip_openNow": {
+    "message": "今すぐ開く"
+  },
+  "tooltip_cancelSnooze": {
+    "message": "スヌーズをキャンセル"
+  },
+  "tooltip_chooseEmoji": {
+    "message": "絵文字を選ぶ"
+  },
+  "tooltip_remove": {
+    "message": "削除"
+  },
+  "notif_restored": {
+    "message": "\"$1\" を再開しました。"
+  },
+  "notif_testBody": {
+    "message": "テスト通知 - タブの準備ができました！"
+  },
+  "notif_testButton": {
+    "message": "🔔 通知をテスト"
+  },
+  "notif_tip": {
+    "message": "💡 ヒント: ブラウザでこの拡張機能からの通知を許可しているか確認してください。"
+  },
+  "about_tagline": {
+    "message": "ワンクリックでタブの散らかりを解消"
+  },
+  "about_rate": {
+    "message": "⭐ 拡張機能を評価"
+  },
+  "about_share": {
+    "message": "📤 シェア"
+  },
+  "about_shareText": {
+    "message": "この素晴らしいタブ管理拡張機能をチェック！"
+  },
+  "about_linkCopied": {
+    "message": "リンクをクリップボードにコピーしました！友だちとシェアしましょう。"
+  },
+  "emoji_choose": {
+    "message": "絵文字を選択"
+  },
+  "presetSetting_enabled": {
+    "message": "有効"
+  },
+  "settings_language": {
+    "message": "言語"
+  },
+  "settingsPage_languageTitle": {
+    "message": "言語"
+  },
+  "settingsPage_languageDesc": {
+    "message": "希望する言語を選択してください"
+  },
+  "settings_auto": {
+    "message": "自動スヌーズ"
+  },
+  "settingsPage_autoDesc": {
+    "message": "ルールに従ってタブを自動的にスヌーズ"
+  },
+  "auto_enable": {
+    "message": "自動スヌーズを有効にする"
+  },
+  "auto_enableDesc": {
+    "message": "有効な間、15分ごとにバックグラウンドでチェックし、以下のルールでタブをスヌーズします。"
+  },
+  "auto_maxTabs": {
+    "message": "最大タブ数"
+  },
+  "auto_maxTabsHint": {
+    "message": "上限を超えると、古いタブからスヌーズされます。"
+  },
+  "auto_idleHours": {
+    "message": "無操作時間（時間）"
+  },
+  "auto_idleHoursHint": {
+    "message": "この時間開いていないタブはスヌーズされます。"
+  },
+  "auto_duration": {
+    "message": "スヌーズ期間"
+  },
+  "auto_help": {
+    "message": "自動スヌーズは15分ごとにタブをチェックします。タブ数が上限を超えた場合、または指定時間開かれていないタブは、閉じられて後で自動的に復元されます。"
+  },
+  "auto_helpExcluded": {
+    "message": "スヌーズされないもの: アクティブなタブ、ピン留めされたタブ、音声を再生中のタブ、ブラウザのページ（chrome:// など）。"
+  },
+  "notif_autoSnoozed1": {
+    "message": "🤖 自動スヌーズ: 1個のタブをスヌーズしました"
+  },
+  "notif_autoSnoozedN": {
+    "message": "🤖 自動スヌーズ: $1個のタブをスヌーズしました"
+  }
+}

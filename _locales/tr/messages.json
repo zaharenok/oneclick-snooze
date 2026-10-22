@@ -1,0 +1,329 @@
+{
+  "extName": {
+    "message": "Sekmeyi sonra aç - Sonra oku (Tab Snooze)"
+  },
+  "extDescription": {
+    "message": "Sekmeleri tek tıkla ertele: şimdi kapat, Chrome sonra otomatik olarak yeniden açar. Sekmeyi sonra okumak için kaydet."
+  },
+  "actionTitle": {
+    "message": "Bu sekmeyi ertele"
+  },
+  "nav_dashboard": {
+    "message": "Panel"
+  },
+  "nav_snoozed": {
+    "message": "Ertelenen"
+  },
+  "nav_history": {
+    "message": "Geçmiş"
+  },
+  "nav_settings": {
+    "message": "Ayarlar"
+  },
+  "section_quickPresets": {
+    "message": "Hızlı Hazır Ayarlar"
+  },
+  "section_smartPresets": {
+    "message": "Akıllı Hazır Ayarlar"
+  },
+  "section_customPresets": {
+    "message": "Hazır Ayarların"
+  },
+  "preset_1hour": {
+    "message": "1 Saat"
+  },
+  "preset_3hours": {
+    "message": "3 Saat"
+  },
+  "preset_6hours": {
+    "message": "6 Saat"
+  },
+  "preset_laterToday": {
+    "message": "Bugün Daha Sonra"
+  },
+  "preset_thisEvening": {
+    "message": "Bu Akşam"
+  },
+  "preset_tomorrow": {
+    "message": "Yarın"
+  },
+  "preset_nextWeekend": {
+    "message": "Gelecek Hafta Sonu"
+  },
+  "preset_nextWeek": {
+    "message": "Gelecek Hafta"
+  },
+  "preset_inMonth": {
+    "message": "Bir Ay İçinde"
+  },
+  "preset_someday": {
+    "message": "Bir Gün"
+  },
+  "preset_pickDate": {
+    "message": "Tarih Seç"
+  },
+  "preset_custom": {
+    "message": "Özel"
+  },
+  "preset_minutes": {
+    "message": "$1 dakika"
+  },
+  "empty_noSnoozed": {
+    "message": "Ertelenen sekme yok"
+  },
+  "empty_goToDashboard": {
+    "message": "Bu sekmeyi ertelemek için Panele git"
+  },
+  "empty_noHistory": {
+    "message": "Henüz geçmiş yok"
+  },
+  "empty_noHistoryDesc": {
+    "message": "Tamamlanan sekmeler burada görünecek"
+  },
+  "history_title": {
+    "message": "📜 Son Açılanlar"
+  },
+  "history_clear": {
+    "message": "Temizle"
+  },
+  "history_clearConfirm": {
+    "message": "Tüm geçmiş temizlensin mi? Bu işlem geri alınamaz."
+  },
+  "settings_presets": {
+    "message": "Hazır Ayar Düğmeleri"
+  },
+  "settings_addPreset": {
+    "message": "+ Hazır Ayar Ekle"
+  },
+  "settings_completed": {
+    "message": "Tamamlanan Sekmeler"
+  },
+  "settings_showCompleted": {
+    "message": "Tamamlanan sekmeleri kısa süre göster"
+  },
+  "settings_duration": {
+    "message": "Süre (saniye):"
+  },
+  "settings_reset": {
+    "message": "Varsayılana Sıfırla"
+  },
+  "settings_save": {
+    "message": "Ayarları Kaydet"
+  },
+  "settings_resetConfirm": {
+    "message": "Tüm ayarlar varsayılana sıfırlansın mı?"
+  },
+  "settings_notifications": {
+    "message": "Bildirimler"
+  },
+  "settings_about": {
+    "message": "Hakkında"
+  },
+  "settings_community": {
+    "message": "Topluluk ve Destek"
+  },
+  "settings_sound": {
+    "message": "Ses Efektleri"
+  },
+  "settings_soundEnabled": {
+    "message": "Sesleri etkinleştir"
+  },
+  "settings_soundDesc": {
+    "message": "Sekmeleri ertelerken ses çal"
+  },
+  "settings_soundsOn": {
+    "message": "Sesler AÇIK"
+  },
+  "settings_soundsOff": {
+    "message": "Sesler KAPALI"
+  },
+  "settings_desktopNotifications": {
+    "message": "Masaüstü Bildirimleri"
+  },
+  "settings_desktopNotificationsDesc": {
+    "message": "Sekme yeniden açıldığında bildirim göster"
+  },
+  "settings_version": {
+    "message": "Sürüm"
+  },
+  "settings_author": {
+    "message": "Sevgiyle"
+  },
+  "settingsPage_presetsTitle": {
+    "message": "Hazır Ayarları Yönet"
+  },
+  "settingsPage_presetsDesc": {
+    "message": "Hızlı erteleme düğmelerini özelleştir"
+  },
+  "settingsPage_notificationsTitle": {
+    "message": "Bildirimler"
+  },
+  "settingsPage_notificationsDesc": {
+    "message": "Uyarıları nasıl alacağınızı yönetin"
+  },
+  "settingsPage_aboutTitle": {
+    "message": "Hakkında"
+  },
+  "settingsPage_aboutDesc": {
+    "message": "Sürüm ve bilgiler"
+  },
+  "settingsPage_communityTitle": {
+    "message": "Topluluk"
+  },
+  "settingsPage_communityDesc": {
+    "message": "Yardım alın ve topluluğumuza katılın"
+  },
+  "settingsPage_soundTitle": {
+    "message": "Ses Efektleri"
+  },
+  "settingsPage_soundDesc": {
+    "message": "Sesli veya sessiz mod arasında seçim yapın"
+  },
+  "edit_title": {
+    "message": "Ertelenen Sekmeyi Düzenle"
+  },
+  "edit_reschedule": {
+    "message": "Yeniden Zamanla"
+  },
+  "edit_customTime": {
+    "message": "Özel Zaman"
+  },
+  "edit_scheduledFor": {
+    "message": "📅 Planlandı:"
+  },
+  "edit_todayAt": {
+    "message": "Bugün saat"
+  },
+  "edit_orPickDate": {
+    "message": "Veya tarih seç"
+  },
+  "edit_openNow": {
+    "message": "🚀 Şimdi Aç"
+  },
+  "edit_saveChanges": {
+    "message": "💾 Değişiklikleri Kaydet"
+  },
+  "time_today": {
+    "message": "Bugün"
+  },
+  "time_tomorrow": {
+    "message": "Yarın"
+  },
+  "time_at": {
+    "message": "saat"
+  },
+  "time_now": {
+    "message": "şimdi"
+  },
+  "status_opened": {
+    "message": "✓ Açıldı"
+  },
+  "status_comingSoon": {
+    "message": "Çok Yakında!"
+  },
+  "error_invalidUrl": {
+    "message": "Bu sayfa ertelenemiyor. Yalnızca normal web sayfaları ertelenebilir."
+  },
+  "error_invalidPreset": {
+    "message": "Geçersiz hazır ayar yapılandırması"
+  },
+  "error_minPresets": {
+    "message": "En az bir hazır ayarınız olmalı"
+  },
+  "error_allowNotifications": {
+    "message": "Bu özelliği kullanmak için lütfen bildirimlere izin verin."
+  },
+  "tooltip_openNow": {
+    "message": "Şimdi aç"
+  },
+  "tooltip_cancelSnooze": {
+    "message": "Ertelenmeyi iptal et"
+  },
+  "tooltip_chooseEmoji": {
+    "message": "Emoji seç"
+  },
+  "tooltip_remove": {
+    "message": "Kaldır"
+  },
+  "notif_restored": {
+    "message": "\"$1\" yeniden açıldı."
+  },
+  "notif_testBody": {
+    "message": "Test bildirimi - sekmeniz hazır!"
+  },
+  "notif_testButton": {
+    "message": "🔔 Bildirimi Test Et"
+  },
+  "notif_tip": {
+    "message": "💡 İpucu: Tarayıcının bu uzantıdan bildirimlere izin verdiğinden emin olun."
+  },
+  "about_tagline": {
+    "message": "Tek tıkla sekme dağınıklığını azaltın"
+  },
+  "about_rate": {
+    "message": "⭐ Uzantıyı Oyla"
+  },
+  "about_share": {
+    "message": "📤 Paylaş"
+  },
+  "about_shareText": {
+    "message": "Bu harika sekme yönetim uzantısına göz atın!"
+  },
+  "about_linkCopied": {
+    "message": "Bağlantı panoya kopyalandı! Arkadaşlarınızla paylaşın."
+  },
+  "emoji_choose": {
+    "message": "Bir emoji seçin"
+  },
+  "presetSetting_enabled": {
+    "message": "Etkin"
+  },
+  "settings_language": {
+    "message": "Dil"
+  },
+  "settingsPage_languageTitle": {
+    "message": "Dil"
+  },
+  "settingsPage_languageDesc": {
+    "message": "Tercih ettiğin dili seç"
+  },
+  "settings_auto": {
+    "message": "Otomatik erteleme"
+  },
+  "settingsPage_autoDesc": {
+    "message": "Sekmeleri kurallarına göre otomatik ertele"
+  },
+  "auto_enable": {
+    "message": "Otomatik ertelemeyi aç"
+  },
+  "auto_enableDesc": {
+    "message": "Açıkken arka plan 15 dakikada bir kontrol eder ve sekmeleri aşağıdaki kurallara göre erteler."
+  },
+  "auto_maxTabs": {
+    "message": "En fazla açık sekme"
+  },
+  "auto_maxTabsHint": {
+    "message": "Limit aşılırsa en eski sekmeler ertelenir."
+  },
+  "auto_idleHours": {
+    "message": "Hareketsizlik (saat)"
+  },
+  "auto_idleHoursHint": {
+    "message": "Bu kadar saattir açılmayan sekmeler ertelenir."
+  },
+  "auto_duration": {
+    "message": "Erteleme süresi"
+  },
+  "auto_help": {
+    "message": "Otomatik erteleme sekmelerinizi 15 dakikada bir kontrol eder. Sekme sayısı limiti aşarsa ya da bir sekme belirtilen saatlerdir açılmadıysa kapatılır ve daha sonra otomatik olarak geri açılır."
+  },
+  "auto_helpExcluded": {
+    "message": "Asla ertelenmez: etkin sekme, sabitlenmiş sekmeler, sesli sekmeler ve tarayıcı sayfaları (chrome://…)."
+  },
+  "notif_autoSnoozed1": {
+    "message": "🤖 Otomatik erteleme: 1 sekme ertelendi"
+  },
+  "notif_autoSnoozedN": {
+    "message": "🤖 Otomatik erteleme: $1 sekme ertelendi"
+  }
+}

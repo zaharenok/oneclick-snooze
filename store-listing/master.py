@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """Master table for Chrome Web Store listing. Edit here, then run build.py.
 
-Locales: 5 UI languages (popup/locales.js: en, ru, de, es, zh) + 12 popular
-Chrome Web Store listing languages (uk, fr, pt, it, pl, tr, ja, tw, ko, nl,
-vi, id). Localized listings do NOT imply UI support — every long description
-states the real UI language set. No _locales in this project.
+SEO rewrite (v1.4.2): title = the search query, brand lives in the description
+(reference: "Auto Tab Discard (suspend)"). TITLES must stay in sync with
+extName in _locales/<code>/messages.json; SHORTS with extDescription.
+CTA closing lines are kept verbatim (build.py checks their presence).
 """
 from pathlib import Path
 
@@ -19,388 +19,357 @@ def reg(lang, title, short, long):
 
 # ---------------------------------------------------------------- English (default)
 reg("en",
-    "Tab Snooze – Close and Reopen Later",
-    "Snooze tabs: close now, reopen later on a tab timer. OneClick Snooze cuts tab clutter and frees memory. Free, no account.",
-    """Snooze a tab in one click: close it now, and it reopens automatically later — tonight, tomorrow at 9:00, or any custom time. OneClick Snooze is a free tab timer and tab snooze extension for Chrome: close tabs and reopen them later, exactly when you need them.
+    "Tab Snooze - Save Tabs for Later & Reopen",
+    "Snooze tabs in one click: close now, Chrome reopens later automatically. Save tabs for later & keep your browser clutter-free.",
+    """Snooze tabs with one click: close a tab now and it automatically reopens in Chrome exactly when you need it — in 1, 3 or 6 hours, this evening, tomorrow morning, next week, or any custom date and time. Stop keeping dozens of tabs open "just for later": save tabs for later, close them, and get them back on schedule. A lightweight read-later tool and tab manager for anyone whose browser is drowning in tabs.
 
-Too many open tabs slow the browser down, eat memory and bury what matters under clutter. Instead of keeping tabs open "just in case", snooze them: the tab closes (Chrome gets lighter right away) and comes back on schedule — alarms survive Chrome restarts, and overdue tabs are restored automatically on startup, even after a computer shutdown.
+OneClick Snooze works like an alarm clock for your browser tabs: pick a time, the tab closes, and it comes back by itself.
 
 Features:
-1. One-click tab snooze — pick a preset (in 30 minutes, this evening, tomorrow at 9:00) or set any custom date and time. Your tab timer, your schedule.
-2. Tabs reopen automatically on time — no missed reminders, even after restarts.
-3. Snoozed-tabs dashboard: reschedule any tab, open it now, or cancel.
-4. History of everything you snoozed, with dates and times.
-5. Custom presets: your own names and emoji for each time slot.
-6. Desktop notification and optional sound reminder when a tab comes back.
-Free, no account, no ads. Interface in English, Russian, German, Spanish and Chinese.
-
-What people use it for: close tabs and reopen later, save tabs for later reading, set a tab reminder, clear tab clutter, free up memory and focus — a "read later" button for your whole browser.
-
-How to use: click the extension icon → choose when the tab should come back → the tab closes. It reopens automatically at the chosen time.
+1. Quick snooze — send the current tab away for 1, 3 or 6 hours.
+2. Smart presets — this evening, tomorrow morning, next week, someday, or a custom date and time.
+3. Automatic restore — snoozed tabs reopen on time, one after another in a calm queue, not all at once.
+4. Desktop notification and a sound when a tab comes back.
+5. Edit anytime — reschedule or cancel a snoozed tab before it returns.
+6. Snooze list with countdown — see what is coming back and when.
+7. Your own preset buttons — add custom times, disable the built-in ones.
+8. Private and offline — everything stays in your browser. No account, no tracking.
+9. Localized into 17 languages: English, Spanish, Portuguese, German, French, Italian, Polish, Turkish, Japanese, Korean, Chinese and more.
 
 Add OneClick Snooze to Chrome — free. Close the tab now; it comes back exactly when you need it.""")
 
 # ---------------------------------------------------------------- Russian
 reg("ru",
-    "Таймер вкладок: закрыть сейчас, открыть позже",
-    "Сон вкладок и таймер вкладок: закройте сейчас, откройте позже. Меньше вкладок, больше памяти. Бесплатно, без аккаунта.",
-    """Отложите вкладку в один клик: закройте сейчас — и она автоматически откроется позже: сегодня вечером, завтра в 9:00 или в любое выбранное время. OneClick Snooze — бесплатный таймер вкладок и расширение «сон вкладок» для Chrome: закройте вкладки и откройте их позже, ровно когда нужно.
+    "Отложить вкладки на потом - Tab Snooze",
+    "Отложите вкладки в один клик: закройте сейчас — Chrome откроет позже автоматически. Вкладки на потом, без хаоса.",
+    """Отложите вкладку в один клик: закройте её сейчас, и Chrome автоматически откроет её ровно тогда, когда она понадобится — через 1, 3 или 6 часов, вечером, завтра утром, на следующей неделе или в любой выбранный день. Хватит держать десятки вкладок открытыми «на потом»: сохраните вкладки на потом, закройте их и получите обратно вовремя. Лёгкий менеджер вкладок и «прочитать позже» для всех, чей браузер тонет во вкладках.
 
-Слишком много открытых вкладок замедляют браузер, забивают память и важное тонет среди лишнего. Вместо того чтобы держать вкладки открытыми «на всякий случай», отложите их: вкладка закрывается (Chrome сразу легче) и возвращается по расписанию — будильники переживают перезапуск Chrome, а просроченные вкладки восстанавливаются при старте, даже после выключения компьютера.
+OneClick Snooze работает как будильник для вкладок: выберите время — вкладка закроется и вернётся сама.
 
-Функции:
-1. Откладывание вкладок в один клик — пресет (через 30 минут, сегодня вечером, завтра в 9:00) или любое своё время. Ваш таймер вкладок — ваше расписание.
-2. Вкладки открываются автоматически вовремя — напоминания не теряются даже после перезапуска.
-3. Панель отложенных вкладок: измените время, откройте сразу или отмените.
-4. История всех отложенных вкладок с датами и временем.
-5. Свои пресеты: собственные названия и эмодзи для каждого времени.
-6. Уведомление на рабочем столе и звуковое напоминание, когда вкладка возвращается.
-Бесплатно, без аккаунта и рекламы. Интерфейс на английском, русском, немецком, испанском и китайском.
-
-Для чего используют: закрыть вкладки и открыть позже, сохранить вкладки на потом, поставить напоминание по вкладке, навести порядок в вкладках, освободить память и сосредоточиться — кнопка «прочитать позже» для всего браузера.
-
-Как пользоваться: нажмите на иконку расширения → выберите, когда вернуть вкладку → вкладка закроется. Она откроется автоматически в выбранное время.
+Возможности:
+1. Быстрое откладывание — отправьте текущую вкладку на 1, 3 или 6 часов.
+2. Умные пресеты — вечером, завтра утром, на следующей неделе, когда-нибудь или точная дата и время.
+3. Автовозврат — отложенные вкладки открываются вовремя, по одной, в спокойной очереди, а не все сразу.
+4. Уведомление на рабочем столе и звук, когда вкладка вернулась.
+5. Изменение в любой момент — перенесите или отмените отложенную вкладку до её возврата.
+6. Список с обратным отсчётом — видно, что и когда вернётся.
+7. Свои кнопки-пресеты — добавьте удобное время, отключите лишнее.
+8. Приватно и офлайн — всё остаётся в вашем браузере. Без аккаунта и слежки.
+9. 17 языков интерфейса, включая русский, английский, немецкий, испанский, португальский, японский, корейский и китайский.
 
 Добавьте OneClick Snooze в Chrome — бесплатно. Закройте вкладку сейчас — она вернётся ровно тогда, когда нужно.""")
 
 # ---------------------------------------------------------------- German
 reg("de",
-    "Tab-Timer: Tabs schließen und später öffnen",
-    "Tabs schlafenlegen mit Tab-Timer: jetzt schließen, später automatisch öffnen. Weniger Tabs, mehr Speicher. Kostenlos.",
-    """Legen Sie Tabs mit einem Klick schlafen: Jetzt schließen — und sie öffnen sich automatisch später von selbst: heute Abend, morgen um 9:00 oder zu Ihrer eigenen Zeit. OneClick Snooze ist ein kostenloser Tab-Timer und Tab-Snoozer für Chrome: Tabs schließen und später öffnen, genau dann, wenn Sie sie brauchen.
+    "Tabs für später speichern (Tab Snooze)",
+    "Tabs mit einem Klick schlummern lassen: jetzt schließen, Chrome öffnet sie später automatisch. Tabs für später ohne Chaos.",
+    """Tabs schlummern lassen mit einem Klick: Schließen Sie einen Tab jetzt und Chrome öffnet ihn automatisch genau dann wieder, wenn Sie ihn brauchen — in 1, 3 oder 6 Stunden, heute Abend, morgen früh, nächste Woche oder zu einem selbst gewählten Termin. Schluss mit dem offenen-Tab-Chaos: Tabs für später speichern, schließen und pünktlich zurückbekommen. Ein leichter Tab-Manager und Read-Later für alle, deren Browser in Tabs untergeht.
 
-Zu viele offene Tabs machen den Browser langsam, fressen Speicher und begraben Wichtiges im Chaos. Statt Tabs „für alle Fälle“ offen zu lassen, legen Sie sie schlafen: Der Tab schließt (Chrome wird sofort leichter) und kommt pünktlich zurück — Wecker überleben Chrome-Neustarts, überfällige Tabs werden beim Start automatisch wiederhergestellt, sogar nach einem Rechner-Ausschalten.
+OneClick Snooze ist ein Wecker für Browser-Tabs: Zeit wählen, Tab schließen, automatisch zurückbekommen.
 
 Funktionen:
-1. Tab in einem Klick schlafenlegen — Voreinstellung wählen (in 30 Minuten, heute Abend, morgen um 9:00) oder eigene Datum-Uhrzeit. Ihr Tab-Timer, Ihr Zeitplan.
-2. Tabs öffnen sich automatisch pünktlich — Erinnerungen gehen selbst nach Neustarts nicht verloren.
-3. Übersicht aller schlafgelegten Tabs: Zeit ändern, sofort öffnen oder abbrechen.
-4. Verlauf aller schlafgelegten Tabs mit Datum und Uhrzeit.
-5. Eigene Voreinstellungen: Namen und Emoji für jeden Zeitraum.
-6. Desktop-Benachrichtigung und optionaler Ton, wenn ein Tab zurückkommt.
-Kostenlos, ohne Konto, ohne Werbung. Oberfläche auf Englisch, Russisch, Deutsch, Spanisch und Chinesisch.
-
-Wofür es genutzt wird: Tabs schließen und später öffnen, Tabs zum Lesen aufheben, Tab-Erinnerung setzen, Tab-Chaos aufräumen, Speicher freigeben und sich konzentrieren — eine „später lesen“-Taste für den ganzen Browser.
-
-So geht es: auf das Erweiterungssymbol klicken → wählen, wann der Tab zurückkommen soll → der Tab schließt sich. Er öffnet sich zur gewählten Zeit automatisch.
+1. Schnelles Schlummern — den aktuellen Tab für 1, 3 oder 6 Stunden weglegen.
+2. Smarte Presets — heute Abend, morgen früh, nächste Woche, irgendwann oder eigenes Datum und Uhrzeit.
+3. Automatische Rückkehr — schlummernde Tabs öffnen sich pünktlich, einer nach dem anderen in ruhiger Queue.
+4. Desktop-Benachrichtigung und Ton, wenn ein Tab zurückkommt.
+5. Jederzeit änderbar — schlummernden Tab verschieben oder abbrechen.
+6. Liste mit Countdown — sehen, was wann zurückkommt.
+7. Eigene Preset-Buttons — eigene Zeiten hinzufügen, eingebaute deaktivieren.
+8. Privat und offline — alles bleibt in Ihrem Browser. Kein Konto, kein Tracking.
+9. In 17 Sprachen, darunter Deutsch, Englisch, Spanisch, Französisch, Italienisch, Japanisch, Koreanisch und Chinesisch.
 
 OneClick Snooze zu Chrome hinzufügen — kostenlos. Tab jetzt schließen; er kommt genau dann zurück, wenn Sie ihn brauchen.""")
 
 # ---------------------------------------------------------------- Spanish
 reg("es",
-    "Temporizador de pestañas: cerrar y reabrir",
-    "Temporizador de pestañas: cierra ahora y reabre después automáticamente. Menos pestañas, más memoria. Gratis, sin cuenta.",
-    """Duerme una pestaña con un clic: ciérrala ahora y se reabre automáticamente después — esta noche, mañana a las 9:00 o a la hora que elijas. OneClick Snooze es un temporizador de pestañas y extensión de «snooze» de pestañas gratis para Chrome: cierra pestañas y reábrelas después, exactamente cuando las necesitas.
+    "Guarda pestañas para más tarde (Tab Snooze)",
+    "Pospone pestañas con un clic: ciérralas ya y Chrome las reabre más tarde automáticamente. Guarda pestañas para más tarde.",
+    """Pospone pestañas con un clic: cierra una pestaña ahora y Chrome la reabre automáticamente justo cuando la necesites — en 1, 3 o 6 horas, esta noche, mañana por la mañana, la próxima semana o en la fecha que elijas. Deja de mantener decenas de pestañas abiertas "para más tarde": guarda pestañas para más tarde, ciérralas y recíbelas a tiempo. Un gestor de pestañas ligero y de leer más tarde para quienes se ahogan en pestañas.
 
-Demasiadas pestañas abiertas ralentizan el navegador, consumen memoria y entierran lo importante entre el desorden. En vez de mantener pestañas abiertas «por si acaso», duérmelas: la pestaña se cierra (Chrome se alivia al instante) y vuelve según el horario — las alarmas sobreviven a los reinicios de Chrome y las pestañas vencidas se restauran al arrancar, incluso tras apagar el equipo.
+OneClick Snooze funciona como un despertador para tus pestañas: eliges la hora, la pestaña se cierra y vuelve sola.
 
 Funciones:
-1. Un clic para posponer una pestaña — elige un ajuste (en 30 minutos, esta noche, mañana a las 9:00) o tu hora personalizada. Tu temporizador de pestañas, tu horario.
-2. Las pestañas se reabren automáticamente a tiempo — ningún recordatorio perdido, ni siquiera tras reinicios.
-3. Panel de pestañas pospuestas: cambia la hora, ábrelas ahora o cancela.
-4. Historial de todo lo que pospusiste, con fechas y horas.
-5. Ajustes personalizados: tus propios nombres y emoji para cada franja.
-6. Notificación de escritorio y aviso sonoro opcional cuando vuelve una pestaña.
-Gratis, sin cuenta, sin anuncios. Interfaz en inglés, ruso, alemán, español y chino.
-
-Para qué se usa: cerrar pestañas y reabrir después, guardar pestañas para leer más tarde, poner un recordatorio de pestaña, ordenar el lío de pestañas, liberar memoria y concentrarse — un botón de «leer más tarde» para todo el navegador.
-
-Cómo se usa: haz clic en el icono de la extensión → elige cuándo debe volver la pestaña → la pestaña se cierra. Se reabre automáticamente a la hora elegida.
+1. Pospuesta rápida — manda la pestaña actual a dentro de 1, 3 o 6 horas.
+2. Presets inteligentes — esta noche, mañana por la mañana, la próxima semana, algún día o fecha y hora personalizadas.
+3. Restauración automática — las pestañas vuelven a tiempo, una a una en una cola tranquila.
+4. Notificación de escritorio y sonido cuando vuelve una pestaña.
+5. Edita cuando quieras — reprograma o cancela antes de que vuelva.
+6. Lista con cuenta atrás — mira qué vuelve y cuándo.
+7. Botones propios — añade tus horas, desactiva las integradas.
+8. Privado y sin conexión — todo queda en tu navegador. Sin cuenta, sin rastreo.
+9. En 17 idiomas: español, inglés, alemán, francés, italiano, portugués, japonés, coreano y chino.
 
 Añade OneClick Snooze a Chrome — gratis. Cierra la pestaña ahora; vuelve exactamente cuando la necesitas.""")
 
 # ---------------------------------------------------------------- Simplified Chinese
 reg("zh",
-    "标签页定时器：关闭后稍后打开",
-    "标签页定时器：现在关闭，稍后自动打开。清理标签页，释放内存。免费，无需登录。",
-    """一键休眠标签页：现在关闭，稍后自动重新打开——今晚、明天 9:00，或你选择的任何时间。OneClick Snooze 是一款免费的标签页定时器和休眠扩展：关闭标签页，稍后再打开，需要的时候准时回来。
+    "标签页休眠 - 稍后阅读,定时自动打开",
+    "一键休眠标签页：现在关闭，Chrome 稍后自动重新打开。稍后阅读，保持浏览器整洁。",
+    """一键休眠标签页：现在关闭标签页，Chrome 会在您需要的时间自动重新打开——1、3 或 6 小时后、今晚、明早、下周或您选的任意日期。别再让几十个标签页挂着“稍后再看”：把标签页存起来，放心关闭，按时取回。轻量的标签页管理器＋稍后阅读工具，适合被标签页淹没的您。
 
-打开的标签页太多，浏览器会变慢、内存被占满，重要内容也会淹没在混乱中。与其“以防万一”一直开着标签页，不如让它们休眠：标签页立即关闭（Chrome 立刻变轻），并按计划回来——闹钟能挺过 Chrome 重启，过期的标签页会在启动时自动恢复，即使电脑关机后也一样。
+OneClick Snooze 就像标签页的闹钟：选好时间，标签页关闭，到点自己回来。
 
-功能:
-1. 一键休眠标签页——选择预设（30 分钟后、今晚、明天 9:00）或自定义日期和时间。你的标签页定时器，你的时间表。
-2. 标签页按时自动打开——即使重启也不会错过提醒。
-3. 休眠标签页面板：修改时间、立即打开或取消。
-4. 所有休眠记录的历史，含日期与时间。
-5. 自定义预设：为每个时间段设置自己的名称和表情符号。
-6. 标签页返回时的桌面通知和可选声音提醒。
-免费、无账号、无广告。界面支持英、俄、德、西、中五种语言。
-
-用途：关闭标签页稍后打开、保存稍后阅读的标签页、设置标签页提醒、清理标签页混乱、释放内存、保持专注——整个浏览器的“阅读稍后”按钮。
-
-用法：点击扩展图标 → 选择标签页何时返回 → 标签页关闭，到时自动重新打开。
+功能：
+1. 快速休眠 — 把当前标签页放到 1、3 或 6 小时后。
+2. 智能预设 — 今晚、明早、下周、改天或自定义日期时间。
+3. 自动恢复 — 休眠的标签页按时按序逐个打开，不会一哄而上。
+4. 标签页回来时的桌面通知和提示音。
+5. 随时编辑 — 在返回前重新安排或取消。
+6. 带倒计时的休眠列表 — 清楚看到什么时间回来。
+7. 自定义预设按钮 — 添加自己的时间，停用内置项。
+8. 隐私且离线 — 一切都留在您的浏览器里。无账号、无跟踪。
+9. 支持 17 种语言，包括中文、英语、日语、韩语、德语、法语、西班牙语、葡萄牙语等。
 
 把 OneClick Snooze 添加到 Chrome——免费。现在关闭标签页，需要的时候它会准时回来。""")
 
 # ---------------------------------------------------------------- Ukrainian
 reg("uk",
-    "Таймер вкладок: закрити і відкрити потім",
-    "Сон вкладок і таймер вкладок: закрийте зараз, відкрийте потім. Менше вкладок — більше пам'яті. Безкоштовно, без акаунта.",
-    """Відкладіть вкладку одним кліком: закрийте зараз — і вона автоматично відкриється потім: сьогодні ввечері, завтра о 9:00 або у вибраний час. OneClick Snooze — безкоштовний таймер вкладок і розширення «сон вкладок» для Chrome: закрийте вкладки й відкрийте їх потім, саме коли потрібно.
+    "Відкласти вкладки на потім - Tab Snooze",
+    "Відкладіть вкладки в один клік: закрийте зараз — Chrome відкриє пізніше автоматично. Вкладки на потім, без хаосу.",
+    """Відкладіть вкладку в один клік: закрийте її зараз, і Chrome автоматично відкриє її саме тоді, коли вона знадобиться — через 1, 3 або 6 годин, увечері, завтра вранці, наступного тижня чи в будь-який обраний день. Хватить тримати десятки вкладок відкритими «на потім»: збережіть вкладки на потім, закрийте їх і отримайте назад вчасно. Легкий менеджер вкладок і «прочитати пізніше» для всіх, чиї браузери тонуть у вкладках.
 
-Забагато відкритих вкладок уповільнює браузер, забиває пам'ять, а важливе губиться серед зайвого. Замість того щоб тримати вкладки відкритими «на всякий випадок», відкладіть їх: вкладка закривається (Chrome одразу легший) і повертається за розкладом — нагадування переживають перезапуск Chrome, а прострочені вкладки відновлюються при старті, навіть після вимкнення комп'ютера.
+OneClick Snooze працює як будильник для вкладок: оберіть час — вкладка закриється і повернеться сама.
 
-Функції:
-1. Відкладення вкладки одним кліком — пресет (через 30 хвилин, сьогодні ввечері, завтра о 9:00) або власний час. Ваш таймер вкладок — ваш розклад.
-2. Вкладки відкриваються автоматично вчасно — нагадування не губляться навіть після перезапуску.
-3. Панель відкладених вкладок: змініть час, відкрийте зараз або скасуйте.
-4. Історія всіх відкладених вкладок із датами й часом.
-5. Власні пресети: свої назви та емодзі для кожного часу.
-6. Сповіщення на робочому столі й звукове нагадування, коли вкладка повертається.
-Безкоштовно, без акаунта й реклами. Інтерфейс англійською, російською, німецькою, іспанською та китайською.
-
-Для чого використовують: закрити вкладки й відкрити пізніше, зберегти вкладки на потім, поставити нагадування по вкладці, навести лад у вкладках, звільнити пам'ять і зосередитися — кнопка «прочитати пізніше» для всього браузера.
-
-Як користуватися: натисніть на іконку розширення → оберіть, коли повернути вкладку → вкладка закриється. Вона відкриється автоматично у вибраний час.
+Можливості:
+1. Швидке відкладання — відправте поточну вкладку на 1, 3 або 6 годин.
+2. Розумні пресети — увечері, завтра вранці, наступного тижня, колись або точні дата й час.
+3. Автоповернення — відкладені вкладки відкриваються вчасно, по одній, у спокійній черзі, а не всі одразу.
+4. Повідомлення на робочому столі та звук, коли вкладка повернулася.
+5. Зміна будь-коли — перенесіть або скасуйте відкладену вкладку до її повернення.
+6. Список із зворотним відліком — видно, що і коли повернеться.
+7. Свої кнопки-пресети — додайте зручний час, вимкніть зайве.
+8. Приватно й офлайн — усе залишається у вашому браузері. Без акаунта й стеження.
+9. 17 мов інтерфейсу, зокрема українська, англійська, німецька, іспанська, португальська, японська, корейська та китайська.
 
 Додайте OneClick Snooze до Chrome — безкоштовно. Закрийте вкладку зараз — вона повернеться саме тоді, коли потрібно.""")
 
 # ---------------------------------------------------------------- French
 reg("fr",
-    "Minuteur d'onglets : fermer et rouvrir",
-    "Minuteur d'onglets : fermez maintenant, rouvrez plus tard automatiquement. Moins d'onglets, plus de mémoire. Gratuit, sans compte.",
-    """Mettez un onglet en veille en un clic : fermez-le maintenant, il se rouvre automatiquement plus tard — ce soir, demain à 9h, ou à l'heure de votre choix. OneClick Snooze est un minuteur d'onglets et une extension de veille d'onglets gratuite pour Chrome : fermez des onglets et rouvrez-les plus tard, exactement quand vous en avez besoin.
+    "Enregistrer des onglets pour plus tard",
+    "Mettez un onglet en veille en un clic : fermez-le, Chrome le rouvre plus tard automatiquement. Enregistrez pour plus tard.",
+    """Mettez un onglet en veille en un clic : fermez-le maintenant et Chrome le rouvre automatiquement au moment choisi — dans 1, 3 ou 6 heures, ce soir, demain matin, la semaine prochaine ou à la date de votre choix. Arrêtez de garder des dizaines d'onglets ouverts « pour plus tard » : enregistrez les onglets pour plus tard, fermez-les et récupérez-les à l'heure. Un gestionnaire d'onglets léger et un outil read-later pour les navigateurs noyés d'onglets.
 
-Trop d'onglets ouverts ralentissent le navigateur, remplissent la mémoire et noient l'important dans le désordre. Au lieu de garder des onglets ouverts « au cas où », mettez-les en veille : l'onglet se ferme (Chrome devient immédiatement plus léger) et revient selon le programme — les alarmes survivent aux redémarrages de Chrome, et les onglets en retard sont restaurés au démarrage, même après une extinction de l'ordinateur.
+OneClick Snooze, c'est un réveil pour vos onglets : choisissez l'heure, l'onglet se ferme et revient tout seul.
 
 Fonctionnalités :
-1. Un clic pour mettre en veille — choisissez un préréglage (dans 30 minutes, ce soir, demain à 9h) ou votre heure personnalisée. Votre minuteur, votre programme.
-2. Les onglets se rouvrent automatiquement à l'heure — aucun rappel perdu, même après un redémarrage.
-3. Tableau des onglets en veille : changez l'heure, ouvrez maintenant ou annulez.
-4. Historique de tous vos onglets reportés, avec dates et heures.
-5. Préréglages personnalisés : vos noms et emojis pour chaque créneau.
-6. Notification bureau et rappel sonore optionnel quand un onglet revient.
-Gratuit, sans compte, sans publicité. Interface en anglais, russe, allemand, espagnol et chinois.
-
-Utilisé pour : fermer des onglets et les rouvrir plus tard, garder des onglets à lire plus tard, programmer un rappel d'onglet, ranger l'encombrement d'onglets, libérer de la mémoire et se concentrer — un bouton « à lire plus tard » pour tout votre navigateur.
-
-Comment faire : cliquez sur l'icône de l'extension → choisissez quand l'onglet doit revenir → l'onglet se ferme. Il se rouvre automatiquement à l'heure choisie.
+1. Mise en veille rapide — envoyez l'onglet actuel dans 1, 3 ou 6 heures.
+2. Présélections intelligentes — ce soir, demain matin, la semaine prochaine, un jour ou date et heure personnalisées.
+3. Restauration automatique — les onglets reviennent à l'heure, un par un dans une file tranquille.
+4. Notification bureau et son au retour d'un onglet.
+5. Modifiable à tout moment — reprogrammez ou annulez avant le retour.
+6. Liste avec compte à rebours — voyez ce qui revient et quand.
+7. Vos propres boutons — ajoutez vos horaires, désactivez ceux d'origine.
+8. Privé et hors ligne — tout reste dans votre navigateur. Sans compte, sans pistage.
+9. Traduit en 17 langues : français, anglais, allemand, espagnol, italien, portugais, japonais, coréen, chinois...
 
 Ajoutez OneClick Snooze à Chrome — c'est gratuit. Fermez l'onglet maintenant ; il revient exactement quand vous en avez besoin.""")
 
 # ---------------------------------------------------------------- Portuguese (Brazil)
 reg("pt",
-    "Temporizador de abas: fechar e reabrir",
-    "Temporizador de abas: feche agora e reabra depois automaticamente. Menos abas, mais memória. Grátis, sem conta.",
-    """Durma uma aba com um clique: feche agora e ela reabre automaticamente depois — hoje à noite, amanhã às 9h ou no horário que você escolher. OneClick Snooze é um temporizador de abas e extensão de «snooze» de abas gratuita para Chrome: feche abas e reabra-as depois, exatamente quando precisar.
+    "Salve abas para depois - Tab Snooze",
+    "Adie abas com um clique: feche agora, o Chrome reabre depois automaticamente. Salve abas para depois, sem bagunça.",
+    """Adie abas com um clique: feche uma aba agora e o Chrome reabre automaticamente na hora certa — em 1, 3 ou 6 horas, hoje à noite, amanhã de manhã, semana que vem ou na data que você escolher. Pare de deixar dezenas de abas abertas "para depois": salve abas para depois, feche-as e receba-as de volta na hora. Um gerenciador de abas leve e de ler depois para quem se afoga em abas.
 
-Abas demais abertas deixam o navegador lento, enchem a memória e enterram o importante no desorganizado. Em vez de manter abas abertas “por garantia”, durma-as: a aba fecha (o Chrome fica mais leve na hora) e volta conforme o horário — os alarmes sobrevivem a reinícios do Chrome e abas vencidas são restauradas na inicialização, mesmo depois de desligar o computador.
+O OneClick Snooze é um despertador para as suas abas: escolha o horário, a aba fecha e volta sozinha, sem bagunça.
 
-Funções:
-1. Um clique para adiar uma aba — escolha um predefinido (em 30 minutos, hoje à noite, amanhã às 9h) ou seu horário personalizado. Seu temporizador de abas, seu horário.
-2. As abas reabrem automaticamente no horário — nenhum lembrete perdido, mesmo após reinícios.
-3. Painel de abas adiadas: mude o horário, abra agora ou cancele.
-4. Histórico de todas as abas adiadas, com datas e horários.
-5. Predefinições personalizadas: seus nomes e emoji para cada horário.
-6. Notificação na área de trabalho e lembrete sonoro opcional quando uma aba volta.
-Grátis, sem conta, sem anúncios. Interface em inglês, russo, alemão, espanhol e chinês.
-
-Para que serve: fechar abas e reabrir depois, guardar abas para ler mais tarde, definir lembrete de aba, organizar o excesso de abas, liberar memória e focar — um botão de “ler depois” para todo o navegador.
-
-Como usar: clique no ícone da extensão → escolha quando a aba deve voltar → a aba fecha. Ela reabre automaticamente na hora escolhida.
+Recursos:
+1. Adiamento rápido — mande a aba atual para 1, 3 ou 6 horas.
+2. Presets inteligentes — hoje à noite, amanhã de manhã, semana que vem, algum dia ou data e hora personalizadas.
+3. Restauração automática — as abas voltam na hora certa, uma a uma, numa fila tranquila.
+4. Notificação na área de trabalho e som quando a aba volta.
+5. Edite quando quiser — reagende ou cancele antes de voltar.
+6. Lista com contagem regressiva — veja o que volta e quando.
+7. Botões próprios — adicione seus horários, desative os integrados.
+8. Privado e offline — tudo fica no seu navegador. Sem conta, sem rastreamento.
+9. Em 17 idiomas: português, inglês, espanhol, alemão, francês, italiano, japonês, coreano e chinês.
 
 Adicione o OneClick Snooze ao Chrome — é grátis. Feche a aba agora; ela volta exatamente quando você precisar.""")
 
 # ---------------------------------------------------------------- Italian
 reg("it",
-    "Timer per schede: chiudi e riapri dopo",
-    "Timer per schede: chiudi ora e riapri dopo automaticamente. Meno schede, più memoria. Gratis, senza account.",
-    """Metti una scheda in sospensione con un clic: chiudila ora e si riapre automaticamente più tardi — stasera, domani alle 9:00 o all'ora che scegli. OneClick Snooze è un timer per schede e un'estensione di sospensione delle schede gratuita per Chrome: chiudi schede e riaprile dopo, esattamente quando ti servono.
+    "Salva schede per dopo (Tab Snooze)",
+    "Metti in pausa le schede con un clic: chiudi ora, Chrome le riapre dopo automaticamente. Salva schede per dopo, senza caos.",
+    """Metti in pausa una scheda con un clic: chiudila ora e Chrome la riapre automaticamente al momento giusto — tra 1, 3 o 6 ore, stasera, domani mattina, la prossima settimana o alla data che scegli. Smetti di tenere aperte decine di schede "per dopo": salva le schede per dopo, chiudile e ritrovale all'ora esatta. Un gestore di schede leggero e di qualità per leggere dopo, per chi affoga tra le schede.
 
-Troppe schede aperte rallentano il browser, riempiono la memoria e seppelliscono le cose importanti nel disordine. Invece di tenere schede aperte “per sicurezza”, mettile in sospensione: la scheda si chiude (Chrome è subito più leggero) e torna secondo programma — le sveglie sopravvivono ai riavvii di Chrome e le schede scadute vengono ripristinate all'avvio, anche dopo lo spegnimento del computer.
+OneClick Snooze è una sveglia per le tue schede: scegli l'ora, la scheda si chiude e torna da sola.
 
-Funzionalità:
-1. Un clic per rimandare una scheda — scegli una preimpostazione (tra 30 minuti, stasera, domani alle 9:00) o il tuo orario personalizzato. Il tuo timer per schede, il tuo programma.
-2. Le schede si riaprono automaticamente in orario — nessun promemoria perso, nemmeno dopo i riavvii.
-3. Elenco delle schede rimandate: cambia l'ora, apri subito o annulla.
-4. Cronologia di tutte le schede rimandate, con date e orari.
-5. Preimpostazioni personalizzate: i tuoi nomi ed emoji per ogni fascia.
-6. Notifica desktop e promemoria sonoro opzionale quando una scheda torna.
-Gratis, senza account, senza pubblicità. Interfaccia in inglese, russo, tedesco, spagnolo e cinese.
-
-A cosa serve: chiudere schede e riaprirle dopo, salvare schede da leggere più tardi, impostare un promemoria per una scheda, riordinare la confusione di schede, liberare memoria e concentrarsi — un pulsante “da leggere dopo” per tutto il browser.
-
-Come si usa: clicca sull'icona dell'estensione → scegli quando deve tornare la scheda → la scheda si chiude. Si riapre automaticamente all'ora scelta.
+Funzioni:
+1. Pausa rapida — manda la scheda attuale tra 1, 3 o 6 ore.
+2. Preset intelligenti — stasera, domani mattina, prossima settimana, un giorno qualsiasi o data e ora personalizzate.
+3. Ripristino automatico — le schede tornano in orario, una alla volta in una coda tranquilla.
+4. Notifica sul desktop e suono al ritorno di una scheda.
+5. Modifica quando vuoi — riprogramma o annulla prima del ritorno.
+6. Elenco con conto alla rovescia — vedi cosa torna e quando.
+7. Pulsanti tuoi — aggiungi orari personalizzati, disattiva quelli predefiniti.
+8. Privato e offline — tutto resta nel tuo browser. Senza account, senza tracciamento.
+9. In 17 lingue: italiano, inglese, tedesco, spagnolo, francese, portoghese, giapponese, coreano e cinese.
 
 Aggiungi OneClick Snooze a Chrome — è gratis. Chiudi la scheda ora; torna esattamente quando ti serve.""")
 
 # ---------------------------------------------------------------- Polish
 reg("pl",
-    "Czasomierz kart: zamknij i otwórz później",
-    "Czasomierz kart: zamknij teraz, otwórz później automatycznie. Mniej kart, więcej pamięci. Za darmo, bez konta.",
-    """Uśpij kartę jednym kliknięciem: zamknij teraz — otworzy się automatycznie później: dziś wieczorem, jutro o 9:00 lub o wybranej przez ciebie godzinie. OneClick Snooze to darmowy czasomierz kart i rozszerzenie do usypiania kart dla Chrome: zamykaj karty i otwieraj je później, dokładnie wtedy, gdy ich potrzebujesz.
+    "Zapisz karty na później (Tab Snooze)",
+    "Odkładaj karty jednym kliknięciem: zamknij teraz, Chrome otworzy je później automatycznie. Karty na później, bez bałaganu.",
+    """Odkładaj karty jednym kliknięciem: zamknij kartę teraz, a Chrome otworzy ją ponownie dokładnie wtedy, gdy będzie potrzebna — za 1, 3 lub 6 godzin, dziś wieczorem, jutro rano, w przyszłym tygodniu albo w dowolnym terminie. Przestań trzymać dziesiątki otwartych kart "na później": zapisz karty na później, zamknij je i odbierz na czas. Lekki menedżer kart i czytaj później dla wszystkich, którzy topią się w kartach.
 
-Za dużo otwartych kart spowalnia przeglądarkę, zapełnia pamięć i grzebie ważne rzeczy w bałaganie. Zamiast trzymać karty otwarte „na wszelki wypadek”, uśpij je: karta się zamyka (Chrome od razu jest lżejszy) i wraca według harmonogramu — alarmy przeżywają ponowne uruchomienia Chrome'a, a przeterminowane karty są przywracane przy starcie, nawet po wyłączeniu komputera.
+OneClick Snooze to budzik dla kart przeglądarki: wybierasz godzinę, karta się zamyka i wraca sama.
 
 Funkcje:
-1. Jedno kliknięcie, aby odłożyć kartę — wybierz gotowy czas (za 30 minut, dziś wieczorem, jutro o 9:00) lub własny. Twój czasomierz kart, twój harmonogram.
-2. Karty otwierają się automatycznie o czasie — żadne przypomnienie nie ginie nawet po ponownym uruchomieniu.
-3. Panel odłożonych kart: zmień godzinę, otwórz teraz lub anuluj.
-4. Historia wszystkich odłożonych kart z datami i godzinami.
-5. Własne ustawienia: twoje nazwy i emoji dla każdego przedziału czasu.
-6. Powiadomienie na pulpicie i opcjonalny dźwiękowy sygnał, gdy karta wraca.
-Za darmo, bez konta, bez reklam. Interfejs po angielsku, rosyjsku, niemiecku, hiszpańsku i chińsku.
-
-Do czego służy: zamknąć karty i otworzyć później, zapisać karty do przeczytania, ustawić przypomnienie o karcie, uprzątnąć bałagan kart, zwolnić pamięć i skupić się — przycisk „przeczytaj później” dla całej przeglądarki.
-
-Jak używać: kliknij ikonę rozszerzenia → wybierz, kiedy karta ma wrócić → karta się zamyka. Otwiera się automatycznie o wybranej godzinie.
+1. Szybkie odkładanie — wyślij bieżącą kartę za 1, 3 lub 6 godzin.
+2. Inteligentne presety — dziś wieczorem, jutro rano, przyszły tydzień, kiedyś lub własna data i godzina.
+3. Automatyczny powrót — odkładane karty otwierają się na czas, jedna po drugiej, w spokojnej kolejce.
+4. Powiadomienie na pulpicie i dźwięk, gdy karta wróci.
+5. Edycja w każdej chwili — zmień termin lub anuluj przed powrotem.
+6. Lista z odliczaniem — widać, co i kiedy wróci.
+7. Własne przyciski presetów — dodaj swoje godziny, wyłącz zbędne.
+8. Prywatnie i offline — wszystko zostaje w przeglądarce. Bez konta i śledzenia.
+9. 17 języków: polski, angielski, niemiecki, hiszpański, francuski, włoski, portugalski, japoński, koreański i chiński.
 
 Dodaj OneClick Snooze do Chrome'a — to darmowe. Zamknij kartę teraz; wróci dokładnie wtedy, gdy jej potrzebujesz.""")
 
 # ---------------------------------------------------------------- Turkish
 reg("tr",
-    "Sekme zamanlayıcı: kapat ve sonra aç",
-    "Sekme zamanlayıcı: şimdi kapat, sonra otomatik aç. Daha az sekme, daha fazla bellek. Ücretsiz, hesapsız.",
-    """Bir tıkla sekmeyi uyut: şimdi kapat — sonra kendiliğinden açılsın: bu akşam, yarın 9:00'da veya seçtiğin saatte. OneClick Snooze; Chrome için ücretsiz bir sekme zamanlayıcı ve sekme uyutma uzantısıdır: sekmeleri kapat, gerektiğinde sonra aç.
+    "Sekmeyi sonra aç - Sonra oku (Tab Snooze)",
+    "Sekmeleri tek tıkla ertele: şimdi kapat, Chrome sonra otomatik olarak yeniden açar. Sekmeyi sonra okumak için kaydet.",
+    """Sekmeyi tek tıkla erteleyin: sekmeyi şimdi kapatın, Chrome tam ihtiyacınız olduğu anda otomatik olarak yeniden açsın — 1, 3 veya 6 saat sonra, bu akşam, yarın sabah, gelecek hafta ya da seçeceğiniz herhangi bir tarihte. Onlarca sekmeyi "sonrası için" açık tutmayı bırakın: sekmeyi sonra okumak için kaydedin, kapatın, zamanı gelince geri gelsin. Sekmelerde boğulanlar için hafif bir sekme yöneticisi ve sonra oku aracı.
 
-Çok fazla açık sekme tarayıcıyı yavaşlatır, belleği dolar ve önemliler dağınıklık içinde kaybolur. “Olur da” diye sekmeleri açık tutmak yerine uyut: sekme kapanır (Chrome hafifler) ve programa göre geri gelir — alarmlar Chrome yeniden başlatmalarını atlatır, süresi dolan sekmeler başlangıçta otomatik geri yüklenir, bilgisayar kapatılmış olsa bile.
+OneClick Snooze sekmeleriniz için bir çalar saattir: saati seçin, sekme kapanır ve kendiliğinden geri gelir.
 
 Özellikler:
-1. Tek tıkla sekmeyi erteleme — hazır zaman seç (30 dakika içinde, bu akşam, yarın 9:00'da) veya kendi saatini gir. Senin sekme zamanlayıcın, senin programın.
-2. Sekmeler zamanında kendiliğinden açılır — yeniden başlatmalarda bile hatırlatma kaybolmaz.
-3. Ertelenen sekmeler paneli: saati değiştir, hemen aç veya iptal et.
-4. Ertelenen tüm sekmelerin tarih ve saatli geçmişi.
-5. Özel hazır ayarlar: her zaman aralığı için kendi adların ve emojilerin.
-6. Masaüstü bildirimi ve isteğe bağlı sesli hatırlatıcı — sekme geri geldiğinde.
-Ücretsiz, hesapsız, reklamsız. Arayüz İngilizce, Rusça, Almanca, İspanyolca ve Çince.
-
-Ne için kullanılır: sekmeleri kapatıp sonra açmak, okumak için sekmeleri saklamak, sekme hatırlatıcısı kurmak, sekme dağınıklığını temizlemek, belleği boşaltmak ve odaklanmak — tüm tarayıcın için bir “daha sonra oku” düğmesi.
-
-Nasıl kullanılır: uzantı simgesine tıkla → sekmenin ne zaman geri geleceğini seç → sekme kapanır. Seçilen saatte kendiliğinden yeniden açılır.
+1. Hızlı erteleme — mevcut sekmeyi 1, 3 veya 6 saatiye gönderin.
+2. Akıllı hazırlıklar — bu akşam, yarın sabah, gelecek hafta, ilerki bir zaman ya da özel tarih ve saat.
+3. Otomatik geri açılma — ertelenen sekmeler zamanında, sakin bir sırayla tek tek açılır.
+4. Sekme geri geldiğinde masaüstü bildirimi ve ses.
+5. Dilediğiniz an düzenleyin — dönmeden önce yeniden planlayın veya iptal edin.
+6. Geri sayımlı liste — neyin ne zaman döneceğini görün.
+7. Kendi düğmeleriniz — özel saatler ekleyin, hazır olanları kapatın.
+8. Özel ve çevrimdışı — her şey tarayıcınızda kalır. Hesap yok, izleme yok.
+9. 17 dil: Türkçe, İngilizce, Almanca, İspanyolca, Fransızca, İtalyanca, Portekizce, Japonca, Korece ve Çince.
 
 OneClick Snooze'u Chrome'a ekle — ücretsiz. Sekmeyi şimdi kapat; tam ihtiyaç duyduğun anda geri gelir.""")
 
 # ---------------------------------------------------------------- Japanese
 reg("ja",
-    "タブを閉じてあとで開く：タブタイマー",
-    "タブタイマー：タブを閉じてあとで自動的に開く。タブ整理とメモリ節約。無料・アカウント不要。",
-    """ワンクリックでタブをスヌーズ：今すぐ閉じれば、あとで自動的に開きます——今夜、明日の 9:00、または指定した任意の時刻に。OneClick Snooze は Chrome 向けの無料のタブタイマー兼タブスヌーズ拡張機能です。タブを閉じてあとで開く、必要な瞬間にちょうど戻します。
+    "あとで読む・タブを後で開く (Tab Snooze)",
+    "ワンクリックでタブをスヌーズ：今閉じて、Chrome が後で自動的に開きます。あとで読む、タブ整理。",
+    """ワンクリックでタブをスヌーズ：今すぐ閉じたタブが、必要な瞬間に Chrome が自動的に開き直します——1・3・6 時間後、今夜、明日の朝、来週、好きな日時に。あとで読むタブを開きっぱなしにするのはもうやめましょう。タブを保存して閉じておけば、時間になれば勝手に戻ります。タブに埋もれた人向けの軽量タブマネージャ＋あとで読むツール。
 
-タブを開きすぎるとブラウザが遅くなり、メモリが埋まり、大事なものが散らがりの中で見失われます。「いつか見るかも」でタブを開いたままにする代わりにスヌーズしましょう。タブは閉じられ（Chrome は即座に軽くなり）、予定どおりに戻ります——アラームは Chrome の再起動を生き延び、期限切れのタブは起動時に自動復元されます。パソコンの電源を切った後でもです。
+OneClick Snooze はタブの目覚まし時計です：時間を選べば、タブは閉じて、自分で戻ってきます。
 
-機能:
-1. 1 クリックでタブをスヌーズ——プリセット（30 分後、今夜、明日 9:00）または任意の日時を選択。あなたのタブタイマー、あなたのスケジュール。
-2. タブは時間どおりに自動で再開——再起動してもリマインダーは失われません。
-3. スヌーズ中タブのダッシュボード——時刻の変更、今すぐ開く、キャンセルが可能。
-4. スヌーズしたタブの履歴——日時つきで確認できます。
-5. カスタムプリセット——時間帯ごとに名前と絵文字を自由に設定。
-6. タブ復帰時のデスクトップ通知と任意のサウンドリマインダー。
-無料・アカウント不要・広告なし。英語・ロシア語・ドイツ語・スペイン語・中国語の UI。
-
-用途: タブを閉じてあとで開く、あとで読むタブを保存、タブのリマインダーを設定、タブの断捨離、メモリの解放、集中——ブラウザ全体の「あとで読む」ボタン。
-
-使い方: 拡張アイコンをクリック → タブを戻す時刻を選択 → タブが閉じます。選んだ時刻に自動で開きます。
+機能：
+1. クイックスヌーズ — 現在のタブを 1・3・6 時間後に送る。
+2. スマートプリセット — 今夜、明日の朝、来週、いつか、カスタム日時。
+3. 自動復元 — スヌーズ中のタブは時間どおりに、静かなキューで 1 枚ずつ開く。
+4. タブが戻ったらデスクトップ通知とサウンド。
+5. いつでも編集 — 戻る前に時刻変更やキャンセルが可能。
+6. カウントダウン付きリスト — 何がいつ戻るかひと目でわかる。
+7. 独自のプリセットボタン — 自分の時間を追加、内蔵のものは無効化も。
+8. プライベート＆オフライン — すべて自分のブラウザの中。アカウント不要、トラッキングなし。
+9. 17 言語対応：日本語、英語、ドイツ語、スペイン語、フランス語、イタリア語、ポルトガル語、韓国語、中国語など。
 
 OneClick Snooze を Chrome に追加——無料。タブは今すぐ閉じて、必要な瞬間にちょうど戻ってきます。""")
 
 # ---------------------------------------------------------------- Traditional Chinese (zh-TW as "tw")
 reg("tw",
-    "分頁定時器：關閉後稍後開啟",
-    "分頁定時器：現在關閉，稍後自動開啟。整理分頁、釋放記憶體。免費，不需登入。",
-    """一鍵休眠分頁：現在關閉，稍後自動重新開啟——今晚、明天 9:00，或你選擇的任何時間。OneClick Snooze 是一款免費的分頁定時器與休眠擴充功能：關閉分頁，稍後再開啟，需要的時候準時回來。
+    "分頁休眠 - 稍後閱讀,稍後自動開啟",
+    "一鍵休眠分頁：現在關閉，Chrome 稍後自動重新開啟。稍後閱讀，保持瀏覽器整潔。",
+    """一鍵休眠分頁：現在關閉分頁，Chrome 會在您需要的時間自動重新開啟——1、3 或 6 小時後、今晚、明早、下週或自訂日期。別再讓幾十個分頁開著「稍後再看」：把分頁存起來，放心關閉，準時取回。為被分頁淹沒的人準備的輕量分頁管理器＋稍後閱讀工具。
 
-開啟的分頁太多，瀏覽器會變慢、記憶體被占滿，重要內容也會淹沒在混亂中。與其「以防萬一」一直開著分頁，不如讓它們休眠：分頁立即關閉（Chrome 立刻變輕），並按計畫回來——鬧鐘能挺過 Chrome 重新啟動，逾期的分頁會在啟動時自動還原，即使電腦關機後也一樣。
+OneClick Snooze 就是分頁的鬧鐘：選好時間，分頁關閉，到點自己回來。
 
-功能:
-1. 一鍵休眠分頁——選擇預設（30 分鐘後、今晚、明天 9:00）或自訂日期與時間。你的分頁定時器，你的時間表。
-2. 分頁按時自動開啟——即使重新啟動也不會錯過提醒。
-3. 休眠分頁面板：修改時間、立即開啟或取消。
-4. 所有休眠紀錄的歷史，含日期與時間。
-5. 自訂預設：為每個時段設定自己的名稱和表情符號。
-6. 分頁回來時的桌面通知和可選音效提醒。
-免費、無帳號、無廣告。介面支援英、俄、德、西、中五種語言。
-
-用途：關閉分頁稍後開啟、保存稍後閱讀的分頁、設定分頁提醒、清理分頁混亂、釋放記憶體、保持專注——整個瀏覽器的「閱讀稍後」按鈕。
-
-用法：點擊擴充圖示 → 選擇分頁何時返回 → 分頁關閉，到時自動重新開啟。
+功能：
+1. 快速休眠 — 把目前的分頁放到 1、3 或 6 小時後。
+2. 智慧預設 — 今晚、明早、下週、改天或自訂日期時間。
+3. 自動恢復 — 休眠的分頁準時依序逐一開啟，不會一次全開。
+4. 分頁回來時的桌面通知與提示音。
+5. 隨時編輯 — 回來前可重新安排或取消。
+6. 倒數計時清單 — 清楚看到什麼時候回來。
+7. 自訂預設按鈕 — 加入自己的時間，停用內建項目。
+8. 隱私且離線 — 一切都留在你的瀏覽器裡。無帳號、無追蹤。
+9. 支援 17 種語言：繁體中文、英文、日文、韓文、德文、法文、西班牙文、葡萄牙文等。
 
 把 OneClick Snooze 加入 Chrome——免費。現在關閉分頁，需要的時候它會準時回來。""")
 
 # ---------------------------------------------------------------- Korean
 reg("ko",
-    "탭 타이머: 닫았다가 나중에 열기",
-    "탭 타이머: 지금 닫고 나중에 자동으로 엽니다. 탭 정리와 메모리 절약. 무료, 계정 불필요.",
-    """클릭 한 번으로 탭 잠자기: 지금 닫으면 나중에 자동으로 다시 열립니다 — 오늘 밤, 내일 오전 9시, 또는 원하는 시간에. OneClick Snooze는 Chrome용 무료 탭 타이머 겸 탭 잠자기 확장 프로그램입니다. 탭을 닫고 나중에 엽니다. 필요한 순간에 정확히 돌아옵니다.
+    "나중에 열 탭 저장 - 탭 스누즈 (Tab Snooze)",
+    "한 번의 클릭으로 탭 스누즈: 지금 닫으면 Chrome이 나중에 자동으로 다시 엽니다. 나중에 읽을 탭 저장.",
+    """한 번의 클릭으로 탭 스누즈: 탭을 지금 닫으면 Chrome이 필요한 순간에 자동으로 다시 열어 줍니다 — 1·3·6시간 후, 오늘 저녁, 내일 아침, 다음 주 또는 원하는 날짜에. '나중에 읽으려고' 수십 개의 탭을 열어 두는 것을 그만하세요: 탭을 저장해 닫아 두고, 시간이 되면 제자리로 돌아옵니다. 탭에 파묻힌 분들을 위한 가벼운 탭 관리자 + 나중에 읽기 도구.
 
-탭을 너무 많이 열어 두면 브라우저가 느려지고 메모리가 가득 차며 중요한 것이 어수선함 속에서 사라집니다. '나중에 볼지도' 하고 탭을 열어 둘 대신 잠자게 하세요. 탭은 닫히고(Chrome이 바로 가벼워짐) 예정대로 돌아옵니다 — 알람은 Chrome 재시작을 견디고, 기한이 지난 탭은 시작 시 자동으로 복원됩니다. 컴퓨터를 끈 후에도 마찬가지입니다.
+OneClick Snooze는 탭을 위한 알람 시계입니다: 시간을 고르면 탭이 닫히고 스스로 돌아옵니다.
 
 기능:
-1. 클릭 한 번으로 탭 미루기 — 프리셋(30분 후, 오늘 밤, 내일 오전 9시) 또는 원하는 일시 지정. 당신의 탭 타이머, 당신의 일정.
-2. 탭이 시간에 맞춰 자동으로 다시 열림 — 재시작 후에도 알림이 사라지지 않습니다.
-3. 미뤄 둔 탭 대시보드 — 시간 변경, 지금 열기, 취소 가능.
-4. 미뤄 둔 탭의 전체 기록 — 날짜와 시간 표시.
-5. 사용자 지정 프리셋 — 시간대별로 이름과 이모지 설정.
-6. 탭 복귀 시 데스크톱 알림과 선택적 사운드 리마인더.
-무료, 계정 없음, 광고 없음. 영어·러시아어·독일어·스페인어·중국어 UI.
-
-용도: 탭 닫고 나중에 열기, 나중에 읽을 탭 저장, 탭 알림 설정, 탭 정리, 메모리 확보, 집중 유지 — 브라우저 전체를 위한 '나중에 읽기' 버튼.
-
-사용법: 확장 아이콘 클릭 → 탭이 돌아올 시간 선택 → 탭이 닫힙니다. 선택한 시간에 자동으로 다시 열립니다.
+1. 빠른 스누즈 — 현재 탭을 1·3·6시간 후로 보내기.
+2. 스마트 프리셋 — 오늘 저녁, 내일 아침, 다음 주, 언젠가 또는 직접 지정한 날짜와 시간.
+3. 자동 복원 — 스누즈된 탭이 시간에 맞춰 차례로 하나씩 열립니다.
+4. 탭이 돌아오면 데스크톱 알림과 소리.
+5. 언제든 편집 — 돌아오기 전에 일정 변경 또는 취소.
+6. 카운트다운 목록 — 무엇이 언제 돌아오는지 한눈에.
+7. 나만의 프리셋 버튼 — 원하는 시간 추가, 기본 항목 끄기.
+8. 프라이버시·오프라인 — 모든 것은 내 브라우저 안에. 계정 없음, 추적 없음.
+9. 17개 언어 지원: 한국어, 영어, 독일어, 스페인어, 프랑스어, 이탈리아어, 포르투갈어, 일본어, 중국어 등.
 
 OneClick Snooze를 Chrome에 추가하세요 — 무료. 탭은 지금 닫고, 필요한 순간에 정확히 돌아옵니다.""")
+
 # ---------------------------------------------------------------- Dutch
 reg("nl",
-    "Tabblad-timer: sluiten en later openen",
-    "Tabblad-timer: nu sluiten, later automatisch openen. Minder tabbladen, meer geheugen. Gratis, zonder account.",
-    """Leg een tabblad met één klik te slapen: sluit nu — en het opent later automatisch vanzelf: vanavond, morgen om 9:00 of op het tijdstip van jouw keuze. OneClick Snooze is een gratis tabblad-timer en tabblad-snooze-extensie voor Chrome: sluit tabbladen en open ze later, precies wanneer je ze nodig hebt.
+    "Tabs voor later opslaan (Tab Snooze)",
+    "Laat tabbladen slapen met één klik: sluit nu, Chrome opent ze later automatisch. Tabs voor later, zonder rommel.",
+    """Laat tabbladen slapen met één klik: sluit een tabblad nu en Chrome opent het automatisch precies wanneer u het nodig hebt — over 1, 3 of 6 uur, vanavond, morgenochtend, volgende week of op elke datum die u kiest. Houd geen tientallen tabbladen meer open "voor later": sla tabs voor later op, sluit ze en krijg ze op tijd terug. Een lichte tabbladbeheerder en lees-later-tool voor wie verdrinkt in tabbladen.
 
-Te veel open tabbladen maken je browser traag, vreten geheugen en begraven het belangrijke tussen de chaos. Houd geen tabbladen open ‘voor de zekerheid’, maar leg ze te slapen: het tabblad sluit (Chrome wordt direct lichter) en komt volgens schema terug — wekkers overleven Chrome-herstarts, en verlopen tabbladen worden bij het opstarten automatisch hersteld, zelfs na het uitschakelen van de computer.
+OneClick Snooze is een wekker voor je browsertabbladen: kies een tijd, het tabblad sluit en komt vanzelf terug.
 
 Functies:
-1. Eén klik om uit te stellen — kies een preset (over 30 minuten, vanavond, morgen om 9:00) of je eigen tijd. Jouw tabblad-timer, jouw schema.
-2. Tabbladen openen automatisch op tijd — geen verloren herinneringen, zelfs na herstarts.
-3. Overzicht van uitgestelde tabbladen: wijzig de tijd, open nu of annuleer.
-4. Geschiedenis van alles wat je hebt uitgesteld, met datum en tijd.
-5. Eigen presets: je eigen namen en emoji's voor elk tijdsblok.
-6. Desktopmelding en optionele geluidsherinnering wanneer een tabblad terugkomt.
-Gratis, zonder account, zonder advertenties. Interface in het Engels, Russisch, Duits, Spaans en Chinees.
-
-Waar het voor wordt gebruikt: tabbladen sluiten en later openen, tabbladen bewaren om later te lezen, een tabblad-herinnering instellen, tabbladrommel opruimen, geheugen vrijmaken en focussen — een ‘lees later’-knop voor je hele browser.
-
-Zo gebruik je het: klik op het extensie-icoon → kies wanneer het tabblad terug moet komen → het tabblad sluit. Het opent automatisch op de gekozen tijd.
+1. Snel sluimeren — leg het huidige tabblad 1, 3 of 6 uur weg.
+2. Slimme presets — vanavond, morgenochtend, volgende week, ooit of eigen datum en tijd.
+3. Automatisch terug — sluimerende tabbladen openen op tijd, één voor één in een rustige wachtrij.
+4. Bureaubladmelding en geluid wanneer een tabblad terugkomt.
+5. Altijd aanpasbaar — verplaats of annuleer vóór de terugkeer.
+6. Lijst met aftellen — zie wat wanneer terugkomt.
+7. Eigen preset-knoppen — voeg tijden toe, schakel ingebouwde uit.
+8. Privé en offline — alles blijft in je browser. Geen account, geen tracking.
+9. In 17 talen, waaronder Nederlands, Engels, Duits, Spaans, Frans, Japans, Koreaans en Chinees.
 
 Voeg OneClick Snooze toe aan Chrome — gratis. Sluit het tabblad nu; het komt precies wanneer je het nodig hebt.""")
+
 # ---------------------------------------------------------------- Vietnamese
 reg("vi",
-    "Hẹn giờ tab: đóng và mở lại sau",
-    "Hẹn giờ tab: đóng ngay, mở lại sau tự động. Ít tab hơn, giải phóng RAM. Miễn phí, không cần tài khoản.",
-    """Cho tab tạm ngủ chỉ với một cú nhấp: đóng ngay lúc này — tab sẽ tự mở lại sau: tối nay, 9:00 ngày mai, hoặc vào giờ bạn chọn. OneClick Snooze là tiện ích hẹn giờ tab và đưa tab vào chế độ ngủ miễn phí cho Chrome: đóng tab và mở lại sau, đúng lúc bạn cần.
+    "Lưu tab để đọc sau (Tab Snooze)",
+    "Tạm ẩn tab bằng một cú nhấp: đóng ngay, Chrome sẽ tự mở lại sau. Lưu tab để đọc sau, không lộn xộn.",
+    """Tạm ẩn tab bằng một cú nhấp: đóng tab ngay bây giờ và Chrome sẽ tự mở lại đúng lúc bạn cần — sau 1, 3 hoặc 6 giờ, tối nay, sáng mai, tuần sau hoặc bất kỳ ngày nào bạn chọn. Đừng giữ hàng chục tab mở "để đọc sau" nữa: lưu tab để đọc sau, đóng lại và nhận lại đúng giờ. Trình quản lý tab nhẹ và công cụ đọc sau cho ai đang chìm trong tab.
 
-Mở quá nhiều tab làm trình duyệt chậm đi, bộ nhớ đầy ắp và những thứ quan trọng bị mất giữa đống lộn xộn. Thay vì giữ tab mở “phòng hờ”, hãy cho tab ngủ: tab đóng lại (Chrome nhẹ ngay lập tức) và trở lại theo lịch — báo thức sống sót qua mỗi lần khởi động lại Chrome, tab hết hạn được khôi phục khi mở máy, kể cả sau khi tắt máy.
+OneClick Snooze như chiếc đồng hồ báo thức cho tab: chọn thời điểm, tab đóng lại và tự quay về.
 
 Tính năng:
-1. Một chạm để hẹn giờ đóng tab — chọn mẫu có sẵn (sau 30 phút, tối nay, 9:00 ngày mai) hoặc giờ tùy chỉnh. Cái hẹn giờ tab của bạn, lịch của bạn.
-2. Tự mở lại đúng giờ — không bỏ lỡ lời nhắc, kể cả sau khi khởi động lại.
-3. Bảng tab đang chờ: đổi giờ, mở ngay hoặc hủy.
-4. Lịch sử mọi tab đã hẹn giờ, có ngày giờ đầy đủ.
-5. Preset tùy chỉnh: tự đặt tên và emoji cho từng khung giờ.
-6. Thông báo trên màn hình và lời nhắc âm thanh tùy chọn khi tab quay lại.
-Miễn phí, không tài khoản, không quảng cáo. Giao diện tiếng Anh, Nga, Đức, Tây Ban Nha, Trung Quốc.
-
-Dùng để: đóng tab và mở lại sau, lưu tab để đọc sau, đặt lời nhắc cho tab, dọn dẹp tab lộn xộn, giải phóng bộ nhớ và tập trung — nút “đọc sau” cho cả trình duyệt.
-
-Cách dùng: bấm vào biểu tượng tiện ích → chọn lúc nào tab quay lại → tab đóng lại. Tự mở lại vào giờ đã chọn.
+1. Tạm ẩn nhanh — gửi tab hiện tại sang sau 1, 3 hoặc 6 giờ.
+2. Mẫu thông minh — tối nay, sáng mai, tuần sau, một lúc nào đó hoặc ngày giờ tùy chọn.
+3. Tự khôi phục — tab được hẹn mở đúng giờ, lần lượt từng cái trong hàng đợi yên tĩnh.
+4. Thông báo trên máy tính và âm thanh khi tab quay lại.
+5. Sửa bất cứ lúc nào — đổi giờ hoặc hủy trước khi tab trở lại.
+6. Danh sách đếm ngược — thấy rõ gì sẽ quay lại và khi nào.
+7. Nút mẫu của riêng bạn — thêm giờ tùy chọn, tắt mẫu có sẵn.
+8. Riêng tư và ngoại tuyến — mọi thứ ở lại trong trình duyệt của bạn. Không tài khoản, không theo dõi.
+9. 17 ngôn ngữ: tiếng Việt, Anh, Đức, Tây Ban Nha, Pháp, Ý, Bồ Đào Nha, Nhật, Hàn và Trung.
 
 Thêm OneClick Snooze vào Chrome — miễn phí. Đóng tab ngay lúc này; tab sẽ quay lại đúng lúc bạn cần.""")
+
 # ---------------------------------------------------------------- Indonesian
 reg("id",
-    "Pengatur waktu tab: tutup dan buka nanti",
-    "Pengatur waktu tab: tutup sekarang, buka lagi nanti otomatis. Lebih sedikit tab, RAM lebih lega. Gratis, tanpa akun.",
-    """Tidurkan tab dengan satu klik: tutup sekarang — tab terbuka lagi otomatis nanti: malam ini, besok jam 9.00, atau pada waktu pilihanmu. OneClick Snooze adalah pengatur waktu tab (tab timer) dan ekstensi peniduran tab gratis untuk Chrome: tutup tab dan buka lagi nanti, tepat saat kamu membutuhkannya.
+    "Simpan tab untuk nanti (Tab Snooze)",
+    "Tidurkan tab dengan satu klik: tutup sekarang, Chrome membukanya lagi nanti secara otomatis. Simpan tab untuk nanti.",
+    """Tidurkan tab dengan satu klik: tutup tab sekarang dan Chrome membukanya kembali otomatis tepat saat Anda membutuhkannya — 1, 3 atau 6 jam lagi, malam ini, besok pagi, minggu depan, atau tanggal apa pun pilihan Anda. Berhenti membiarkan puluhan tab terbuka "untuk nanti": simpan tab untuk nanti, tutup, dan dapatkan kembali tepat waktu. Pengelola tab ringan dan alat baca nanti untuk yang tenggelam dalam tab.
 
-Terlalu banyak tab terbuka membuat browser melambat, RAM penuh, dan hal penting tenggelam di antara tumpukan. Daripada membiarkan tab tetap terbuka “just in case”, tidurkan tabnya: tab ditutup (Chrome langsung lebih ringan) dan kembali sesuai jadwal — alarm bertahan setelah Chrome dimulai ulang, dan tab kedaluwarsa dipulihkan saat startup, bahkan setelah komputer dimatikan.
+OneClick Snooze seperti jam weker untuk tab browser Anda: pilih waktunya, tab tertutup dan kembali sendiri.
 
 Fitur:
-1. Klik sekali untuk menunda tab — pilih preset (30 menit lagi, malam ini, besok jam 9.00) atau waktu kustom. Pengatur waktu tab-mu, jadwalmu.
-2. Tab terbuka lagi otomatis tepat waktu — pengingat tidak hilang meski setelah restart.
-3. Dasbor tab yang ditunda: ubah waktu, buka sekarang, atau batalkan.
-4. Riwayat semua tab yang ditunda, lengkap dengan tanggal dan jam.
-5. Preset kustom: nama dan emoji sendiri untuk setiap slot waktu.
-6. Notifikasi desktop dan pengingat suara opsional saat tab kembali.
-Gratis, tanpa akun, tanpa iklan. Tersedia dalam bahasa Inggris, Rusia, Jerman, Spanyol, dan Mandarin.
-
-Dipakai untuk: menutup tab dan membukanya nanti, menyimpan tab untuk dibaca nanti, mengatur pengingat tab, membersihkan tumpukan tab, membebaskan RAM, dan fokus — tombol “baca nanti” untuk seluruh browser.
-
-Cara pakai: klik ikon ekstensi → pilih kapan tab harus kembali → tab ditutup. Tab terbuka lagi otomatis pada waktu yang dipilih.
+1. Tidur cepat — kirim tab aktif ke 1, 3 atau 6 jam lagi.
+2. Preset pintar — malam ini, besok pagi, minggu depan, kapan saja atau tanggal dan waktu khusus.
+3. Pemulihan otomatis — tab yang ditidurkan terbuka tepat waktu, satu per satu dalam antrean yang tenang.
+4. Notifikasi desktop dan suara saat tab kembali.
+5. Sunting kapan saja — atur ulang atau batalkan sebelum kembali.
+6. Daftar dengan hitung mundur — lihat apa yang kembali dan kapan.
+7. Tombol preset milik Anda — tambahkan waktu sendiri, matikan bawaan.
+8. Privat dan offline — semuanya tetap di browser Anda. Tanpa akun, tanpa pelacakan.
+9. 17 bahasa: Indonesia, Inggris, Jerman, Spanyol, Prancis, Italia, Jepang, Korea dan Mandarin.
 
 Tambahkan OneClick Snooze ke Chrome — gratis. Tutup tab sekarang; tab kembali tepat saat kamu membutuhkannya.""")

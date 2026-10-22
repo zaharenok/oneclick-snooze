@@ -1,0 +1,329 @@
+{
+  "extName": {
+    "message": "标签页休眠 - 稍后阅读,定时自动打开"
+  },
+  "extDescription": {
+    "message": "一键休眠标签页：现在关闭，Chrome 稍后自动重新打开。稍后阅读，保持浏览器整洁。"
+  },
+  "actionTitle": {
+    "message": "暂停此标签页"
+  },
+  "nav_dashboard": {
+    "message": "仪表板"
+  },
+  "nav_snoozed": {
+    "message": "已暂停"
+  },
+  "nav_history": {
+    "message": "历史记录"
+  },
+  "nav_settings": {
+    "message": "设置"
+  },
+  "section_quickPresets": {
+    "message": "快速预设"
+  },
+  "section_smartPresets": {
+    "message": "智能预设"
+  },
+  "section_customPresets": {
+    "message": "自定义预设"
+  },
+  "preset_1hour": {
+    "message": "1小时"
+  },
+  "preset_3hours": {
+    "message": "3小时"
+  },
+  "preset_6hours": {
+    "message": "6小时"
+  },
+  "preset_laterToday": {
+    "message": "今天稍后"
+  },
+  "preset_thisEvening": {
+    "message": "今晚"
+  },
+  "preset_tomorrow": {
+    "message": "明天"
+  },
+  "preset_nextWeekend": {
+    "message": "下周末"
+  },
+  "preset_nextWeek": {
+    "message": "下周"
+  },
+  "preset_inMonth": {
+    "message": "一个月后"
+  },
+  "preset_someday": {
+    "message": "某天"
+  },
+  "preset_pickDate": {
+    "message": "选择日期"
+  },
+  "preset_custom": {
+    "message": "自定义"
+  },
+  "preset_minutes": {
+    "message": "$1分钟"
+  },
+  "empty_noSnoozed": {
+    "message": "没有暂停的标签页"
+  },
+  "empty_goToDashboard": {
+    "message": "前往仪表板暂停此标签页"
+  },
+  "empty_noHistory": {
+    "message": "暂无历史记录"
+  },
+  "empty_noHistoryDesc": {
+    "message": "完成的标签页将显示在这里"
+  },
+  "history_title": {
+    "message": "📜 最近打开"
+  },
+  "history_clear": {
+    "message": "清除"
+  },
+  "history_clearConfirm": {
+    "message": "确定清除所有历史记录吗？此操作无法撤销。"
+  },
+  "settings_presets": {
+    "message": "预设按钮"
+  },
+  "settings_addPreset": {
+    "message": "+ 添加预设"
+  },
+  "settings_completed": {
+    "message": "已完成的标签页"
+  },
+  "settings_showCompleted": {
+    "message": "短暂显示已完成的标签页"
+  },
+  "settings_duration": {
+    "message": "持续时间（秒）："
+  },
+  "settings_reset": {
+    "message": "重置"
+  },
+  "settings_save": {
+    "message": "保存设置"
+  },
+  "settings_resetConfirm": {
+    "message": "确定将所有设置重置为默认值吗？"
+  },
+  "settings_notifications": {
+    "message": "通知"
+  },
+  "settings_about": {
+    "message": "关于"
+  },
+  "settings_community": {
+    "message": "社区"
+  },
+  "settings_sound": {
+    "message": "音效"
+  },
+  "settings_soundEnabled": {
+    "message": "启用音效"
+  },
+  "settings_soundDesc": {
+    "message": "暂停标签页时播放声音"
+  },
+  "settings_soundsOn": {
+    "message": "声音已开启"
+  },
+  "settings_soundsOff": {
+    "message": "声音已关闭"
+  },
+  "settings_desktopNotifications": {
+    "message": "桌面通知"
+  },
+  "settings_desktopNotificationsDesc": {
+    "message": "重新打开标签页时显示通知"
+  },
+  "settings_version": {
+    "message": "版本"
+  },
+  "settings_author": {
+    "message": "由"
+  },
+  "settingsPage_presetsTitle": {
+    "message": "管理预设"
+  },
+  "settingsPage_presetsDesc": {
+    "message": "自定义快速暂停按钮"
+  },
+  "settingsPage_notificationsTitle": {
+    "message": "通知"
+  },
+  "settingsPage_notificationsDesc": {
+    "message": "管理提醒方式"
+  },
+  "settingsPage_aboutTitle": {
+    "message": "关于"
+  },
+  "settingsPage_aboutDesc": {
+    "message": "版本和信息"
+  },
+  "settingsPage_communityTitle": {
+    "message": "社区"
+  },
+  "settingsPage_communityDesc": {
+    "message": "获取帮助并加入我们"
+  },
+  "settingsPage_soundTitle": {
+    "message": "音效"
+  },
+  "settingsPage_soundDesc": {
+    "message": "选择有声模式或静音模式"
+  },
+  "edit_title": {
+    "message": "编辑暂停的标签页"
+  },
+  "edit_reschedule": {
+    "message": "重新安排"
+  },
+  "edit_customTime": {
+    "message": "自定义时间"
+  },
+  "edit_scheduledFor": {
+    "message": "📅 计划于："
+  },
+  "edit_todayAt": {
+    "message": "今天"
+  },
+  "edit_orPickDate": {
+    "message": "或选择日期"
+  },
+  "edit_openNow": {
+    "message": "🚀 立即打开"
+  },
+  "edit_saveChanges": {
+    "message": "💾 保存更改"
+  },
+  "time_today": {
+    "message": "今天"
+  },
+  "time_tomorrow": {
+    "message": "明天"
+  },
+  "time_at": {
+    "message": "在"
+  },
+  "time_now": {
+    "message": "现在"
+  },
+  "status_opened": {
+    "message": "✓ 已打开"
+  },
+  "status_comingSoon": {
+    "message": "即将推出！"
+  },
+  "error_invalidUrl": {
+    "message": "无法暂停此页面。只有普通网页才能暂停。"
+  },
+  "error_invalidPreset": {
+    "message": "预设配置无效"
+  },
+  "error_minPresets": {
+    "message": "至少需要保留一个预设"
+  },
+  "error_allowNotifications": {
+    "message": "请允许通知以使用此功能。"
+  },
+  "tooltip_openNow": {
+    "message": "立即打开"
+  },
+  "tooltip_cancelSnooze": {
+    "message": "取消暂停"
+  },
+  "tooltip_chooseEmoji": {
+    "message": "选择表情符号"
+  },
+  "tooltip_remove": {
+    "message": "移除"
+  },
+  "notif_restored": {
+    "message": "\"$1\" 已恢复。"
+  },
+  "notif_testBody": {
+    "message": "测试通知——你的标签页已就绪！"
+  },
+  "notif_testButton": {
+    "message": "🔔 测试通知"
+  },
+  "notif_tip": {
+    "message": "💡 提示：请确保浏览器允许此扩展发送通知。"
+  },
+  "about_tagline": {
+    "message": "一键减少标签页杂乱"
+  },
+  "about_rate": {
+    "message": "⭐ 评分"
+  },
+  "about_share": {
+    "message": "📤 分享"
+  },
+  "about_shareText": {
+    "message": "看看这款超棒的标签页管理扩展！"
+  },
+  "about_linkCopied": {
+    "message": "链接已复制到剪贴板！快分享给朋友吧。"
+  },
+  "emoji_choose": {
+    "message": "选择一个表情符号"
+  },
+  "presetSetting_enabled": {
+    "message": "已启用"
+  },
+  "settings_language": {
+    "message": "语言"
+  },
+  "settingsPage_languageTitle": {
+    "message": "语言"
+  },
+  "settingsPage_languageDesc": {
+    "message": "选择你的首选语言"
+  },
+  "settings_auto": {
+    "message": "自动休眠"
+  },
+  "settingsPage_autoDesc": {
+    "message": "按规则自动休眠标签页"
+  },
+  "auto_enable": {
+    "message": "启用自动休眠"
+  },
+  "auto_enableDesc": {
+    "message": "启用后，后台每 15 分钟检查一次，并按以下规则休眠标签页。"
+  },
+  "auto_maxTabs": {
+    "message": "最多打开标签页数"
+  },
+  "auto_maxTabsHint": {
+    "message": "超过上限时，较早的标签页会被休眠。"
+  },
+  "auto_idleHours": {
+    "message": "不活跃小时数"
+  },
+  "auto_idleHoursHint": {
+    "message": "超过该小时数未打开的标签页会被休眠。"
+  },
+  "auto_duration": {
+    "message": "休眠到"
+  },
+  "auto_help": {
+    "message": "自动休眠每 15 分钟检查一次标签页。当标签页数量超过上限，或某个标签页超过设定小时数未打开时，它会被关闭并在之后自动恢复。"
+  },
+  "auto_helpExcluded": {
+    "message": "永不休眠：当前活动标签页、已固定的标签页、正在播放声音的标签页以及浏览器页面（chrome://…）。"
+  },
+  "notif_autoSnoozed1": {
+    "message": "🤖 自动休眠：已休眠 1 个标签页"
+  },
+  "notif_autoSnoozedN": {
+    "message": "🤖 自动休眠：已休眠 $1 个标签页"
+  }
+}

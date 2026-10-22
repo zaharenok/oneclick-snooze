@@ -1,0 +1,329 @@
+{
+  "extName": {
+    "message": "Simpan tab untuk nanti (Tab Snooze)"
+  },
+  "extDescription": {
+    "message": "Tidurkan tab dengan satu klik: tutup sekarang, Chrome membukanya lagi nanti secara otomatis. Simpan tab untuk nanti."
+  },
+  "actionTitle": {
+    "message": "Jeda tab ini"
+  },
+  "nav_dashboard": {
+    "message": "Dasbor"
+  },
+  "nav_snoozed": {
+    "message": "Dijeda"
+  },
+  "nav_history": {
+    "message": "Riwayat"
+  },
+  "nav_settings": {
+    "message": "Pengaturan"
+  },
+  "section_quickPresets": {
+    "message": "Preset Cepat"
+  },
+  "section_smartPresets": {
+    "message": "Preset Cerdas"
+  },
+  "section_customPresets": {
+    "message": "Preset Anda"
+  },
+  "preset_1hour": {
+    "message": "1 Jam"
+  },
+  "preset_3hours": {
+    "message": "3 Jam"
+  },
+  "preset_6hours": {
+    "message": "6 Jam"
+  },
+  "preset_laterToday": {
+    "message": "Nanti Hari Ini"
+  },
+  "preset_thisEvening": {
+    "message": "Malam Ini"
+  },
+  "preset_tomorrow": {
+    "message": "Besok"
+  },
+  "preset_nextWeekend": {
+    "message": "Akhir Pekan Depan"
+  },
+  "preset_nextWeek": {
+    "message": "Minggu Depan"
+  },
+  "preset_inMonth": {
+    "message": "Sebulan Lagi"
+  },
+  "preset_someday": {
+    "message": "Suatu Hari"
+  },
+  "preset_pickDate": {
+    "message": "Pilih Tanggal"
+  },
+  "preset_custom": {
+    "message": "Kustom"
+  },
+  "preset_minutes": {
+    "message": "$1 menit"
+  },
+  "empty_noSnoozed": {
+    "message": "Tidak ada tab yang dijeda"
+  },
+  "empty_goToDashboard": {
+    "message": "Buka Dasbor untuk menjeda tab ini"
+  },
+  "empty_noHistory": {
+    "message": "Belum ada riwayat"
+  },
+  "empty_noHistoryDesc": {
+    "message": "Tab yang selesai akan muncul di sini"
+  },
+  "history_title": {
+    "message": "📜 Dibuka Baru-baru Ini"
+  },
+  "history_clear": {
+    "message": "Hapus"
+  },
+  "history_clearConfirm": {
+    "message": "Hapus semua riwayat? Tindakan ini tidak dapat dibatalkan."
+  },
+  "settings_presets": {
+    "message": "Tombol Preset"
+  },
+  "settings_addPreset": {
+    "message": "+ Tambah Preset"
+  },
+  "settings_completed": {
+    "message": "Tab yang Selesai"
+  },
+  "settings_showCompleted": {
+    "message": "Tampilkan tab yang selesai sebentar"
+  },
+  "settings_duration": {
+    "message": "Durasi (detik):"
+  },
+  "settings_reset": {
+    "message": "Kembalikan ke Default"
+  },
+  "settings_save": {
+    "message": "Simpan Pengaturan"
+  },
+  "settings_resetConfirm": {
+    "message": "Kembalikan semua pengaturan ke default?"
+  },
+  "settings_notifications": {
+    "message": "Notifikasi"
+  },
+  "settings_about": {
+    "message": "Tentang"
+  },
+  "settings_community": {
+    "message": "Komunitas & Dukungan"
+  },
+  "settings_sound": {
+    "message": "Efek Suara"
+  },
+  "settings_soundEnabled": {
+    "message": "Aktifkan suara"
+  },
+  "settings_soundDesc": {
+    "message": "Putar suara saat menjeda tab"
+  },
+  "settings_soundsOn": {
+    "message": "Suara AKTIF"
+  },
+  "settings_soundsOff": {
+    "message": "Suara NONAKTIF"
+  },
+  "settings_desktopNotifications": {
+    "message": "Notifikasi Desktop"
+  },
+  "settings_desktopNotificationsDesc": {
+    "message": "Tampilkan notifikasi saat tab dibuka kembali"
+  },
+  "settings_version": {
+    "message": "Versi"
+  },
+  "settings_author": {
+    "message": "Dibuat dengan"
+  },
+  "settingsPage_presetsTitle": {
+    "message": "Kelola Preset"
+  },
+  "settingsPage_presetsDesc": {
+    "message": "Sesuaikan tombol jeda cepat Anda"
+  },
+  "settingsPage_notificationsTitle": {
+    "message": "Notifikasi"
+  },
+  "settingsPage_notificationsDesc": {
+    "message": "Kelola cara Anda menerima pemberitahuan"
+  },
+  "settingsPage_aboutTitle": {
+    "message": "Tentang"
+  },
+  "settingsPage_aboutDesc": {
+    "message": "Versi dan informasi"
+  },
+  "settingsPage_communityTitle": {
+    "message": "Komunitas"
+  },
+  "settingsPage_communityDesc": {
+    "message": "Dapatkan bantuan dan bergabung dengan komunitas kami"
+  },
+  "settingsPage_soundTitle": {
+    "message": "Efek Suara"
+  },
+  "settingsPage_soundDesc": {
+    "message": "Pilih antara suara atau mode senyap"
+  },
+  "edit_title": {
+    "message": "Edit Tab yang Dijeda"
+  },
+  "edit_reschedule": {
+    "message": "Jadwalkan Ulang"
+  },
+  "edit_customTime": {
+    "message": "Waktu Kustom"
+  },
+  "edit_scheduledFor": {
+    "message": "📅 Dijadwalkan pukul:"
+  },
+  "edit_todayAt": {
+    "message": "Hari ini pukul"
+  },
+  "edit_orPickDate": {
+    "message": "Atau pilih tanggal"
+  },
+  "edit_openNow": {
+    "message": "🚀 Buka Sekarang"
+  },
+  "edit_saveChanges": {
+    "message": "💾 Simpan Perubahan"
+  },
+  "time_today": {
+    "message": "Hari ini"
+  },
+  "time_tomorrow": {
+    "message": "Besok"
+  },
+  "time_at": {
+    "message": "pukul"
+  },
+  "time_now": {
+    "message": "sekarang"
+  },
+  "status_opened": {
+    "message": "✓ Dibuka"
+  },
+  "status_comingSoon": {
+    "message": "Segera hadir!"
+  },
+  "error_invalidUrl": {
+    "message": "Tidak dapat menjeda halaman ini. Hanya halaman web biasa yang dapat dijeda."
+  },
+  "error_invalidPreset": {
+    "message": "Konfigurasi preset tidak valid"
+  },
+  "error_minPresets": {
+    "message": "Anda harus memiliki setidaknya satu preset"
+  },
+  "error_allowNotifications": {
+    "message": "Izinkan notifikasi untuk menggunakan fitur ini."
+  },
+  "tooltip_openNow": {
+    "message": "Buka sekarang"
+  },
+  "tooltip_cancelSnooze": {
+    "message": "Batalkan jeda"
+  },
+  "tooltip_chooseEmoji": {
+    "message": "Pilih emoji"
+  },
+  "tooltip_remove": {
+    "message": "Hapus"
+  },
+  "notif_restored": {
+    "message": "\"$1\" telah dibuka kembali."
+  },
+  "notif_testBody": {
+    "message": "Notifikasi percobaan - tab Anda siap!"
+  },
+  "notif_testButton": {
+    "message": "🔔 Uji Notifikasi"
+  },
+  "notif_tip": {
+    "message": "💡 Tips: Pastikan browser mengizinkan notifikasi dari ekstensi ini."
+  },
+  "about_tagline": {
+    "message": "Kurangi tumpukan tab dengan satu klik"
+  },
+  "about_rate": {
+    "message": "⭐ Nilai Ekstensi"
+  },
+  "about_share": {
+    "message": "📤 Bagikan"
+  },
+  "about_shareText": {
+    "message": "Coba ekstensi pengelolaan tab yang keren ini!"
+  },
+  "about_linkCopied": {
+    "message": "Tautan disalin ke papan klip! Bagikan ke teman-teman Anda."
+  },
+  "emoji_choose": {
+    "message": "Pilih emoji"
+  },
+  "presetSetting_enabled": {
+    "message": "Diaktifkan"
+  },
+  "settings_language": {
+    "message": "Bahasa"
+  },
+  "settingsPage_languageTitle": {
+    "message": "Bahasa"
+  },
+  "settingsPage_languageDesc": {
+    "message": "Pilih bahasa yang kamu inginkan"
+  },
+  "settings_auto": {
+    "message": "Snooze otomatis"
+  },
+  "settingsPage_autoDesc": {
+    "message": "Tidurkan tab secara otomatis sesuai aturan"
+  },
+  "auto_enable": {
+    "message": "Aktifkan snooze otomatis"
+  },
+  "auto_enableDesc": {
+    "message": "Selama aktif, pemeriksaan latar belakang setiap 15 menit akan menidurkan tab sesuai aturan di bawah."
+  },
+  "auto_maxTabs": {
+    "message": "Maksimum tab terbuka"
+  },
+  "auto_maxTabsHint": {
+    "message": "Jika tab melebihi batas, tab terlama yang ditidurkan."
+  },
+  "auto_idleHours": {
+    "message": "Jam tidak aktif"
+  },
+  "auto_idleHoursHint": {
+    "message": "Tab yang tidak dibuka selama sekian jam akan ditidurkan."
+  },
+  "auto_duration": {
+    "message": "Snooze hingga"
+  },
+  "auto_help": {
+    "message": "Snooze otomatis memeriksa tab Anda setiap 15 menit. Jika jumlah tab melebihi batas, atau sebuah tab tidak dibuka selama beberapa jam, tab itu ditutup dan dibuka kembali secara otomatis nanti."
+  },
+  "auto_helpExcluded": {
+    "message": "Tidak pernah ditidurkan: tab aktif, tab yang disematkan, tab yang memutar suara, dan halaman browser (chrome://…)."
+  },
+  "notif_autoSnoozed1": {
+    "message": "🤖 Snooze otomatis: 1 tab ditidurkan"
+  },
+  "notif_autoSnoozedN": {
+    "message": "🤖 Snooze otomatis: $1 tab ditidurkan"
+  }
+}

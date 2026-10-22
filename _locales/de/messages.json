@@ -1,0 +1,329 @@
+{
+  "extName": {
+    "message": "Tabs für später speichern (Tab Snooze)"
+  },
+  "extDescription": {
+    "message": "Tabs mit einem Klick schlummern lassen: jetzt schließen, Chrome öffnet sie später automatisch. Tabs für später ohne Chaos."
+  },
+  "actionTitle": {
+    "message": "Diesen Tab schlummern lassen"
+  },
+  "nav_dashboard": {
+    "message": "Dashboard"
+  },
+  "nav_snoozed": {
+    "message": "Schlummernd"
+  },
+  "nav_history": {
+    "message": "Verlauf"
+  },
+  "nav_settings": {
+    "message": "Einstellungen"
+  },
+  "section_quickPresets": {
+    "message": "Schnellvorlagen"
+  },
+  "section_smartPresets": {
+    "message": "Smarte Vorlagen"
+  },
+  "section_customPresets": {
+    "message": "Deine Vorlagen"
+  },
+  "preset_1hour": {
+    "message": "1 Stunde"
+  },
+  "preset_3hours": {
+    "message": "3 Stunden"
+  },
+  "preset_6hours": {
+    "message": "6 Stunden"
+  },
+  "preset_laterToday": {
+    "message": "Später heute"
+  },
+  "preset_thisEvening": {
+    "message": "Heute Abend"
+  },
+  "preset_tomorrow": {
+    "message": "Morgen"
+  },
+  "preset_nextWeekend": {
+    "message": "Nächstes Wochenende"
+  },
+  "preset_nextWeek": {
+    "message": "Nächste Woche"
+  },
+  "preset_inMonth": {
+    "message": "In einem Monat"
+  },
+  "preset_someday": {
+    "message": "Irgendwann"
+  },
+  "preset_pickDate": {
+    "message": "Datum wählen"
+  },
+  "preset_custom": {
+    "message": "Eigene"
+  },
+  "preset_minutes": {
+    "message": "$1 Minuten"
+  },
+  "empty_noSnoozed": {
+    "message": "Keine schlummernden Tabs"
+  },
+  "empty_goToDashboard": {
+    "message": "Gehe zum Dashboard, um diesen Tab zu schlummern"
+  },
+  "empty_noHistory": {
+    "message": "Kein Verlauf"
+  },
+  "empty_noHistoryDesc": {
+    "message": "Abgeschlossene Tabs erscheinen hier"
+  },
+  "history_title": {
+    "message": "📜 Kürzlich geöffnet"
+  },
+  "history_clear": {
+    "message": "Löschen"
+  },
+  "history_clearConfirm": {
+    "message": "Gesamten Verlauf löschen? Dies kann nicht rückgängig gemacht werden."
+  },
+  "settings_presets": {
+    "message": "Vorlagen-Buttons"
+  },
+  "settings_addPreset": {
+    "message": "+ Vorlage hinzufügen"
+  },
+  "settings_completed": {
+    "message": "Abgeschlossene Tabs"
+  },
+  "settings_showCompleted": {
+    "message": "Abgeschlossene Tabs kurz anzeigen"
+  },
+  "settings_duration": {
+    "message": "Dauer (Sekunden):"
+  },
+  "settings_reset": {
+    "message": "Zurücksetzen"
+  },
+  "settings_save": {
+    "message": "Speichern"
+  },
+  "settings_resetConfirm": {
+    "message": "Alle Einstellungen auf Standard zurücksetzen?"
+  },
+  "settings_notifications": {
+    "message": "Benachrichtigungen"
+  },
+  "settings_about": {
+    "message": "Über"
+  },
+  "settings_community": {
+    "message": "Community"
+  },
+  "settings_sound": {
+    "message": "Soundeffekte"
+  },
+  "settings_soundEnabled": {
+    "message": "Sounds aktivieren"
+  },
+  "settings_soundDesc": {
+    "message": "Sounds abspielen beim Tabs schlummern"
+  },
+  "settings_soundsOn": {
+    "message": "Sounds EIN"
+  },
+  "settings_soundsOff": {
+    "message": "Sounds AUS"
+  },
+  "settings_desktopNotifications": {
+    "message": "Desktop-Benachrichtigungen"
+  },
+  "settings_desktopNotificationsDesc": {
+    "message": "Benachrichtigung zeigen, wenn der Tab wieder geöffnet wird"
+  },
+  "settings_version": {
+    "message": "Version"
+  },
+  "settings_author": {
+    "message": "Gemacht mit"
+  },
+  "settingsPage_presetsTitle": {
+    "message": "Vorlagen verwalten"
+  },
+  "settingsPage_presetsDesc": {
+    "message": "Passe deine Schnell-Wiedereröffnungs-Buttons an"
+  },
+  "settingsPage_notificationsTitle": {
+    "message": "Benachrichtigungen"
+  },
+  "settingsPage_notificationsDesc": {
+    "message": "Verwalte deine Warnungen"
+  },
+  "settingsPage_aboutTitle": {
+    "message": "Über"
+  },
+  "settingsPage_aboutDesc": {
+    "message": "Version und Informationen"
+  },
+  "settingsPage_communityTitle": {
+    "message": "Community"
+  },
+  "settingsPage_communityDesc": {
+    "message": "Hilfe erhalten und beitreten"
+  },
+  "settingsPage_soundTitle": {
+    "message": "Soundeffekte"
+  },
+  "settingsPage_soundDesc": {
+    "message": "Wähle zwischen Sound- oder Silent-Modus"
+  },
+  "edit_title": {
+    "message": "Schlummernden Tab bearbeiten"
+  },
+  "edit_reschedule": {
+    "message": "Neu planen"
+  },
+  "edit_customTime": {
+    "message": "Benutzerdefinierte Zeit"
+  },
+  "edit_scheduledFor": {
+    "message": "📅 Geplant für:"
+  },
+  "edit_todayAt": {
+    "message": "Heute um"
+  },
+  "edit_orPickDate": {
+    "message": "Oder Datum wählen"
+  },
+  "edit_openNow": {
+    "message": "🚀 Jetzt öffnen"
+  },
+  "edit_saveChanges": {
+    "message": "💾 Speichern"
+  },
+  "time_today": {
+    "message": "Heute"
+  },
+  "time_tomorrow": {
+    "message": "Morgen"
+  },
+  "time_at": {
+    "message": "um"
+  },
+  "time_now": {
+    "message": "jetzt"
+  },
+  "status_opened": {
+    "message": "✓ Geöffnet"
+  },
+  "status_comingSoon": {
+    "message": "Bald verfügbar!"
+  },
+  "error_invalidUrl": {
+    "message": "Diesen Tab kann man nicht schlummern lassen. Nur normale Webseiten können schlummern."
+  },
+  "error_invalidPreset": {
+    "message": "Ungültige Vorlagenkonfiguration"
+  },
+  "error_minPresets": {
+    "message": "Es muss mindestens eine Vorlage vorhanden sein"
+  },
+  "error_allowNotifications": {
+    "message": "Bitte erlaube Benachrichtigungen, um diese Funktion zu nutzen."
+  },
+  "tooltip_openNow": {
+    "message": "Jetzt öffnen"
+  },
+  "tooltip_cancelSnooze": {
+    "message": "Schlummern abbrechen"
+  },
+  "tooltip_chooseEmoji": {
+    "message": "Emoji wählen"
+  },
+  "tooltip_remove": {
+    "message": "Entfernen"
+  },
+  "notif_restored": {
+    "message": "Tab \"$1\" wurde wieder geöffnet."
+  },
+  "notif_testBody": {
+    "message": "Testbenachrichtigung – dein Tab ist bereit!"
+  },
+  "notif_testButton": {
+    "message": "🔔 Benachrichtigung testen"
+  },
+  "notif_tip": {
+    "message": "💡 Tipp: Stelle sicher, dass der Browser Benachrichtigungen von dieser Erweiterung erlaubt."
+  },
+  "about_tagline": {
+    "message": "Weniger Tab-Wirrwarr mit einem Klick"
+  },
+  "about_rate": {
+    "message": "⭐ Erweiterung bewerten"
+  },
+  "about_share": {
+    "message": "📤 Teilen"
+  },
+  "about_shareText": {
+    "message": "Sieh dir diese großartige Tab-Verwaltungs-Erweiterung an!"
+  },
+  "about_linkCopied": {
+    "message": "Link in die Zwischenablage kopiert! Teile ihn mit deinen Freunden."
+  },
+  "emoji_choose": {
+    "message": "Wähle ein Emoji"
+  },
+  "presetSetting_enabled": {
+    "message": "Aktiviert"
+  },
+  "settings_language": {
+    "message": "Sprache"
+  },
+  "settingsPage_languageTitle": {
+    "message": "Sprache"
+  },
+  "settingsPage_languageDesc": {
+    "message": "Wähle deine bevorzugte Sprache"
+  },
+  "settings_auto": {
+    "message": "Auto-Snooze"
+  },
+  "settingsPage_autoDesc": {
+    "message": "Tabs automatisch nach deinen Regeln snoozen"
+  },
+  "auto_enable": {
+    "message": "Auto-Snooze aktivieren"
+  },
+  "auto_enableDesc": {
+    "message": "Solange aktiv, prüft der Hintergrund alle 15 Minuten und snoozt Tabs nach den folgenden Regeln."
+  },
+  "auto_maxTabs": {
+    "message": "Maximal offene Tabs"
+  },
+  "auto_maxTabsHint": {
+    "message": "Sind mehr Tabs offen, werden die ältesten gesnoozt."
+  },
+  "auto_idleHours": {
+    "message": "Stunden Inaktivität"
+  },
+  "auto_idleHoursHint": {
+    "message": "Tabs, die so viele Stunden nicht geöffnet wurden, werden gesnoozt."
+  },
+  "auto_duration": {
+    "message": "Snooze bis"
+  },
+  "auto_help": {
+    "message": "Auto-Snooze prüft alle 15 Minuten deine Tabs. Überschreitet die Anzahl das Limit oder wurde ein Tab seit Stunden nicht geöffnet, wird er geschlossen und später automatisch wiederhergestellt."
+  },
+  "auto_helpExcluded": {
+    "message": "Nie gesnoozt: der aktive Tab, angeheftete Tabs, Tabs mit Ton und Browserseiten (chrome://…)."
+  },
+  "notif_autoSnoozed1": {
+    "message": "🤖 Auto-Snooze: 1 Tab gesnoozt"
+  },
+  "notif_autoSnoozedN": {
+    "message": "🤖 Auto-Snooze: $1 Tabs gesnoozt"
+  }
+}

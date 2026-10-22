@@ -1,0 +1,438 @@
+{
+  "extName": {
+    "message": "Tab Snooze - Save Tabs for Later & Reopen",
+    "description": "Extension name shown in Chrome Web Store and toolbar. Keyword-led for store search (<= 45 chars); brand OneClick Snooze lives in the description."
+  },
+  "extDescription": {
+    "message": "Snooze tabs in one click: close now, Chrome reopens later automatically. Save tabs for later & keep your browser clutter-free.",
+    "description": "Extension description shown in Chrome Web Store (<= 132 chars)."
+  },
+  "actionTitle": {
+    "message": "Snooze this tab",
+    "description": "Tooltip when hovering the extension toolbar icon."
+  },
+  "nav_dashboard": {
+    "message": "Dashboard",
+    "description": "Main navigation tab label."
+  },
+  "nav_snoozed": {
+    "message": "Snoozed",
+    "description": "Navigation tab showing currently snoozed tabs."
+  },
+  "nav_history": {
+    "message": "History",
+    "description": "Navigation tab showing recently opened tabs."
+  },
+  "nav_settings": {
+    "message": "Settings",
+    "description": "Navigation tab label."
+  },
+  "section_quickPresets": {
+    "message": "Quick Presets",
+    "description": "Section title for the 1/3/6 hour buttons."
+  },
+  "section_smartPresets": {
+    "message": "Smart Presets",
+    "description": "Section title for preset buttons like Later Today, Tomorrow."
+  },
+  "section_customPresets": {
+    "message": "Your Presets",
+    "description": "Section title for user-defined preset buttons."
+  },
+  "preset_1hour": {
+    "message": "1 Hour",
+    "description": "Quick preset button: snooze for 1 hour."
+  },
+  "preset_3hours": {
+    "message": "3 Hours",
+    "description": "Quick preset button: snooze for 3 hours."
+  },
+  "preset_6hours": {
+    "message": "6 Hours",
+    "description": "Quick preset button: snooze for 6 hours."
+  },
+  "preset_laterToday": {
+    "message": "Later Today",
+    "description": "Smart preset: snooze until later today."
+  },
+  "preset_thisEvening": {
+    "message": "This Evening",
+    "description": "Smart preset: snooze until this evening."
+  },
+  "preset_tomorrow": {
+    "message": "Tomorrow",
+    "description": "Smart preset: snooze until tomorrow morning."
+  },
+  "preset_nextWeekend": {
+    "message": "Next Weekend",
+    "description": "Smart preset: snooze until next weekend."
+  },
+  "preset_nextWeek": {
+    "message": "Next Week",
+    "description": "Smart preset: snooze until next week."
+  },
+  "preset_inMonth": {
+    "message": "In a Month",
+    "description": "Smart preset: snooze for one month."
+  },
+  "preset_someday": {
+    "message": "Someday",
+    "description": "Smart preset: snooze for an indefinite future date."
+  },
+  "preset_pickDate": {
+    "message": "Pick Date",
+    "description": "Smart preset: open a date picker."
+  },
+  "preset_custom": {
+    "message": "Custom",
+    "description": "Label for a user-defined custom preset."
+  },
+  "preset_minutes": {
+    "message": "$1 minutes",
+    "description": "Snooze duration label. $1 is the number of minutes (e.g. 30 minutes)."
+  },
+  "empty_noSnoozed": {
+    "message": "No snoozed tabs",
+    "description": "Empty-state heading when there are no snoozed tabs."
+  },
+  "empty_goToDashboard": {
+    "message": "Go to Dashboard to snooze this tab",
+    "description": "Empty-state subtext guiding the user to the Dashboard."
+  },
+  "empty_noHistory": {
+    "message": "No history yet",
+    "description": "Empty-state heading for the History tab."
+  },
+  "empty_noHistoryDesc": {
+    "message": "Completed tabs will appear here",
+    "description": "Empty-state subtext for the History tab."
+  },
+  "history_title": {
+    "message": "📜 Recently Opened",
+    "description": "Heading above the history list. Includes a memo emoji."
+  },
+  "history_clear": {
+    "message": "Clear",
+    "description": "Button that clears the history list."
+  },
+  "history_clearConfirm": {
+    "message": "Clear all history? This cannot be undone.",
+    "description": "Confirmation dialog before clearing history."
+  },
+  "settings_presets": {
+    "message": "Preset Buttons",
+    "description": "Settings nav item and section title for managing presets."
+  },
+  "settings_addPreset": {
+    "message": "+ Add Preset",
+    "description": "Button that adds a new custom preset."
+  },
+  "settings_completed": {
+    "message": "Completed Tabs",
+    "description": "Settings section title for completed-tab display options."
+  },
+  "settings_showCompleted": {
+    "message": "Show completed tabs briefly",
+    "description": "Checkbox label: show a tab briefly after it reopens."
+  },
+  "settings_duration": {
+    "message": "Duration (seconds):",
+    "description": "Label for the numeric input controlling how long completed tabs show."
+  },
+  "settings_reset": {
+    "message": "Reset to Default",
+    "description": "Button that resets all settings to defaults."
+  },
+  "settings_save": {
+    "message": "Save Settings",
+    "description": "Button that saves settings."
+  },
+  "settings_resetConfirm": {
+    "message": "Reset all settings to default?",
+    "description": "Confirmation dialog before resetting settings."
+  },
+  "settings_notifications": {
+    "message": "Notifications",
+    "description": "Settings nav item label."
+  },
+  "settings_about": {
+    "message": "About",
+    "description": "Settings nav item label."
+  },
+  "settings_community": {
+    "message": "Community & Support",
+    "description": "Settings nav item label for community/support link."
+  },
+  "settings_sound": {
+    "message": "Sound Effects",
+    "description": "Settings nav item and section title for sound options."
+  },
+  "settings_soundEnabled": {
+    "message": "Enable sounds",
+    "description": "Checkbox label: turn snooze/restore sounds on."
+  },
+  "settings_soundDesc": {
+    "message": "Play sounds when snoozing tabs",
+    "description": "Description under the sound enable checkbox."
+  },
+  "settings_soundsOn": {
+    "message": "Sounds ON",
+    "description": "Status text showing sounds are currently enabled."
+  },
+  "settings_soundsOff": {
+    "message": "Sounds OFF",
+    "description": "Status text showing sounds are currently disabled."
+  },
+  "settings_desktopNotifications": {
+    "message": "Desktop Notifications",
+    "description": "Section title for desktop notification options."
+  },
+  "settings_desktopNotificationsDesc": {
+    "message": "Show notification when tab reopens",
+    "description": "Checkbox label for desktop notifications."
+  },
+  "settings_version": {
+    "message": "Version",
+    "description": "Label before the extension version number in About."
+  },
+  "settings_author": {
+    "message": "Made with",
+    "description": "Prefix before a heart emoji in the About section."
+  },
+  "settingsPage_presetsTitle": {
+    "message": "Manage Presets",
+    "description": "Title of the preset-management settings page."
+  },
+  "settingsPage_presetsDesc": {
+    "message": "Customize your quick snooze buttons",
+    "description": "Short description under the presets settings nav item."
+  },
+  "settingsPage_notificationsTitle": {
+    "message": "Notifications",
+    "description": "Title of the notifications settings page."
+  },
+  "settingsPage_notificationsDesc": {
+    "message": "Manage how you receive alerts",
+    "description": "Short description under the notifications settings nav item."
+  },
+  "settingsPage_aboutTitle": {
+    "message": "About",
+    "description": "Title of the About settings page."
+  },
+  "settingsPage_aboutDesc": {
+    "message": "Version and information",
+    "description": "Short description under the About settings nav item."
+  },
+  "settingsPage_communityTitle": {
+    "message": "Community",
+    "description": "Title of the community settings page."
+  },
+  "settingsPage_communityDesc": {
+    "message": "Get help and join our community",
+    "description": "Short description under the community settings nav item."
+  },
+  "settingsPage_soundTitle": {
+    "message": "Sound Effects",
+    "description": "Title of the sound settings page."
+  },
+  "settingsPage_soundDesc": {
+    "message": "Choose between sound or silent mode",
+    "description": "Short description under the sound settings nav item."
+  },
+  "edit_title": {
+    "message": "Edit Snoozed Tab",
+    "description": "Title of the modal for editing a snoozed tab."
+  },
+  "edit_reschedule": {
+    "message": "Reschedule",
+    "description": "Section heading and button for rescheduling a tab."
+  },
+  "edit_customTime": {
+    "message": "Custom Time",
+    "description": "Section heading for picking a custom reschedule time."
+  },
+  "edit_scheduledFor": {
+    "message": "📅 Scheduled for:",
+    "description": "Label showing when the tab is scheduled to reopen. Includes a calendar emoji."
+  },
+  "edit_todayAt": {
+    "message": "Today at",
+    "description": "Label before the hour/minute inputs for a same-day time."
+  },
+  "edit_orPickDate": {
+    "message": "Or pick date",
+    "description": "Label before the date picker input."
+  },
+  "edit_openNow": {
+    "message": "🚀 Open Now",
+    "description": "Button that reopens the tab immediately. Includes a rocket emoji."
+  },
+  "edit_saveChanges": {
+    "message": "💾 Save Changes",
+    "description": "Button that saves edits to a snoozed tab. Includes a floppy-disk emoji."
+  },
+  "time_today": {
+    "message": "Today",
+    "description": "Day label when the scheduled time is today."
+  },
+  "time_tomorrow": {
+    "message": "Tomorrow",
+    "description": "Day label when the scheduled time is tomorrow."
+  },
+  "time_at": {
+    "message": "at",
+    "description": "Word between the day and the clock time (e.g. Today at 21:00)."
+  },
+  "time_now": {
+    "message": "now",
+    "description": "Countdown text shown when a tab is due to reopen immediately."
+  },
+  "status_opened": {
+    "message": "✓ Opened",
+    "description": "Status marker on a tab that has already been reopened."
+  },
+  "status_comingSoon": {
+    "message": "Coming soon!",
+    "description": "Placeholder shown for a settings page that is not yet implemented."
+  },
+  "error_invalidUrl": {
+    "message": "Cannot snooze this page. Only regular web pages can be snoozed.",
+    "description": "Error shown when trying to snooze a non-http(s) page."
+  },
+  "error_invalidPreset": {
+    "message": "Invalid preset configuration",
+    "description": "Error shown when a preset has a bad time configuration."
+  },
+  "error_minPresets": {
+    "message": "You must have at least one preset",
+    "description": "Error shown when trying to delete the last remaining preset."
+  },
+  "error_allowNotifications": {
+    "message": "Please allow notifications to use this feature.",
+    "description": "Error shown when notification permission is denied."
+  },
+  "tooltip_openNow": {
+    "message": "Open now",
+    "description": "Hover tooltip on the reopen button in a tab list."
+  },
+  "tooltip_cancelSnooze": {
+    "message": "Cancel snooze",
+    "description": "Hover tooltip on the cancel button in a tab list."
+  },
+  "tooltip_chooseEmoji": {
+    "message": "Choose emoji",
+    "description": "Hover tooltip on the emoji picker button in preset settings."
+  },
+  "tooltip_remove": {
+    "message": "Remove",
+    "description": "Hover tooltip on the delete-preset button."
+  },
+  "notif_restored": {
+    "message": "\"$1\" has been restored.",
+    "description": "Desktop notification when a tab reopens. $1 is the tab title."
+  },
+  "notif_testBody": {
+    "message": "Test notification - your tab is ready!",
+    "description": "Body text of the test desktop notification."
+  },
+  "notif_testButton": {
+    "message": "🔔 Test Notification",
+    "description": "Button that sends a test desktop notification. Includes a bell emoji."
+  },
+  "notif_tip": {
+    "message": "💡 Tip: Make sure browser allows notifications from this extension.",
+    "description": "Tip shown in notification settings. Includes a lightbulb emoji."
+  },
+  "about_tagline": {
+    "message": "Reduce tab clutter with one click",
+    "description": "Short tagline shown in the About section."
+  },
+  "about_rate": {
+    "message": "⭐ Rate Extension",
+    "description": "Button that opens the Chrome Web Store review page. Includes a star emoji."
+  },
+  "about_share": {
+    "message": "📤 Share",
+    "description": "Button that shares the extension. Includes an outbox emoji."
+  },
+  "about_shareText": {
+    "message": "Check out this awesome tab management extension!",
+    "description": "Text used when sharing the extension link."
+  },
+  "about_linkCopied": {
+    "message": "Link copied to clipboard! Share it with your friends.",
+    "description": "Confirmation shown after copying the extension link."
+  },
+  "emoji_choose": {
+    "message": "Choose an emoji",
+    "description": "Header text of the emoji picker."
+  },
+  "presetSetting_enabled": {
+    "message": "Enabled",
+    "description": "Checkbox label next to each preset in preset settings."
+  },
+  "settings_language": {
+    "message": "Language",
+    "description": "Settings nav item label for the language picker."
+  },
+  "settingsPage_languageTitle": {
+    "message": "Language",
+    "description": "Title of the language settings page."
+  },
+  "settingsPage_languageDesc": {
+    "message": "Choose your preferred language",
+    "description": "Short description under the language settings nav item."
+  },
+  "settings_auto": {
+    "message": "Auto Snooze",
+    "description": "Settings nav item and section title for the automatic snooze mode."
+  },
+  "settingsPage_autoDesc": {
+    "message": "Auto-snooze inactive tabs by your rules",
+    "description": "Settings nav description for the auto snooze item."
+  },
+  "auto_enable": {
+    "message": "Enable Auto Snooze",
+    "description": "Checkbox that turns the automatic snooze mode on or off."
+  },
+  "auto_enableDesc": {
+    "message": "While enabled, a background check runs every 15 minutes and snoozes tabs by the rules below.",
+    "description": "Explanation under the auto snooze checkbox."
+  },
+  "auto_maxTabs": {
+    "message": "Maximum open tabs",
+    "description": "Label for the tab cap setting."
+  },
+  "auto_maxTabsHint": {
+    "message": "If more tabs are open, the oldest ones are snoozed.",
+    "description": "Hint under the tab cap setting."
+  },
+  "auto_idleHours": {
+    "message": "Hours of inactivity",
+    "description": "Label for the inactivity threshold setting."
+  },
+  "auto_idleHoursHint": {
+    "message": "Tabs not opened for this many hours are snoozed.",
+    "description": "Hint under the inactivity threshold setting."
+  },
+  "auto_duration": {
+    "message": "Snooze until",
+    "description": "Label for how long auto-snoozed tabs stay closed."
+  },
+  "auto_help": {
+    "message": "Auto Snooze checks your tabs every 15 minutes. If there are more tabs than the limit, or a tab has not been opened for the set number of hours, it is closed and restored later automatically.",
+    "description": "Instruction block explaining how auto snooze works."
+  },
+  "auto_helpExcluded": {
+    "message": "Never snoozed: the active tab, pinned tabs, tabs playing audio, and browser pages (chrome://…).",
+    "description": "Instruction block listing exclusions."
+  },
+  "notif_autoSnoozed1": {
+    "message": "🤖 Auto Snooze: 1 tab snoozed",
+    "description": "Desktop notification when auto snooze closes exactly one tab. No placeholders."
+  },
+  "notif_autoSnoozedN": {
+    "message": "🤖 Auto Snooze: $1 tabs snoozed",
+    "description": "Desktop notification when auto snooze closes several tabs. $1 is the tab count."
+  }
+}

@@ -41,9 +41,12 @@ async function loadSettings() {
         ],
         showCompleted: true,
         completedDuration: 5,
-        soundEnabled: true
+        soundEnabled: true,
+        autoMode: { enabled: false, maxTabs: 10, idleHours: 2, snoozePreset: '6h' }
       };
       currentSettings = { ...DEFAULT_SETTINGS, ...(result.settings || {}) };
+      // Deep-merge autoMode: settings saved before v1.5.0 have no autoMode key
+      currentSettings.autoMode = { ...DEFAULT_SETTINGS.autoMode, ...(currentSettings.autoMode || {}) };
 
       // Update sound manager
       if (typeof soundManager !== 'undefined') {
@@ -59,6 +62,10 @@ async function saveSettings(settings) {
   return new Promise((resolve) => {
     chrome.storage.local.set({ settings: settings }, () => {
       currentSettings = settings;
+      // Service worker re-arms (or clears) the auto-snooze alarm on settings change
+      try {
+        chrome.runtime.sendMessage({ type: 'settingsUpdated' }).catch(() => {});
+      } catch (e) { /* worker unavailable */ }
       resolve(settings);
     });
   });
@@ -255,24 +262,9 @@ function formatScheduledDate(timestamp) {
   } else if (daysDiff === 1) {
     dayLabel = i18n.get('time.tomorrow');
   } else if (daysDiff < 7) {
-    const weekdays = {
-      'en': ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      'ru': ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
-      'de': ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
-      'es': ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
-      'zh': ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
-    };
-    const langWeekdays = weekdays[i18n.currentLocale] || weekdays['en'];
-    dayLabel = langWeekdays[date.getDay()];
+    dayLabel = new Intl.DateTimeFormat(i18n.localeTag(), { weekday: 'long' }).format(date);
   } else {
-    const localeMap = {
-      'en': 'en-US',
-      'ru': 'ru-RU',
-      'de': 'de-DE',
-      'es': 'es-ES',
-      'zh': 'zh-CN'
-    };
-    dayLabel = date.toLocaleDateString(localeMap[i18n.currentLocale] || 'en-US', { month: 'short', day: 'numeric' });
+    dayLabel = date.toLocaleDateString(i18n.localeTag(), { month: 'short', day: 'numeric' });
   }
 
   const timeStr = formatTime(date.getHours(), date.getMinutes());
@@ -295,7 +287,7 @@ function formatCountdown(scheduledTime) {
   const diff = scheduledTime - now;
 
   if (diff <= 0) {
-    return 'now';
+    return i18n.get('time.now');
   }
 
   const seconds = Math.floor(diff / 1000);
@@ -357,13 +349,13 @@ async function snoozeTab(preset) {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
   if (!tab || !validateUrl(tab.url)) {
-    alert('Cannot snooze this page. Only regular web pages can be snoozed.');
+    alert(i18n.get('error.invalidUrl'));
     return;
   }
 
   const scheduledTime = calculateScheduledTime(preset);
   if (!scheduledTime) {
-    alert('Invalid preset configuration');
+    alert(i18n.get('error.invalidPreset'));
     return;
   }
 
@@ -383,10 +375,12 @@ async function snoozeTab(preset) {
 
   chrome.storage.local.get('snoozedTabs', (result) => {
     const snoozedTabs = result.snoozedTabs || [];
+    // Same-slot queue: fixed-time presets («Tomorrow», «Weekends»…) would otherwise all restore at once
+    tabData.scheduledTime = staggerScheduledTime(tabData.scheduledTime, snoozedTabs);
     snoozedTabs.push(tabData);
 
     chrome.storage.local.set({ snoozedTabs: snoozedTabs }, () => {
-      chrome.alarms.create(`snooze_${tabData.id}`, { when: scheduledTime });
+      chrome.alarms.create(`snooze_${tabData.id}`, { when: tabData.scheduledTime });
 
       // Play sound then close tab after brief delay so audio starts
       if (typeof soundManager !== 'undefined') {
@@ -451,14 +445,14 @@ function renderSnoozedTabs() {
           <div class="tab-domain">${getDomain(tab.url)}</div>
         </div>
         ${tab.isCompleted
-          ? `<div class="tab-countdown completed">✓ Opened</div>`
+          ? `<div class="tab-countdown completed">${i18n.get('status.opened')}</div>`
           : `<div class="tab-countdown" data-scheduled="${tab.scheduledTime}">${formatCountdown(tab.scheduledTime)}</div>`
         }
         <div class="tab-actions">
           ${!tab.isCompleted ? `
-            <button class="edit-btn" data-id="${tab.id}" title="Reschedule">✏️</button>
-            <button class="open-now-btn-small" data-id="${tab.id}" data-url="${tab.url}" title="Open now">🚀</button>
-            <button class="cancel-btn" data-id="${tab.id}" title="Cancel snooze">✕</button>
+            <button class="edit-btn" data-id="${tab.id}" title="${i18n.get('edit.reschedule')}">✏️</button>
+            <button class="open-now-btn-small" data-id="${tab.id}" data-url="${tab.url}" title="${i18n.get('tooltip.openNow')}">🚀</button>
+            <button class="cancel-btn" data-id="${tab.id}" title="${i18n.get('tooltip.cancelSnooze')}">✕</button>
           ` : ''}
         </div>
       </div>
@@ -594,10 +588,12 @@ function updateTabSchedule(tabId, newTime, preset) {
             status: 'active'
           };
 
+          // Same-slot queue for custom/pick-date times landing on an occupied slot
+          tabData.scheduledTime = staggerScheduledTime(newTime, snoozedTabs, tabData.id);
           snoozedTabs.push(tabData);
 
           chrome.storage.local.set({ snoozedTabs: snoozedTabs }, () => {
-            chrome.alarms.create(`snooze_${tabData.id}`, { when: newTime });
+            chrome.alarms.create(`snooze_${tabData.id}`, { when: tabData.scheduledTime });
             chrome.tabs.remove(currentTab.id);
             renderSnoozedTabs();
             renderHistory();
@@ -611,7 +607,7 @@ function updateTabSchedule(tabId, newTime, preset) {
     if (tabIndex !== -1) {
       chrome.alarms.clear(`snooze_${tabId}`);
 
-      snoozedTabs[tabIndex].scheduledTime = newTime;
+      snoozedTabs[tabIndex].scheduledTime = staggerScheduledTime(newTime, snoozedTabs, tabId);
       if (preset) {
         snoozedTabs[tabIndex].preset = preset;
         const presetConfig = currentSettings.presets.find(p => p.id === preset);
@@ -619,7 +615,7 @@ function updateTabSchedule(tabId, newTime, preset) {
       }
 
       chrome.storage.local.set({ snoozedTabs: snoozedTabs }, () => {
-        chrome.alarms.create(`snooze_${tabId}`, { when: newTime });
+        chrome.alarms.create(`snooze_${tabId}`, { when: snoozedTabs[tabIndex].scheduledTime });
         renderSnoozedTabs();
       });
     }
@@ -721,7 +717,7 @@ function renderHistory() {
 }
 
 function clearHistory() {
-  if (!confirm('Clear all history? This cannot be undone.')) {
+  if (!confirm(i18n.get('history.clearConfirm'))) {
     return;
   }
 
@@ -894,18 +890,18 @@ function renderPresetSettings() {
   container.innerHTML = currentSettings.presets.map((preset, index) => `
     <div class="preset-setting-item" data-index="${index}">
       <div class="preset-row">
-        <button class="emoji-picker-btn" data-index="${index}" data-emoji="${preset.icon}" title="Choose emoji">
+        <button class="emoji-picker-btn" data-index="${index}" data-emoji="${preset.icon}" title="${i18n.get('tooltip.chooseEmoji')}">
           ${preset.icon}
         </button>
-        <input type="text" class="preset-label" value="${preset.label}" placeholder="${resolvePresetLabel(preset)}">
+        <input type="text" class="preset-label" value="${resolvePresetLabel(preset)}" placeholder="${resolvePresetLabel(preset)}">
         <input type="number" class="preset-hour" value="${preset.hour}" min="0" max="23">
         <span>:</span>
         <input type="number" class="preset-minute" value="${preset.minute}" min="0" max="59">
         <label class="enabled-label">
           <input type="checkbox" class="preset-enabled" ${preset.enabled ? 'checked' : ''}>
-          Enabled
+          ${i18n.get('presetSetting.enabled')}
         </label>
-        <button class="remove-preset" data-index="${index}" title="Remove">🗑️</button>
+        <button class="remove-preset" data-index="${index}" title="${i18n.get('tooltip.remove')}">🗑️</button>
       </div>
     </div>
   `).join('');
@@ -921,7 +917,7 @@ function renderPresetSettings() {
     btn.addEventListener('click', () => {
       const index = parseInt(btn.dataset.index);
       if (currentSettings.presets.length <= 1) {
-        alert('You must have at least one preset');
+        alert(i18n.get('error.minPresets'));
         return;
       }
       currentSettings.presets.splice(index, 1);
@@ -972,7 +968,7 @@ function saveSettingsFromModal() {
 }
 
 function resetSettings() {
-  if (confirm('Reset all settings to default?')) {
+  if (confirm(i18n.get('settings.resetConfirm'))) {
     const DEFAULT_SETTINGS = {
       presets: [
         { id: 'evening', label: 'Evening', icon: '🌙', hour: 21, minute: 0, enabled: true },
@@ -980,7 +976,8 @@ function resetSettings() {
         { id: 'nextweek', label: 'Next Week', icon: '📅', hour: 9, minute: 0, enabled: true }
       ],
       showCompleted: true,
-      completedDuration: 5
+      completedDuration: 5,
+      autoMode: { enabled: false, maxTabs: 10, idleHours: 2, snoozePreset: '6h' }
     };
     saveSettings(DEFAULT_SETTINGS).then(() => {
       renderPresetButtons();
@@ -1032,6 +1029,11 @@ function renderSettingsNav() {
         <span class="label" data-i18n="settings.presets">Preset Buttons</span>
         <span class="description" data-i18n="settingsPage.presetsDesc">Customize your quick snooze buttons</span>
       </button>
+      <button class="settings-nav-btn" data-settings-page="auto">
+        <span class="icon">🤖</span>
+        <span class="label" data-i18n="settings.auto">Auto Snooze</span>
+        <span class="description" data-i18n="settingsPage.autoDesc">Auto-snooze inactive tabs by your rules</span>
+      </button>
       <button class="settings-nav-btn" data-settings-page="language">
         <span class="icon">🌐</span>
         <span class="label" data-i18n="settings.language">Language</span>
@@ -1040,7 +1042,7 @@ function renderSettingsNav() {
       <button class="settings-nav-btn" data-settings-page="sound">
         <span class="icon">${soundStatus}</span>
         <span class="label" data-i18n="settings.sound">Sound Effects</span>
-        <span class="description" data-i18n="settings.soundEnabled">${currentSettings.soundEnabled ? 'Sounds ON' : 'Sounds OFF'}</span>
+        <span class="description">${currentSettings.soundEnabled ? i18n.get('settings.soundsOn') : i18n.get('settings.soundsOff')}</span>
       </button>
 
       <button class="settings-nav-btn" data-settings-page="notifications">
@@ -1082,6 +1084,8 @@ function openSettingsPage(page) {
   // For now, let's handle the most common ones
   if (page === 'presets') {
     openPresetsSettings();
+  } else if (page === 'auto') {
+    openAutoModeSettings();
   } else if (page === 'language') {
     openLanguageSettings();
   } else if (page === 'sound') {
@@ -1096,7 +1100,7 @@ function openSettingsPage(page) {
     chrome.tabs.create({ url: 'https://www.skool.com/ai-pays-my-bills-7018/about' });
   } else {
     // Show coming soon for other pages
-    alert(`${i18n.get('settingsPage.' + page + 'Title')} - Coming soon!`);
+    alert(i18n.get('status.comingSoon'));
   }
 }
 
@@ -1140,9 +1144,9 @@ function openNotificationSettings() {
 
       ${notificationsEnabled ? `
         <div style="padding: 12px; background: #e7f5ff; border-radius: 8px; font-size: 12px; color: #495057;">
-          <p style="margin: 0 0 8px 0;"><strong>💡 Tip:</strong> Make sure browser allows notifications from this extension.</p>
+          <p style="margin: 0 0 8px 0;">${i18n.get('notif.tip')}</p>
           <button id="test-notification" class="test-btn" style="padding: 6px 12px; background: #228be6; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 11px;">
-            🔔 Test Notification
+            ${i18n.get('notif.testButton')}
           </button>
         </div>
       ` : ''}
@@ -1165,7 +1169,7 @@ function openNotificationSettings() {
             openNotificationSettings();
           } else {
             e.target.checked = false;
-            alert('Please allow notifications to use this feature.');
+            alert(i18n.get('error.allowNotifications'));
           }
         });
       } else {
@@ -1180,13 +1184,92 @@ function openNotificationSettings() {
   if (testBtn) {
     testBtn.addEventListener('click', () => {
       if (Notification.permission === 'granted') {
-        new Notification('🦉 OneClick Snooze', {
-          body: 'Test notification - your tab is ready!',
+        new Notification('🦉 ' + i18n.get('extName'), {
+          body: i18n.get('notif.testBody'),
           icon: 'icons/icon128.png'
         });
       }
     });
   }
+}
+
+function openAutoModeSettings() {
+  const modal = document.getElementById('settings-modal');
+  modal.classList.add('open');
+
+  // Initialize modal handlers
+  initModalHandlers();
+
+  const auto = currentSettings.autoMode || { enabled: false, maxTabs: 10, idleHours: 2, snoozePreset: '6h' };
+  const durationOptions = [
+    ['1h', i18n.get('preset.1hour')],
+    ['3h', i18n.get('preset.3hours')],
+    ['6h', i18n.get('preset.6hours')],
+    ['tomorrow', i18n.get('preset.tomorrow')],
+    ['nextweek', i18n.get('preset.nextWeek')]
+  ];
+
+  const modalBody = modal.querySelector('.modal-body');
+  modalBody.innerHTML = `
+    <div class="settings-section">
+      <h3>🤖 ${i18n.get('settings.auto')}</h3>
+      <label class="setting-label" style="margin-bottom: 8px;">
+        <input type="checkbox" id="auto-enabled" ${auto.enabled ? 'checked' : ''}>
+        <span style="font-weight: 600;">${i18n.get('auto.enable')}</span>
+      </label>
+      <p style="margin: 0 0 16px 0; font-size: 11px; color: #868e96;">${i18n.get('auto.enableDesc')}</p>
+
+      ${auto.enabled ? `
+        <div style="margin-bottom: 14px;">
+          <label class="setting-label" for="auto-max-tabs" style="display: block; margin-bottom: 4px;">${i18n.get('auto.maxTabs')}</label>
+          <input type="number" id="auto-max-tabs" min="3" max="100" value="${auto.maxTabs}" style="width: 80px;">
+          <p style="margin: 4px 0 0 0; font-size: 11px; color: #868e96;">${i18n.get('auto.maxTabsHint')}</p>
+        </div>
+        <div style="margin-bottom: 14px;">
+          <label class="setting-label" for="auto-idle-hours" style="display: block; margin-bottom: 4px;">${i18n.get('auto.idleHours')}</label>
+          <input type="number" id="auto-idle-hours" min="1" max="48" value="${auto.idleHours}" style="width: 80px;">
+          <p style="margin: 4px 0 0 0; font-size: 11px; color: #868e96;">${i18n.get('auto.idleHoursHint')}</p>
+        </div>
+        <div style="margin-bottom: 16px;">
+          <label class="setting-label" for="auto-duration" style="display: block; margin-bottom: 4px;">${i18n.get('auto.duration')}</label>
+          <select id="auto-duration" style="padding: 6px; border-radius: 6px; border: 1px solid #dee2e6;">
+            ${durationOptions.map(([value, label]) =>
+              `<option value="${value}" ${value === auto.snoozePreset ? 'selected' : ''}>${label}</option>`
+            ).join('')}
+          </select>
+        </div>
+      ` : ''}
+
+      <div style="padding: 12px; background: #f8f9fa; border-radius: 8px; font-size: 11px; color: #495057; line-height: 1.6;">
+        <p style="margin: 0 0 8px 0;">💡 ${i18n.get('auto.help')}</p>
+        <p style="margin: 0;">${i18n.get('auto.helpExcluded')}</p>
+      </div>
+    </div>
+  `;
+
+  const clampInt = (raw, min, max, fallback) => {
+    const n = parseInt(raw, 10);
+    if (isNaN(n)) return fallback;
+    return Math.min(max, Math.max(min, n));
+  };
+
+  const saveAutoMode = () => {
+    currentSettings.autoMode = {
+      enabled: !!document.getElementById('auto-enabled')?.checked,
+      maxTabs: clampInt(document.getElementById('auto-max-tabs')?.value, 3, 100, 10),
+      idleHours: clampInt(document.getElementById('auto-idle-hours')?.value, 1, 48, 2),
+      snoozePreset: document.getElementById('auto-duration')?.value || '6h'
+    };
+    // saveSettings notifies the service worker to re-arm the periodic alarm
+    saveSettings(currentSettings).then(() => {
+      // Re-render: reveals the rule fields after enabling, hides them after disabling
+      openAutoModeSettings();
+    });
+  };
+
+  ['auto-enabled', 'auto-max-tabs', 'auto-idle-hours', 'auto-duration'].forEach((id) => {
+    document.getElementById(id)?.addEventListener('change', saveAutoMode);
+  });
 }
 
 function openAboutSettings() {
@@ -1209,15 +1292,15 @@ function openAboutSettings() {
       <div style="padding: 16px; background: #f8f9fa; border-radius: 8px; margin-bottom: 16px;">
         <p style="margin: 0; font-size: 12px; color: #495057; line-height: 1.6;">
           ${i18n.get('settings.author')} ❤️<br>
-          Reduce tab clutter with one click
+          ${i18n.get('about.tagline')}
         </p>
       </div>
       <div style="display: flex; gap: 8px; justify-content: center;">
         <button id="rate-extension" class="community-link" style="padding: 8px 16px; font-size: 12px;">
-          ⭐ Rate Extension
+          ${i18n.get('about.rate')}
         </button>
         <button id="share-extension" class="community-link" style="padding: 8px 16px; font-size: 12px;">
-          📤 Share
+          ${i18n.get('about.share')}
         </button>
       </div>
     </div>
@@ -1233,14 +1316,14 @@ function openAboutSettings() {
 
     if (navigator.share) {
       navigator.share({
-        title: 'OneClick Snooze',
-        text: 'Check out this awesome tab management extension!',
+        title: i18n.get('extName'),
+        text: i18n.get('about.shareText'),
         url: shareUrl
       });
     } else {
       // Copy to clipboard
       navigator.clipboard.writeText(shareUrl).then(() => {
-        alert('Link copied to clipboard! Share it with your friends.');
+        alert(i18n.get('about.linkCopied'));
       });
     }
   });
@@ -1257,28 +1340,28 @@ function openPresetsSettings() {
   const modalBody = modal.querySelector('.modal-body');
   modalBody.innerHTML = `
     <div class="settings-section">
-      <h3>Preset Buttons</h3>
+      <h3>${i18n.get('settings.presets')}</h3>
       <div id="preset-settings" class="preset-settings">
         <!-- Preset settings will be rendered dynamically -->
       </div>
-      <button id="add-preset" class="add-btn">+ Add Preset</button>
+      <button id="add-preset" class="add-btn">${i18n.get('settings.addPreset')}</button>
     </div>
 
     <div class="settings-section">
-      <h3>Completed Tabs</h3>
+      <h3>${i18n.get('settings.completed')}</h3>
       <label class="setting-label">
         <input type="checkbox" id="show-completed">
-        <span>Show completed tabs briefly</span>
+        <span>${i18n.get('settings.showCompleted')}</span>
       </label>
       <div class="setting-row" id="completed-duration-row">
-        <label>Duration (seconds):</label>
+        <label>${i18n.get('settings.duration')}</label>
         <input type="number" id="completed-duration" min="1" max="60" value="5">
       </div>
     </div>
 
     <div class="settings-actions">
-      <button id="reset-settings" class="reset-btn">Reset to Default</button>
-      <button id="save-settings" class="save-btn">Save Settings</button>
+      <button id="reset-settings" class="reset-btn">${i18n.get('settings.reset')}</button>
+      <button id="save-settings" class="save-btn">${i18n.get('settings.save')}</button>
     </div>
   `;
 
@@ -1352,19 +1435,19 @@ function openCompletedSettings() {
   const modalBody = modal.querySelector('.modal-body');
   modalBody.innerHTML = `
     <div class="settings-section">
-      <h3>Completed Tabs</h3>
+      <h3>${i18n.get('settings.completed')}</h3>
       <label class="setting-label">
         <input type="checkbox" id="show-completed" ${currentSettings.showCompleted ? 'checked' : ''}>
-        <span>Show completed tabs briefly</span>
+        <span>${i18n.get('settings.showCompleted')}</span>
       </label>
       <div class="setting-row" id="completed-duration-row">
-        <label>Duration (seconds):</label>
+        <label>${i18n.get('settings.duration')}</label>
         <input type="number" id="completed-duration" min="1" max="60" value="${currentSettings.completedDuration}">
       </div>
     </div>
 
     <div class="settings-actions">
-      <button id="save-completed-settings" class="save-btn">Save Settings</button>
+      <button id="save-completed-settings" class="save-btn">${i18n.get('settings.save')}</button>
     </div>
   `;
 
@@ -1399,7 +1482,7 @@ async function snoozeForMinutes(minutes) {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
   if (!tab || !validateUrl(tab.url)) {
-    alert('Cannot snooze this page. Only regular web pages can be snoozed.');
+    alert(i18n.get('error.invalidUrl'));
     return;
   }
 
@@ -1413,16 +1496,18 @@ async function snoozeForMinutes(minutes) {
     scheduledTime: scheduledTime,
     createdTime: Date.now(),
     preset: `minutes_${minutes}`,
-    presetLabel: i18n.get('preset.minutes').replace('{n}', minutes),
+    presetLabel: i18n.get('preset.minutes', [String(minutes)]),
     status: 'active'
   };
 
   chrome.storage.local.get('snoozedTabs', (result) => {
     const snoozedTabs = result.snoozedTabs || [];
+    // Same-slot queue: fixed-time presets («Tomorrow», «Weekends»…) would otherwise all restore at once
+    tabData.scheduledTime = staggerScheduledTime(tabData.scheduledTime, snoozedTabs);
     snoozedTabs.push(tabData);
 
     chrome.storage.local.set({ snoozedTabs: snoozedTabs }, () => {
-      chrome.alarms.create(`snooze_${tabData.id}`, { when: scheduledTime });
+      chrome.alarms.create(`snooze_${tabData.id}`, { when: tabData.scheduledTime });
 
       // Play sound then close tab after brief delay so audio starts
       if (typeof soundManager !== 'undefined') {
@@ -1443,7 +1528,7 @@ async function snoozeWithSmartPreset(presetType) {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
   if (!tab || !validateUrl(tab.url)) {
-    alert('Cannot snooze this page. Only regular web pages can be snoozed.');
+    alert(i18n.get('error.invalidUrl'));
     return;
   }
 
@@ -1465,10 +1550,12 @@ async function snoozeWithSmartPreset(presetType) {
 
   chrome.storage.local.get('snoozedTabs', (result) => {
     const snoozedTabs = result.snoozedTabs || [];
+    // Same-slot queue: fixed-time presets («Tomorrow», «Weekends»…) would otherwise all restore at once
+    tabData.scheduledTime = staggerScheduledTime(tabData.scheduledTime, snoozedTabs);
     snoozedTabs.push(tabData);
 
     chrome.storage.local.set({ snoozedTabs: snoozedTabs }, () => {
-      chrome.alarms.create(`snooze_${tabData.id}`, { when: scheduledTime });
+      chrome.alarms.create(`snooze_${tabData.id}`, { when: tabData.scheduledTime });
 
       // Play sound then close tab after brief delay so audio starts
       if (typeof soundManager !== 'undefined') {

@@ -1,0 +1,329 @@
+{
+  "extName": {
+    "message": "Tabs voor later opslaan (Tab Snooze)"
+  },
+  "extDescription": {
+    "message": "Laat tabbladen slapen met één klik: sluit nu, Chrome opent ze later automatisch. Tabs voor later, zonder rommel."
+  },
+  "actionTitle": {
+    "message": "Dit tabblad in slaap zetten"
+  },
+  "nav_dashboard": {
+    "message": "Dashboard"
+  },
+  "nav_snoozed": {
+    "message": "Slapend"
+  },
+  "nav_history": {
+    "message": "Geschiedenis"
+  },
+  "nav_settings": {
+    "message": "Instellingen"
+  },
+  "section_quickPresets": {
+    "message": "Snelle presets"
+  },
+  "section_smartPresets": {
+    "message": "Slimme presets"
+  },
+  "section_customPresets": {
+    "message": "Jouw presets"
+  },
+  "preset_1hour": {
+    "message": "1 uur"
+  },
+  "preset_3hours": {
+    "message": "3 uur"
+  },
+  "preset_6hours": {
+    "message": "6 uur"
+  },
+  "preset_laterToday": {
+    "message": "Later vandaag"
+  },
+  "preset_thisEvening": {
+    "message": "Vanavond"
+  },
+  "preset_tomorrow": {
+    "message": "Morgen"
+  },
+  "preset_nextWeekend": {
+    "message": "Volgend weekend"
+  },
+  "preset_nextWeek": {
+    "message": "Volgende week"
+  },
+  "preset_inMonth": {
+    "message": "Over een maand"
+  },
+  "preset_someday": {
+    "message": "Ooit"
+  },
+  "preset_pickDate": {
+    "message": "Kies datum"
+  },
+  "preset_custom": {
+    "message": "Aangepast"
+  },
+  "preset_minutes": {
+    "message": "$1 minuten"
+  },
+  "empty_noSnoozed": {
+    "message": "Geen slapende tabbladen"
+  },
+  "empty_goToDashboard": {
+    "message": "Ga naar het dashboard om dit tabblad in slaap te zetten"
+  },
+  "empty_noHistory": {
+    "message": "Nog geen geschiedenis"
+  },
+  "empty_noHistoryDesc": {
+    "message": "Voltooide tabbladen verschijnen hier"
+  },
+  "history_title": {
+    "message": "📜 Recent geopend"
+  },
+  "history_clear": {
+    "message": "Wissen"
+  },
+  "history_clearConfirm": {
+    "message": "Alle geschiedenis wissen? Dit kan niet ongedaan worden gemaakt."
+  },
+  "settings_presets": {
+    "message": "Presetknoppen"
+  },
+  "settings_addPreset": {
+    "message": "+ Preset toevoegen"
+  },
+  "settings_completed": {
+    "message": "Voltooide tabbladen"
+  },
+  "settings_showCompleted": {
+    "message": "Toon voltooide tabbladen kort"
+  },
+  "settings_duration": {
+    "message": "Duur (seconden):"
+  },
+  "settings_reset": {
+    "message": "Standaard herstellen"
+  },
+  "settings_save": {
+    "message": "Instellingen opslaan"
+  },
+  "settings_resetConfirm": {
+    "message": "Alle instellingen terugzetten naar standaard?"
+  },
+  "settings_notifications": {
+    "message": "Meldingen"
+  },
+  "settings_about": {
+    "message": "Over"
+  },
+  "settings_community": {
+    "message": "Community & ondersteuning"
+  },
+  "settings_sound": {
+    "message": "Geluidseffecten"
+  },
+  "settings_soundEnabled": {
+    "message": "Geluid inschakelen"
+  },
+  "settings_soundDesc": {
+    "message": "Speel geluiden af wanneer tabbladen in slaap gaan"
+  },
+  "settings_soundsOn": {
+    "message": "Geluid AAN"
+  },
+  "settings_soundsOff": {
+    "message": "Geluid UIT"
+  },
+  "settings_desktopNotifications": {
+    "message": "Bureaubladmeldingen"
+  },
+  "settings_desktopNotificationsDesc": {
+    "message": "Toon een melding wanneer een tabblad opnieuw opent"
+  },
+  "settings_version": {
+    "message": "Versie"
+  },
+  "settings_author": {
+    "message": "Gemaakt met"
+  },
+  "settingsPage_presetsTitle": {
+    "message": "Presets beheren"
+  },
+  "settingsPage_presetsDesc": {
+    "message": "Pas je snelle slaaptabknoppen aan"
+  },
+  "settingsPage_notificationsTitle": {
+    "message": "Meldingen"
+  },
+  "settingsPage_notificationsDesc": {
+    "message": "Beheer hoe je meldingen ontvangt"
+  },
+  "settingsPage_aboutTitle": {
+    "message": "Over"
+  },
+  "settingsPage_aboutDesc": {
+    "message": "Versie en informatie"
+  },
+  "settingsPage_communityTitle": {
+    "message": "Community"
+  },
+  "settingsPage_communityDesc": {
+    "message": "Krijg hulp en sluit je aan bij onze community"
+  },
+  "settingsPage_soundTitle": {
+    "message": "Geluidseffecten"
+  },
+  "settingsPage_soundDesc": {
+    "message": "Kies tussen geluid of stille modus"
+  },
+  "edit_title": {
+    "message": "Slapend tabblad bewerken"
+  },
+  "edit_reschedule": {
+    "message": "Herplannen"
+  },
+  "edit_customTime": {
+    "message": "Aangepaste tijd"
+  },
+  "edit_scheduledFor": {
+    "message": "📅 Gepland voor:"
+  },
+  "edit_todayAt": {
+    "message": "Vandaag om"
+  },
+  "edit_orPickDate": {
+    "message": "Of kies een datum"
+  },
+  "edit_openNow": {
+    "message": "🚀 Nu openen"
+  },
+  "edit_saveChanges": {
+    "message": "💾 Wijzigingen opslaan"
+  },
+  "time_today": {
+    "message": "Vandaag"
+  },
+  "time_tomorrow": {
+    "message": "Morgen"
+  },
+  "time_at": {
+    "message": "om"
+  },
+  "time_now": {
+    "message": "nu"
+  },
+  "status_opened": {
+    "message": "✓ Geopend"
+  },
+  "status_comingSoon": {
+    "message": "Binnenkort beschikbaar!"
+  },
+  "error_invalidUrl": {
+    "message": "Kan dit tabblad niet in slaap zetten. Alleen gewone webpagina's kunnen worden geslapen."
+  },
+  "error_invalidPreset": {
+    "message": "Ongeldige presetconfiguratie"
+  },
+  "error_minPresets": {
+    "message": "Je moet minstens één preset hebben"
+  },
+  "error_allowNotifications": {
+    "message": "Sta meldingen toe om deze functie te gebruiken."
+  },
+  "tooltip_openNow": {
+    "message": "Nu openen"
+  },
+  "tooltip_cancelSnooze": {
+    "message": "Slaap annuleren"
+  },
+  "tooltip_chooseEmoji": {
+    "message": "Emoji kiezen"
+  },
+  "tooltip_remove": {
+    "message": "Verwijderen"
+  },
+  "notif_restored": {
+    "message": "\"$1\" is opnieuw geopend."
+  },
+  "notif_testBody": {
+    "message": "Testmelding – je tabblad staat klaar!"
+  },
+  "notif_testButton": {
+    "message": "🔔 Testmelding"
+  },
+  "notif_tip": {
+    "message": "💡 Tip: zorg dat je browser meldingen van deze extensie toestaat."
+  },
+  "about_tagline": {
+    "message": "Verminder tabbladrommel met één klik"
+  },
+  "about_rate": {
+    "message": "⭐ Beoordeel extensie"
+  },
+  "about_share": {
+    "message": "📤 Delen"
+  },
+  "about_shareText": {
+    "message": "Bekijk deze geweldige extensie voor tabbladbeheer!"
+  },
+  "about_linkCopied": {
+    "message": "Link naar klembord gekopieerd! Deel hem met je vrienden."
+  },
+  "emoji_choose": {
+    "message": "Kies een emoji"
+  },
+  "presetSetting_enabled": {
+    "message": "Ingeschakeld"
+  },
+  "settings_language": {
+    "message": "Taal"
+  },
+  "settingsPage_languageTitle": {
+    "message": "Taal"
+  },
+  "settingsPage_languageDesc": {
+    "message": "Kies je voorkeurtaal"
+  },
+  "settings_auto": {
+    "message": "Auto-snooze"
+  },
+  "settingsPage_autoDesc": {
+    "message": "Tabs automatisch snoozen volgens je regels"
+  },
+  "auto_enable": {
+    "message": "Auto-snooze inschakelen"
+  },
+  "auto_enableDesc": {
+    "message": "Zolang ingeschakeld, controleert de achtergrond elke 15 minuten en snoozet tabs volgens onderstaande regels."
+  },
+  "auto_maxTabs": {
+    "message": "Maximaal open tabs"
+  },
+  "auto_maxTabsHint": {
+    "message": "Zijn er meer tabs open, dan worden de oudste gesnoozt."
+  },
+  "auto_idleHours": {
+    "message": "Uren inactiviteit"
+  },
+  "auto_idleHoursHint": {
+    "message": "Tabs die zo lang niet geopend zijn, worden gesnoozt."
+  },
+  "auto_duration": {
+    "message": "Snooze tot"
+  },
+  "auto_help": {
+    "message": "Auto-snooze controleert je tabs elke 15 minuten. Zit je boven het limiet, of is een tab uren niet geopend, dan wordt hij gesloten en later automatisch hersteld."
+  },
+  "auto_helpExcluded": {
+    "message": "Nooit gesnoozt: de actieve tab, vastgezette tabs, tabs met geluid en browserpagina's (chrome://…)."
+  },
+  "notif_autoSnoozed1": {
+    "message": "🤖 Auto-snooze: 1 tab gesnoozt"
+  },
+  "notif_autoSnoozedN": {
+    "message": "🤖 Auto-snooze: $1 tabs gesnoozt"
+  }
+}

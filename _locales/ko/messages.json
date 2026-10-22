@@ -1,0 +1,329 @@
+{
+  "extName": {
+    "message": "나중에 열 탭 저장 - 탭 스누즈 (Tab Snooze)"
+  },
+  "extDescription": {
+    "message": "한 번의 클릭으로 탭 스누즈: 지금 닫으면 Chrome이 나중에 자동으로 다시 엽니다. 나중에 읽을 탭 저장."
+  },
+  "actionTitle": {
+    "message": "이 탭 스누즈"
+  },
+  "nav_dashboard": {
+    "message": "대시보드"
+  },
+  "nav_snoozed": {
+    "message": "스누즈됨"
+  },
+  "nav_history": {
+    "message": "기록"
+  },
+  "nav_settings": {
+    "message": "설정"
+  },
+  "section_quickPresets": {
+    "message": "빠른 프리셋"
+  },
+  "section_smartPresets": {
+    "message": "스마트 프리셋"
+  },
+  "section_customPresets": {
+    "message": "내 프리셋"
+  },
+  "preset_1hour": {
+    "message": "1시간"
+  },
+  "preset_3hours": {
+    "message": "3시간"
+  },
+  "preset_6hours": {
+    "message": "6시간"
+  },
+  "preset_laterToday": {
+    "message": "오늘 안에"
+  },
+  "preset_thisEvening": {
+    "message": "오늘 저녁"
+  },
+  "preset_tomorrow": {
+    "message": "내일"
+  },
+  "preset_nextWeekend": {
+    "message": "다음 주말"
+  },
+  "preset_nextWeek": {
+    "message": "다음 주"
+  },
+  "preset_inMonth": {
+    "message": "한 달 후"
+  },
+  "preset_someday": {
+    "message": "언젠가"
+  },
+  "preset_pickDate": {
+    "message": "날짜 선택"
+  },
+  "preset_custom": {
+    "message": "사용자 지정"
+  },
+  "preset_minutes": {
+    "message": "$1분"
+  },
+  "empty_noSnoozed": {
+    "message": "스누즈된 탭이 없습니다"
+  },
+  "empty_goToDashboard": {
+    "message": "대시보드에서 이 탭을 스누즈하세요"
+  },
+  "empty_noHistory": {
+    "message": "아직 기록이 없습니다"
+  },
+  "empty_noHistoryDesc": {
+    "message": "완료된 탭이 여기에 표시됩니다"
+  },
+  "history_title": {
+    "message": "📜 최근에 연 탭"
+  },
+  "history_clear": {
+    "message": "지우기"
+  },
+  "history_clearConfirm": {
+    "message": "모든 기록을 지울까요? 이 작업은 되돌릴 수 없습니다."
+  },
+  "settings_presets": {
+    "message": "프리셋 버튼"
+  },
+  "settings_addPreset": {
+    "message": "+ 프리셋 추가"
+  },
+  "settings_completed": {
+    "message": "완료된 탭"
+  },
+  "settings_showCompleted": {
+    "message": "완료된 탭을 잠시 표시"
+  },
+  "settings_duration": {
+    "message": "표시 시간(초):"
+  },
+  "settings_reset": {
+    "message": "기본값으로 재설정"
+  },
+  "settings_save": {
+    "message": "설정 저장"
+  },
+  "settings_resetConfirm": {
+    "message": "모든 설정을 기본값으로 재설정할까요?"
+  },
+  "settings_notifications": {
+    "message": "알림"
+  },
+  "settings_about": {
+    "message": "정보"
+  },
+  "settings_community": {
+    "message": "커뮤니티 및 지원"
+  },
+  "settings_sound": {
+    "message": "효과음"
+  },
+  "settings_soundEnabled": {
+    "message": "효과음 켜기"
+  },
+  "settings_soundDesc": {
+    "message": "탭을 스누즈할 때 효과음 재생"
+  },
+  "settings_soundsOn": {
+    "message": "효과음 켜짐"
+  },
+  "settings_soundsOff": {
+    "message": "효과음 꺼짐"
+  },
+  "settings_desktopNotifications": {
+    "message": "데스크톱 알림"
+  },
+  "settings_desktopNotificationsDesc": {
+    "message": "탭이 다시 열릴 때 알림 표시"
+  },
+  "settings_version": {
+    "message": "버전"
+  },
+  "settings_author": {
+    "message": "사랑을 담아"
+  },
+  "settingsPage_presetsTitle": {
+    "message": "프리셋 관리"
+  },
+  "settingsPage_presetsDesc": {
+    "message": "빠른 스누즈 버튼을 사용자 지정"
+  },
+  "settingsPage_notificationsTitle": {
+    "message": "알림"
+  },
+  "settingsPage_notificationsDesc": {
+    "message": "알림을 받는 방식 관리"
+  },
+  "settingsPage_aboutTitle": {
+    "message": "정보"
+  },
+  "settingsPage_aboutDesc": {
+    "message": "버전 및 정보"
+  },
+  "settingsPage_communityTitle": {
+    "message": "커뮤니티"
+  },
+  "settingsPage_communityDesc": {
+    "message": "도움을 받고 커뮤니티에 참여하세요"
+  },
+  "settingsPage_soundTitle": {
+    "message": "효과음"
+  },
+  "settingsPage_soundDesc": {
+    "message": "소리 또는 무음 모드 선택"
+  },
+  "edit_title": {
+    "message": "스누즈된 탭 편집"
+  },
+  "edit_reschedule": {
+    "message": "다시 예약"
+  },
+  "edit_customTime": {
+    "message": "사용자 지정 시간"
+  },
+  "edit_scheduledFor": {
+    "message": "📅 예약된 시간:"
+  },
+  "edit_todayAt": {
+    "message": "오늘"
+  },
+  "edit_orPickDate": {
+    "message": "또는 날짜 선택"
+  },
+  "edit_openNow": {
+    "message": "🚀 지금 열기"
+  },
+  "edit_saveChanges": {
+    "message": "💾 변경 사항 저장"
+  },
+  "time_today": {
+    "message": "오늘"
+  },
+  "time_tomorrow": {
+    "message": "내일"
+  },
+  "time_at": {
+    "message": "에"
+  },
+  "time_now": {
+    "message": "지금"
+  },
+  "status_opened": {
+    "message": "✓ 열림"
+  },
+  "status_comingSoon": {
+    "message": "곧 출시 예정!"
+  },
+  "error_invalidUrl": {
+    "message": "이 페이지는 스누즈할 수 없습니다. 일반 웹 페이지만 스누즈할 수 있습니다."
+  },
+  "error_invalidPreset": {
+    "message": "잘못된 프리셋 설정입니다"
+  },
+  "error_minPresets": {
+    "message": "프리셋은 최소 하나 이상 필요합니다"
+  },
+  "error_allowNotifications": {
+    "message": "이 기능을 사용하려면 알림을 허용해 주세요."
+  },
+  "tooltip_openNow": {
+    "message": "지금 열기"
+  },
+  "tooltip_cancelSnooze": {
+    "message": "스누즈 취소"
+  },
+  "tooltip_chooseEmoji": {
+    "message": "이모지 선택"
+  },
+  "tooltip_remove": {
+    "message": "제거"
+  },
+  "notif_restored": {
+    "message": "\"$1\" 탭을 다시 열었습니다."
+  },
+  "notif_testBody": {
+    "message": "테스트 알림 - 탭이 준비되었습니다!"
+  },
+  "notif_testButton": {
+    "message": "🔔 알림 테스트"
+  },
+  "notif_tip": {
+    "message": "💡 팁: 브라우저가 이 확장 프로그램의 알림을 허용하는지 확인하세요."
+  },
+  "about_tagline": {
+    "message": "한 번의 클릭으로 탭 정리"
+  },
+  "about_rate": {
+    "message": "⭐ 확장 프로그램 평가"
+  },
+  "about_share": {
+    "message": "📤 공유"
+  },
+  "about_shareText": {
+    "message": "이 훌륭한 탭 관리 확장 프로그램을 확인해 보세요!"
+  },
+  "about_linkCopied": {
+    "message": "링크가 클립보드에 복사되었습니다! 친구들과 공유해 보세요."
+  },
+  "emoji_choose": {
+    "message": "이모지 선택"
+  },
+  "presetSetting_enabled": {
+    "message": "활성화됨"
+  },
+  "settings_language": {
+    "message": "언어"
+  },
+  "settingsPage_languageTitle": {
+    "message": "언어"
+  },
+  "settingsPage_languageDesc": {
+    "message": "선호하는 언어를 선택하세요"
+  },
+  "settings_auto": {
+    "message": "자동 스누즈"
+  },
+  "settingsPage_autoDesc": {
+    "message": "규칙에 따라 탭 자동 스누즈"
+  },
+  "auto_enable": {
+    "message": "자동 스누즈 사용"
+  },
+  "auto_enableDesc": {
+    "message": "사용 중에는 15분마다 백그라운드에서 확인하여 아래 규칙에 따라 탭을 스누즈합니다."
+  },
+  "auto_maxTabs": {
+    "message": "최대 열린 탭 수"
+  },
+  "auto_maxTabsHint": {
+    "message": "한도를 초과하면 오래된 탭부터 스누즈됩니다."
+  },
+  "auto_idleHours": {
+    "message": "비활성 시간(시간)"
+  },
+  "auto_idleHoursHint": {
+    "message": "해당 시간 동안 열지 않은 탭은 스누즈됩니다."
+  },
+  "auto_duration": {
+    "message": "스누즈 기간"
+  },
+  "auto_help": {
+    "message": "자동 스누즈는 15분마다 탭을 확인합니다. 탭 수가 한도를 초과하거나 탭이 설정한 시간 동안 열리지 않으면 닫혔다가 나중에 자동으로 복원됩니다."
+  },
+  "auto_helpExcluded": {
+    "message": "스누즈하지 않음: 활성 탭, 고정된 탭, 소리 재생 중인 탭, 브라우저 페이지(chrome://…)."
+  },
+  "notif_autoSnoozed1": {
+    "message": "🤖 자동 스누즈: 탭 1개를 스누즈했습니다"
+  },
+  "notif_autoSnoozedN": {
+    "message": "🤖 자동 스누즈: 탭 $1개를 스누즈했습니다"
+  }
+}

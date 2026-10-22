@@ -1,0 +1,329 @@
+{
+  "extName": {
+    "message": "Salva schede per dopo (Tab Snooze)"
+  },
+  "extDescription": {
+    "message": "Metti in pausa le schede con un clic: chiudi ora, Chrome le riapre dopo automaticamente. Salva schede per dopo, senza caos."
+  },
+  "actionTitle": {
+    "message": "Metti in pausa questa scheda"
+  },
+  "nav_dashboard": {
+    "message": "Dashboard"
+  },
+  "nav_snoozed": {
+    "message": "In pausa"
+  },
+  "nav_history": {
+    "message": "Cronologia"
+  },
+  "nav_settings": {
+    "message": "Impostazioni"
+  },
+  "section_quickPresets": {
+    "message": "Preset rapidi"
+  },
+  "section_smartPresets": {
+    "message": "Preset intelligenti"
+  },
+  "section_customPresets": {
+    "message": "I tuoi preset"
+  },
+  "preset_1hour": {
+    "message": "1 ora"
+  },
+  "preset_3hours": {
+    "message": "3 ore"
+  },
+  "preset_6hours": {
+    "message": "6 ore"
+  },
+  "preset_laterToday": {
+    "message": "Più tardi oggi"
+  },
+  "preset_thisEvening": {
+    "message": "Stasera"
+  },
+  "preset_tomorrow": {
+    "message": "Domani"
+  },
+  "preset_nextWeekend": {
+    "message": "Prossimo fine settimana"
+  },
+  "preset_nextWeek": {
+    "message": "La prossima settimana"
+  },
+  "preset_inMonth": {
+    "message": "Tra un mese"
+  },
+  "preset_someday": {
+    "message": "Un giorno"
+  },
+  "preset_pickDate": {
+    "message": "Scegli data"
+  },
+  "preset_custom": {
+    "message": "Personalizzato"
+  },
+  "preset_minutes": {
+    "message": "$1 minuti"
+  },
+  "empty_noSnoozed": {
+    "message": "Nessuna scheda in pausa"
+  },
+  "empty_goToDashboard": {
+    "message": "Vai alla Dashboard per mettere in pausa questa scheda"
+  },
+  "empty_noHistory": {
+    "message": "Nessuna cronologia"
+  },
+  "empty_noHistoryDesc": {
+    "message": "Le schede completate appariranno qui"
+  },
+  "history_title": {
+    "message": "📜 Aperte di recente"
+  },
+  "history_clear": {
+    "message": "Cancella"
+  },
+  "history_clearConfirm": {
+    "message": "Cancellare tutta la cronologia? L'operazione non può essere annullata."
+  },
+  "settings_presets": {
+    "message": "Pulsanti preset"
+  },
+  "settings_addPreset": {
+    "message": "+ Aggiungi preset"
+  },
+  "settings_completed": {
+    "message": "Schede completate"
+  },
+  "settings_showCompleted": {
+    "message": "Mostra brevemente le schede completate"
+  },
+  "settings_duration": {
+    "message": "Durata (secondi):"
+  },
+  "settings_reset": {
+    "message": "Ripristina valori predefiniti"
+  },
+  "settings_save": {
+    "message": "Salva impostazioni"
+  },
+  "settings_resetConfirm": {
+    "message": "Ripristinare tutte le impostazioni ai valori predefiniti?"
+  },
+  "settings_notifications": {
+    "message": "Notifiche"
+  },
+  "settings_about": {
+    "message": "Informazioni"
+  },
+  "settings_community": {
+    "message": "Comunità e supporto"
+  },
+  "settings_sound": {
+    "message": "Effetti sonori"
+  },
+  "settings_soundEnabled": {
+    "message": "Abilita suoni"
+  },
+  "settings_soundDesc": {
+    "message": "Riproduci i suoni quando metti in pausa le schede"
+  },
+  "settings_soundsOn": {
+    "message": "Suoni ATTIVATI"
+  },
+  "settings_soundsOff": {
+    "message": "Suoni DISATTIVATI"
+  },
+  "settings_desktopNotifications": {
+    "message": "Notifiche desktop"
+  },
+  "settings_desktopNotificationsDesc": {
+    "message": "Mostra una notifica quando la scheda si riapre"
+  },
+  "settings_version": {
+    "message": "Versione"
+  },
+  "settings_author": {
+    "message": "Realizzato con"
+  },
+  "settingsPage_presetsTitle": {
+    "message": "Gestisci preset"
+  },
+  "settingsPage_presetsDesc": {
+    "message": "Personalizza i tuoi pulsanti di messa in pausa rapida"
+  },
+  "settingsPage_notificationsTitle": {
+    "message": "Notifiche"
+  },
+  "settingsPage_notificationsDesc": {
+    "message": "Gestisci come ricevere gli avvisi"
+  },
+  "settingsPage_aboutTitle": {
+    "message": "Informazioni"
+  },
+  "settingsPage_aboutDesc": {
+    "message": "Versione e informazioni"
+  },
+  "settingsPage_communityTitle": {
+    "message": "Comunità"
+  },
+  "settingsPage_communityDesc": {
+    "message": "Chiedi aiuto e unisciti alla nostra comunità"
+  },
+  "settingsPage_soundTitle": {
+    "message": "Effetti sonori"
+  },
+  "settingsPage_soundDesc": {
+    "message": "Scegli tra suono o modalità silenziosa"
+  },
+  "edit_title": {
+    "message": "Modifica scheda in pausa"
+  },
+  "edit_reschedule": {
+    "message": "Riprogramma"
+  },
+  "edit_customTime": {
+    "message": "Orario personalizzato"
+  },
+  "edit_scheduledFor": {
+    "message": "📅 Programmata per:"
+  },
+  "edit_todayAt": {
+    "message": "Oggi alle"
+  },
+  "edit_orPickDate": {
+    "message": "Oppure scegli una data"
+  },
+  "edit_openNow": {
+    "message": "🚀 Apri ora"
+  },
+  "edit_saveChanges": {
+    "message": "💾 Salva modifiche"
+  },
+  "time_today": {
+    "message": "Oggi"
+  },
+  "time_tomorrow": {
+    "message": "Domani"
+  },
+  "time_at": {
+    "message": "alle"
+  },
+  "time_now": {
+    "message": "adesso"
+  },
+  "status_opened": {
+    "message": "✓ Aperta"
+  },
+  "status_comingSoon": {
+    "message": "In arrivo!"
+  },
+  "error_invalidUrl": {
+    "message": "Impossibile mettere in pausa questa pagina. Solo le pagine web normali possono essere messe in pausa."
+  },
+  "error_invalidPreset": {
+    "message": "Configurazione del preset non valida"
+  },
+  "error_minPresets": {
+    "message": "Devi avere almeno un preset"
+  },
+  "error_allowNotifications": {
+    "message": "Consenti le notifiche per usare questa funzionalità."
+  },
+  "tooltip_openNow": {
+    "message": "Apri ora"
+  },
+  "tooltip_cancelSnooze": {
+    "message": "Annulla messa in pausa"
+  },
+  "tooltip_chooseEmoji": {
+    "message": "Scegli un'emoji"
+  },
+  "tooltip_remove": {
+    "message": "Rimuovi"
+  },
+  "notif_restored": {
+    "message": "\"$1\" è stata ripristinata."
+  },
+  "notif_testBody": {
+    "message": "Notifica di prova - la tua scheda è pronta!"
+  },
+  "notif_testButton": {
+    "message": "🔔 Prova notifica"
+  },
+  "notif_tip": {
+    "message": "💡 Suggerimento: assicurati che il browser consenta le notifiche da questa estensione."
+  },
+  "about_tagline": {
+    "message": "Riduci il disordine delle schede con un clic"
+  },
+  "about_rate": {
+    "message": "⭐ Valuta l'estensione"
+  },
+  "about_share": {
+    "message": "📤 Condividi"
+  },
+  "about_shareText": {
+    "message": "Scopri questa fantastica estensione per gestire le schede!"
+  },
+  "about_linkCopied": {
+    "message": "Link copiato negli appunti! Condividilo con i tuoi amici."
+  },
+  "emoji_choose": {
+    "message": "Scegli un'emoji"
+  },
+  "presetSetting_enabled": {
+    "message": "Attivato"
+  },
+  "settings_language": {
+    "message": "Lingua"
+  },
+  "settingsPage_languageTitle": {
+    "message": "Lingua"
+  },
+  "settingsPage_languageDesc": {
+    "message": "Scegli la tua lingua preferita"
+  },
+  "settings_auto": {
+    "message": "Auto-snooze"
+  },
+  "settingsPage_autoDesc": {
+    "message": "Sospende le schede automaticamente in base alle regole"
+  },
+  "auto_enable": {
+    "message": "Attiva auto-snooze"
+  },
+  "auto_enableDesc": {
+    "message": "Mentre è attivo, un controllo in background ogni 15 minuti sospende le schede secondo le regole seguenti."
+  },
+  "auto_maxTabs": {
+    "message": "Numero massimo di schede aperte"
+  },
+  "auto_maxTabsHint": {
+    "message": "Oltre il limite, vengono sospese le schede più vecchie."
+  },
+  "auto_idleHours": {
+    "message": "Ore di inattività"
+  },
+  "auto_idleHoursHint": {
+    "message": "Le schede non aperte da questo numero di ore vengono sospese."
+  },
+  "auto_duration": {
+    "message": "Snooze fino a"
+  },
+  "auto_help": {
+    "message": "L'auto-snooze controlla le schede ogni 15 minuti. Se le schede superano il limite o una scheda non viene aperta per ore, viene chiusa e riaperta automaticamente più tardi."
+  },
+  "auto_helpExcluded": {
+    "message": "Mai sospese: la scheda attiva, le schede fissate, le schede con audio e le pagine del browser (chrome://…)."
+  },
+  "notif_autoSnoozed1": {
+    "message": "🤖 Auto-snooze: 1 scheda sospesa"
+  },
+  "notif_autoSnoozedN": {
+    "message": "🤖 Auto-snooze: $1 schede sospese"
+  }
+}

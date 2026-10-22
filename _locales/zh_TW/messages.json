@@ -1,0 +1,329 @@
+{
+  "extName": {
+    "message": "分頁休眠 - 稍後閱讀,稍後自動開啟"
+  },
+  "extDescription": {
+    "message": "一鍵休眠分頁：現在關閉，Chrome 稍後自動重新開啟。稍後閱讀，保持瀏覽器整潔。"
+  },
+  "actionTitle": {
+    "message": "稍後再看此分頁"
+  },
+  "nav_dashboard": {
+    "message": "儀表板"
+  },
+  "nav_snoozed": {
+    "message": "稍後再看"
+  },
+  "nav_history": {
+    "message": "記錄"
+  },
+  "nav_settings": {
+    "message": "設定"
+  },
+  "section_quickPresets": {
+    "message": "快速預設"
+  },
+  "section_smartPresets": {
+    "message": "智慧預設"
+  },
+  "section_customPresets": {
+    "message": "你的預設"
+  },
+  "preset_1hour": {
+    "message": "1 小時"
+  },
+  "preset_3hours": {
+    "message": "3 小時"
+  },
+  "preset_6hours": {
+    "message": "6 小時"
+  },
+  "preset_laterToday": {
+    "message": "今天稍後"
+  },
+  "preset_thisEvening": {
+    "message": "今晚"
+  },
+  "preset_tomorrow": {
+    "message": "明天"
+  },
+  "preset_nextWeekend": {
+    "message": "下個週末"
+  },
+  "preset_nextWeek": {
+    "message": "下週"
+  },
+  "preset_inMonth": {
+    "message": "一個月後"
+  },
+  "preset_someday": {
+    "message": "改天"
+  },
+  "preset_pickDate": {
+    "message": "選擇日期"
+  },
+  "preset_custom": {
+    "message": "自訂"
+  },
+  "preset_minutes": {
+    "message": "$1 分鐘"
+  },
+  "empty_noSnoozed": {
+    "message": "沒有稍後再看的分頁"
+  },
+  "empty_goToDashboard": {
+    "message": "前往儀表板稍後再看此分頁"
+  },
+  "empty_noHistory": {
+    "message": "尚無記錄"
+  },
+  "empty_noHistoryDesc": {
+    "message": "已完成的分頁會顯示在這裡"
+  },
+  "history_title": {
+    "message": "📜 最近開啟"
+  },
+  "history_clear": {
+    "message": "清除"
+  },
+  "history_clearConfirm": {
+    "message": "要清除所有記錄嗎？此操作無法復原。"
+  },
+  "settings_presets": {
+    "message": "預設按鈕"
+  },
+  "settings_addPreset": {
+    "message": "+ 新增預設"
+  },
+  "settings_completed": {
+    "message": "已完成的分頁"
+  },
+  "settings_showCompleted": {
+    "message": "短暫顯示已完成的分頁"
+  },
+  "settings_duration": {
+    "message": "顯示時間 (秒):"
+  },
+  "settings_reset": {
+    "message": "恢復預設值"
+  },
+  "settings_save": {
+    "message": "儲存設定"
+  },
+  "settings_resetConfirm": {
+    "message": "要將所有設定恢復為預設值嗎？"
+  },
+  "settings_notifications": {
+    "message": "通知"
+  },
+  "settings_about": {
+    "message": "關於"
+  },
+  "settings_community": {
+    "message": "社群與支援"
+  },
+  "settings_sound": {
+    "message": "音效"
+  },
+  "settings_soundEnabled": {
+    "message": "啟用聲音"
+  },
+  "settings_soundDesc": {
+    "message": "稍後再看分頁時播放聲音"
+  },
+  "settings_soundsOn": {
+    "message": "聲音開啟"
+  },
+  "settings_soundsOff": {
+    "message": "聲音關閉"
+  },
+  "settings_desktopNotifications": {
+    "message": "桌面通知"
+  },
+  "settings_desktopNotificationsDesc": {
+    "message": "分頁重新開啟時顯示通知"
+  },
+  "settings_version": {
+    "message": "版本"
+  },
+  "settings_author": {
+    "message": "用心打造"
+  },
+  "settingsPage_presetsTitle": {
+    "message": "管理預設"
+  },
+  "settingsPage_presetsDesc": {
+    "message": "自訂你的快速稍後再看按鈕"
+  },
+  "settingsPage_notificationsTitle": {
+    "message": "通知"
+  },
+  "settingsPage_notificationsDesc": {
+    "message": "管理通知的接收方式"
+  },
+  "settingsPage_aboutTitle": {
+    "message": "關於"
+  },
+  "settingsPage_aboutDesc": {
+    "message": "版本與資訊"
+  },
+  "settingsPage_communityTitle": {
+    "message": "社群"
+  },
+  "settingsPage_communityDesc": {
+    "message": "取得協助並加入我們的社群"
+  },
+  "settingsPage_soundTitle": {
+    "message": "音效"
+  },
+  "settingsPage_soundDesc": {
+    "message": "選擇聲音或靜音模式"
+  },
+  "edit_title": {
+    "message": "編輯稍後再看的分頁"
+  },
+  "edit_reschedule": {
+    "message": "重新排程"
+  },
+  "edit_customTime": {
+    "message": "自訂時間"
+  },
+  "edit_scheduledFor": {
+    "message": "📅 排定時間:"
+  },
+  "edit_todayAt": {
+    "message": "今天"
+  },
+  "edit_orPickDate": {
+    "message": "或選擇日期"
+  },
+  "edit_openNow": {
+    "message": "🚀 立即開啟"
+  },
+  "edit_saveChanges": {
+    "message": "💾 儲存變更"
+  },
+  "time_today": {
+    "message": "今天"
+  },
+  "time_tomorrow": {
+    "message": "明天"
+  },
+  "time_at": {
+    "message": "在"
+  },
+  "time_now": {
+    "message": "現在"
+  },
+  "status_opened": {
+    "message": "✓ 已開啟"
+  },
+  "status_comingSoon": {
+    "message": "即將推出！"
+  },
+  "error_invalidUrl": {
+    "message": "無法將此頁面稍後再看。只有普通網頁可以稍後再看。"
+  },
+  "error_invalidPreset": {
+    "message": "預設設定無效"
+  },
+  "error_minPresets": {
+    "message": "至少需要保留一個預設"
+  },
+  "error_allowNotifications": {
+    "message": "請允許通知以使用此功能。"
+  },
+  "tooltip_openNow": {
+    "message": "立即開啟"
+  },
+  "tooltip_cancelSnooze": {
+    "message": "取消稍後再看"
+  },
+  "tooltip_chooseEmoji": {
+    "message": "選擇表情符號"
+  },
+  "tooltip_remove": {
+    "message": "移除"
+  },
+  "notif_restored": {
+    "message": "\"$1\" 已重新開啟。"
+  },
+  "notif_testBody": {
+    "message": "測試通知 - 你的分頁已準備就緒！"
+  },
+  "notif_testButton": {
+    "message": "🔔 測試通知"
+  },
+  "notif_tip": {
+    "message": "💡 提示：請確認瀏覽器允許此擴充功能發送通知。"
+  },
+  "about_tagline": {
+    "message": "一鍵減少分頁混亂"
+  },
+  "about_rate": {
+    "message": "⭐ 評分擴充功能"
+  },
+  "about_share": {
+    "message": "📤 分享"
+  },
+  "about_shareText": {
+    "message": "看看這個超棒的分頁管理擴充功能！"
+  },
+  "about_linkCopied": {
+    "message": "連結已複製到剪貼簿！快分享給你的朋友吧。"
+  },
+  "emoji_choose": {
+    "message": "選擇表情符號"
+  },
+  "presetSetting_enabled": {
+    "message": "已啟用"
+  },
+  "settings_language": {
+    "message": "語言"
+  },
+  "settingsPage_languageTitle": {
+    "message": "語言"
+  },
+  "settingsPage_languageDesc": {
+    "message": "選擇你的首選語言"
+  },
+  "settings_auto": {
+    "message": "自動休眠"
+  },
+  "settingsPage_autoDesc": {
+    "message": "依規則自動休眠分頁"
+  },
+  "auto_enable": {
+    "message": "啟用自動休眠"
+  },
+  "auto_enableDesc": {
+    "message": "啟用後，背景每 15 分鐘檢查一次，並依以下規則休眠分頁。"
+  },
+  "auto_maxTabs": {
+    "message": "最多開啟分頁數"
+  },
+  "auto_maxTabsHint": {
+    "message": "超過上限時，較早的分頁會被休眠。"
+  },
+  "auto_idleHours": {
+    "message": "閒置小時數"
+  },
+  "auto_idleHoursHint": {
+    "message": "超過該小時數未開啟的分頁會被休眠。"
+  },
+  "auto_duration": {
+    "message": "休眠到"
+  },
+  "auto_help": {
+    "message": "自動休眠每 15 分鐘檢查一次分頁。當分頁數量超過上限，或某個分頁超過設定小時數未開啟時，它會被關閉並在之後自動還原。"
+  },
+  "auto_helpExcluded": {
+    "message": "永不休眠：目前使用中的分頁、已釘選的分頁、正在播放聲音的分頁，以及瀏覽器頁面（chrome://…）。"
+  },
+  "notif_autoSnoozed1": {
+    "message": "🤖 自動休眠：已休眠 1 個分頁"
+  },
+  "notif_autoSnoozedN": {
+    "message": "🤖 自動休眠：已休眠 $1 個分頁"
+  }
+}

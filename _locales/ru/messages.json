@@ -1,0 +1,329 @@
+{
+  "extName": {
+    "message": "Отложить вкладки на потом - Tab Snooze"
+  },
+  "extDescription": {
+    "message": "Отложите вкладки в один клик: закройте сейчас — Chrome откроет позже автоматически. Вкладки на потом, без хаоса."
+  },
+  "actionTitle": {
+    "message": "Отложить эту вкладку"
+  },
+  "nav_dashboard": {
+    "message": "Дашборд"
+  },
+  "nav_snoozed": {
+    "message": "Отложенные"
+  },
+  "nav_history": {
+    "message": "История"
+  },
+  "nav_settings": {
+    "message": "Настройки"
+  },
+  "section_quickPresets": {
+    "message": "Быстрые пресеты"
+  },
+  "section_smartPresets": {
+    "message": "Умные пресеты"
+  },
+  "section_customPresets": {
+    "message": "Ваши пресеты"
+  },
+  "preset_1hour": {
+    "message": "1 час"
+  },
+  "preset_3hours": {
+    "message": "3 часа"
+  },
+  "preset_6hours": {
+    "message": "6 часов"
+  },
+  "preset_laterToday": {
+    "message": "Сегодня позже"
+  },
+  "preset_thisEvening": {
+    "message": "Сегодня вечером"
+  },
+  "preset_tomorrow": {
+    "message": "Завтра"
+  },
+  "preset_nextWeekend": {
+    "message": "Следующие выходные"
+  },
+  "preset_nextWeek": {
+    "message": "Следующая неделя"
+  },
+  "preset_inMonth": {
+    "message": "Через месяц"
+  },
+  "preset_someday": {
+    "message": "Когда-нибудь"
+  },
+  "preset_pickDate": {
+    "message": "Выбрать дату"
+  },
+  "preset_custom": {
+    "message": "Своё"
+  },
+  "preset_minutes": {
+    "message": "$1 минут"
+  },
+  "empty_noSnoozed": {
+    "message": "Нет отложенных вкладок"
+  },
+  "empty_goToDashboard": {
+    "message": "Перейдите в Дашборд, чтобы отложить эту вкладку"
+  },
+  "empty_noHistory": {
+    "message": "История пуста"
+  },
+  "empty_noHistoryDesc": {
+    "message": "Завершенные вкладки появятся здесь"
+  },
+  "history_title": {
+    "message": "📜 Недавно открытые"
+  },
+  "history_clear": {
+    "message": "Очистить"
+  },
+  "history_clearConfirm": {
+    "message": "Очистить всю историю? Это действие нельзя отменить."
+  },
+  "settings_presets": {
+    "message": "Кнопки пресетов"
+  },
+  "settings_addPreset": {
+    "message": "+ Добавить пресет"
+  },
+  "settings_completed": {
+    "message": "Завершенные вкладки"
+  },
+  "settings_showCompleted": {
+    "message": "Показывать завершенные вкладки"
+  },
+  "settings_duration": {
+    "message": "Длительность (секунд):"
+  },
+  "settings_reset": {
+    "message": "Сбросить"
+  },
+  "settings_save": {
+    "message": "Сохранить"
+  },
+  "settings_resetConfirm": {
+    "message": "Сбросить все настройки к значениям по умолчанию?"
+  },
+  "settings_notifications": {
+    "message": "Уведомления"
+  },
+  "settings_about": {
+    "message": "О программе"
+  },
+  "settings_community": {
+    "message": "Сообщество"
+  },
+  "settings_sound": {
+    "message": "Звуковые эффекты"
+  },
+  "settings_soundEnabled": {
+    "message": "Включить звуки"
+  },
+  "settings_soundDesc": {
+    "message": "Воспроизводить звуки при откладывании вкладок"
+  },
+  "settings_soundsOn": {
+    "message": "Звуки включены"
+  },
+  "settings_soundsOff": {
+    "message": "Звуки выключены"
+  },
+  "settings_desktopNotifications": {
+    "message": "Уведомления на рабочем столе"
+  },
+  "settings_desktopNotificationsDesc": {
+    "message": "Показывать уведомление при повторном открытии вкладки"
+  },
+  "settings_version": {
+    "message": "Версия"
+  },
+  "settings_author": {
+    "message": "Сделано с"
+  },
+  "settingsPage_presetsTitle": {
+    "message": "Управление пресетами"
+  },
+  "settingsPage_presetsDesc": {
+    "message": "Настройте кнопки быстрого откладывания"
+  },
+  "settingsPage_notificationsTitle": {
+    "message": "Уведомления"
+  },
+  "settingsPage_notificationsDesc": {
+    "message": "Управление оповещениями"
+  },
+  "settingsPage_aboutTitle": {
+    "message": "О программе"
+  },
+  "settingsPage_aboutDesc": {
+    "message": "Версия и информация"
+  },
+  "settingsPage_communityTitle": {
+    "message": "Сообщество"
+  },
+  "settingsPage_communityDesc": {
+    "message": "Получите помощь и присоединяйтесь к нам"
+  },
+  "settingsPage_soundTitle": {
+    "message": "Звуковые эффекты"
+  },
+  "settingsPage_soundDesc": {
+    "message": "Выберите между звуковым и тихим режимом"
+  },
+  "edit_title": {
+    "message": "Редактировать вкладку"
+  },
+  "edit_reschedule": {
+    "message": "Перенести"
+  },
+  "edit_customTime": {
+    "message": "Настраиваемое время"
+  },
+  "edit_scheduledFor": {
+    "message": "📅 Запланировано на:"
+  },
+  "edit_todayAt": {
+    "message": "Сегодня в"
+  },
+  "edit_orPickDate": {
+    "message": "Или выберите дату"
+  },
+  "edit_openNow": {
+    "message": "🚀 Открыть сейчас"
+  },
+  "edit_saveChanges": {
+    "message": "💾 Сохранить"
+  },
+  "time_today": {
+    "message": "Сегодня"
+  },
+  "time_tomorrow": {
+    "message": "Завтра"
+  },
+  "time_at": {
+    "message": "в"
+  },
+  "time_now": {
+    "message": "сейчас"
+  },
+  "status_opened": {
+    "message": "✓ Открыта"
+  },
+  "status_comingSoon": {
+    "message": "Скоро!"
+  },
+  "error_invalidUrl": {
+    "message": "Эту страницу нельзя отложить. Откладывать можно только обычные веб-страницы."
+  },
+  "error_invalidPreset": {
+    "message": "Некорректная конфигурация пресета"
+  },
+  "error_minPresets": {
+    "message": "Должен остаться хотя бы один пресет"
+  },
+  "error_allowNotifications": {
+    "message": "Разрешите уведомления, чтобы использовать эту функцию."
+  },
+  "tooltip_openNow": {
+    "message": "Открыть сейчас"
+  },
+  "tooltip_cancelSnooze": {
+    "message": "Отменить откладывание"
+  },
+  "tooltip_chooseEmoji": {
+    "message": "Выбрать эмодзи"
+  },
+  "tooltip_remove": {
+    "message": "Удалить"
+  },
+  "notif_restored": {
+    "message": "Вкладка \"$1\" снова открыта."
+  },
+  "notif_testBody": {
+    "message": "Тестовое уведомление — ваша вкладка готова!"
+  },
+  "notif_testButton": {
+    "message": "🔔 Тестовое уведомление"
+  },
+  "notif_tip": {
+    "message": "💡 Совет: убедитесь, что браузер разрешает уведомления от этого расширения."
+  },
+  "about_tagline": {
+    "message": "Наведите порядок во вкладках одним кликом"
+  },
+  "about_rate": {
+    "message": "⭐ Оценить расширение"
+  },
+  "about_share": {
+    "message": "📤 Поделиться"
+  },
+  "about_shareText": {
+    "message": "Посмотрите это отличное расширение для управления вкладками!"
+  },
+  "about_linkCopied": {
+    "message": "Ссылка скопирована в буфер обмена! Поделитесь ею с друзьями."
+  },
+  "emoji_choose": {
+    "message": "Выберите эмодзи"
+  },
+  "presetSetting_enabled": {
+    "message": "Включён"
+  },
+  "settings_language": {
+    "message": "Язык"
+  },
+  "settingsPage_languageTitle": {
+    "message": "Язык"
+  },
+  "settingsPage_languageDesc": {
+    "message": "Выберите предпочитаемый язык"
+  },
+  "settings_auto": {
+    "message": "Авто-снуз"
+  },
+  "settingsPage_autoDesc": {
+    "message": "Автоматически откладывать вкладки по правилам"
+  },
+  "auto_enable": {
+    "message": "Включить авто-снуз"
+  },
+  "auto_enableDesc": {
+    "message": "Пока включено, фоновая проверка каждые 15 минут откладывает вкладки по правилам ниже."
+  },
+  "auto_maxTabs": {
+    "message": "Максимум открытых вкладок"
+  },
+  "auto_maxTabsHint": {
+    "message": "Если вкладок больше, самые старые из них откладываются."
+  },
+  "auto_idleHours": {
+    "message": "Часов бездействия"
+  },
+  "auto_idleHoursHint": {
+    "message": "Вкладки, которые не открывались столько часов, откладываются."
+  },
+  "auto_duration": {
+    "message": "Вернуть через"
+  },
+  "auto_help": {
+    "message": "Авто-снуз проверяет вкладки каждые 15 минут. Если вкладок больше лимита или вкладка не открывалась указанное число часов, она закрывается и позже вернётся автоматически."
+  },
+  "auto_helpExcluded": {
+    "message": "Никогда не откладываются: активная вкладка, закреплённые вкладки, вкладки со звуком и служебные страницы (chrome://…)."
+  },
+  "notif_autoSnoozed1": {
+    "message": "🤖 Авто-снуз: отложена 1 вкладка"
+  },
+  "notif_autoSnoozedN": {
+    "message": "🤖 Авто-снуз: отложено вкладок: $1"
+  }
+}

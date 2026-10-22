@@ -1,0 +1,329 @@
+{
+  "extName": {
+    "message": "Відкласти вкладки на потім - Tab Snooze"
+  },
+  "extDescription": {
+    "message": "Відкладіть вкладки в один клік: закрийте зараз — Chrome відкриє пізніше автоматично. Вкладки на потім, без хаосу."
+  },
+  "actionTitle": {
+    "message": "Відкласти цю вкладку"
+  },
+  "nav_dashboard": {
+    "message": "Панель"
+  },
+  "nav_snoozed": {
+    "message": "Відкладені"
+  },
+  "nav_history": {
+    "message": "Історія"
+  },
+  "nav_settings": {
+    "message": "Налаштування"
+  },
+  "section_quickPresets": {
+    "message": "Швидкі пресети"
+  },
+  "section_smartPresets": {
+    "message": "Розумні пресети"
+  },
+  "section_customPresets": {
+    "message": "Ваші пресети"
+  },
+  "preset_1hour": {
+    "message": "1 година"
+  },
+  "preset_3hours": {
+    "message": "3 години"
+  },
+  "preset_6hours": {
+    "message": "6 годин"
+  },
+  "preset_laterToday": {
+    "message": "Пізніше сьогодні"
+  },
+  "preset_thisEvening": {
+    "message": "Сьогодні ввечері"
+  },
+  "preset_tomorrow": {
+    "message": "Завтра"
+  },
+  "preset_nextWeekend": {
+    "message": "Наступні вихідні"
+  },
+  "preset_nextWeek": {
+    "message": "Наступний тиждень"
+  },
+  "preset_inMonth": {
+    "message": "Через місяць"
+  },
+  "preset_someday": {
+    "message": "Якось"
+  },
+  "preset_pickDate": {
+    "message": "Вибрати дату"
+  },
+  "preset_custom": {
+    "message": "Власний"
+  },
+  "preset_minutes": {
+    "message": "$1 хвилин"
+  },
+  "empty_noSnoozed": {
+    "message": "Немає відкладених вкладок"
+  },
+  "empty_goToDashboard": {
+    "message": "Перейдіть на Панель, щоб відкласти цю вкладку"
+  },
+  "empty_noHistory": {
+    "message": "Історії поки немає"
+  },
+  "empty_noHistoryDesc": {
+    "message": "Завершені вкладки з'являться тут"
+  },
+  "history_title": {
+    "message": "📜 Нещодавно відкриті"
+  },
+  "history_clear": {
+    "message": "Очистити"
+  },
+  "history_clearConfirm": {
+    "message": "Очистити всю історію? Цю дію не можна скасувати."
+  },
+  "settings_presets": {
+    "message": "Кнопки пресетів"
+  },
+  "settings_addPreset": {
+    "message": "+ Додати пресет"
+  },
+  "settings_completed": {
+    "message": "Завершені вкладки"
+  },
+  "settings_showCompleted": {
+    "message": "Коротко показувати завершені вкладки"
+  },
+  "settings_duration": {
+    "message": "Тривалість (секунди):"
+  },
+  "settings_reset": {
+    "message": "Скинути до стандартних"
+  },
+  "settings_save": {
+    "message": "Зберегти налаштування"
+  },
+  "settings_resetConfirm": {
+    "message": "Скинути всі налаштування до стандартних?"
+  },
+  "settings_notifications": {
+    "message": "Сповіщення"
+  },
+  "settings_about": {
+    "message": "Про програму"
+  },
+  "settings_community": {
+    "message": "Спільнота та підтримка"
+  },
+  "settings_sound": {
+    "message": "Звукові ефекти"
+  },
+  "settings_soundEnabled": {
+    "message": "Увімкнути звуки"
+  },
+  "settings_soundDesc": {
+    "message": "Відтворювати звуки під час відкладання вкладок"
+  },
+  "settings_soundsOn": {
+    "message": "Звуки ввімкнено"
+  },
+  "settings_soundsOff": {
+    "message": "Звуки вимкнено"
+  },
+  "settings_desktopNotifications": {
+    "message": "Сповіщення на робочому столі"
+  },
+  "settings_desktopNotificationsDesc": {
+    "message": "Показувати сповіщення, коли вкладку відкрито"
+  },
+  "settings_version": {
+    "message": "Версія"
+  },
+  "settings_author": {
+    "message": "Створено з"
+  },
+  "settingsPage_presetsTitle": {
+    "message": "Керування пресетами"
+  },
+  "settingsPage_presetsDesc": {
+    "message": "Налаштуйте кнопки швидкого відкладання"
+  },
+  "settingsPage_notificationsTitle": {
+    "message": "Сповіщення"
+  },
+  "settingsPage_notificationsDesc": {
+    "message": "Керуйте тим, як ви отримуєте сповіщення"
+  },
+  "settingsPage_aboutTitle": {
+    "message": "Про програму"
+  },
+  "settingsPage_aboutDesc": {
+    "message": "Версія та інформація"
+  },
+  "settingsPage_communityTitle": {
+    "message": "Спільнота"
+  },
+  "settingsPage_communityDesc": {
+    "message": "Отримайте допомогу та приєднуйтесь до спільноти"
+  },
+  "settingsPage_soundTitle": {
+    "message": "Звукові ефекти"
+  },
+  "settingsPage_soundDesc": {
+    "message": "Оберіть звук або тихий режим"
+  },
+  "edit_title": {
+    "message": "Редагувати відкладену вкладку"
+  },
+  "edit_reschedule": {
+    "message": "Перенести"
+  },
+  "edit_customTime": {
+    "message": "Власний час"
+  },
+  "edit_scheduledFor": {
+    "message": "📅 Заплановано:"
+  },
+  "edit_todayAt": {
+    "message": "Сьогодні о"
+  },
+  "edit_orPickDate": {
+    "message": "Або вибрати дату"
+  },
+  "edit_openNow": {
+    "message": "🚀 Відкрити зараз"
+  },
+  "edit_saveChanges": {
+    "message": "💾 Зберегти зміни"
+  },
+  "time_today": {
+    "message": "Сьогодні"
+  },
+  "time_tomorrow": {
+    "message": "Завтра"
+  },
+  "time_at": {
+    "message": "о"
+  },
+  "time_now": {
+    "message": "зараз"
+  },
+  "status_opened": {
+    "message": "✓ Відкрито"
+  },
+  "status_comingSoon": {
+    "message": "Скоро!"
+  },
+  "error_invalidUrl": {
+    "message": "Неможливо відкласти цю сторінку. Відкладати можна лише звичайні веб-сторінки."
+  },
+  "error_invalidPreset": {
+    "message": "Некоректна конфігурація пресета"
+  },
+  "error_minPresets": {
+    "message": "Має бути щонайменше один пресет"
+  },
+  "error_allowNotifications": {
+    "message": "Дозвольте сповіщення, щоб скористатися цією функцією."
+  },
+  "tooltip_openNow": {
+    "message": "Відкрити зараз"
+  },
+  "tooltip_cancelSnooze": {
+    "message": "Скасувати відкладання"
+  },
+  "tooltip_chooseEmoji": {
+    "message": "Вибрати емодзі"
+  },
+  "tooltip_remove": {
+    "message": "Видалити"
+  },
+  "notif_restored": {
+    "message": "\"$1\" знову відкрито."
+  },
+  "notif_testBody": {
+    "message": "Тестове сповіщення — вашу вкладку відкрито!"
+  },
+  "notif_testButton": {
+    "message": "🔔 Тестове сповіщення"
+  },
+  "notif_tip": {
+    "message": "💡 Порада: переконайтеся, що браузер дозволяє сповіщення від цього розширення."
+  },
+  "about_tagline": {
+    "message": "Приберіть хаос у вкладках одним кліком"
+  },
+  "about_rate": {
+    "message": "⭐ Оцінити розширення"
+  },
+  "about_share": {
+    "message": "📤 Поділитися"
+  },
+  "about_shareText": {
+    "message": "Спробуйте це класне розширення для керування вкладками!"
+  },
+  "about_linkCopied": {
+    "message": "Посилання скопійовано! Поділіться ним з друзями."
+  },
+  "emoji_choose": {
+    "message": "Виберіть емодзі"
+  },
+  "presetSetting_enabled": {
+    "message": "Увімкнено"
+  },
+  "settings_language": {
+    "message": "Мова"
+  },
+  "settingsPage_languageTitle": {
+    "message": "Мова"
+  },
+  "settingsPage_languageDesc": {
+    "message": "Виберіть бажану мову"
+  },
+  "settings_auto": {
+    "message": "Авто-снуз"
+  },
+  "settingsPage_autoDesc": {
+    "message": "Автоматично відкладати вкладки за правилами"
+  },
+  "auto_enable": {
+    "message": "Увімкнути авто-снуз"
+  },
+  "auto_enableDesc": {
+    "message": "Поки увімкнено, фонова перевірка кожні 15 хвилин відкладає вкладки за правилами нижче."
+  },
+  "auto_maxTabs": {
+    "message": "Максимум відкритих вкладок"
+  },
+  "auto_maxTabsHint": {
+    "message": "Якщо вкладок більше, найстаріші з них відкладаються."
+  },
+  "auto_idleHours": {
+    "message": "Годин бездіяльності"
+  },
+  "auto_idleHoursHint": {
+    "message": "Вкладки, які стільки годин не відкривалися, відкладаються."
+  },
+  "auto_duration": {
+    "message": "Повернути"
+  },
+  "auto_help": {
+    "message": "Авто-снуз перевіряє вкладки кожні 15 хвилин. Якщо вкладок більше за ліміт або вкладка не відкривалася вказану кількість годин, вона закривається й автоматично повернеться пізніше."
+  },
+  "auto_helpExcluded": {
+    "message": "Ніколи не відкладаються: активна вкладка, закріплені вкладки, вкладки зі звуком і службові сторінки (chrome://…)."
+  },
+  "notif_autoSnoozed1": {
+    "message": "🤖 Авто-снуз: відкладено 1 вкладку"
+  },
+  "notif_autoSnoozedN": {
+    "message": "🤖 Авто-снуз: відкладено вкладок: $1"
+  }
+}

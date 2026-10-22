@@ -136,7 +136,7 @@
   <div id="edit-modal" class="modal">
     <div class="modal-content edit-modal-content">
       <div class="modal-header">
-        <h2>Edit Snoozed Tab</h2>
+        <h2 data-i18n="edit.title">Edit Snoozed Tab</h2>
         <button id="close-edit-modal" class="close-btn">✕</button>
       </div>
 
@@ -152,35 +152,35 @@
         </div>
 
         <div class="settings-section">
-          <h3>Reschedule</h3>
+          <h3 data-i18n="edit.reschedule">Reschedule</h3>
           <div class="quick-reschedule" id="quick-reschedule">
             <!-- Quick preset buttons -->
           </div>
         </div>
 
         <div class="settings-section">
-          <h3>Custom Time</h3>
+          <h3 data-i18n="edit.customTime">Custom Time</h3>
           <div class="custom-time-inputs">
             <div class="date-display-group" id="edit-date-display">
-              <label class="date-label">📅 Scheduled for:</label>
+              <label class="date-label" data-i18n="edit.scheduledFor">📅 Scheduled for:</label>
               <span class="date-value" id="edit-date-value">--</span>
             </div>
             <div class="time-input-group">
-              <label>Today at</label>
+              <label data-i18n="edit.todayAt">Today at</label>
               <input type="number" id="custom-hour" min="0" max="23" placeholder="21">
               <span>:</span>
               <input type="number" id="custom-minute" min="0" max="59" placeholder="00">
             </div>
             <div class="date-input-group">
-              <label>Or pick date</label>
+              <label data-i18n="edit.orPickDate">Or pick date</label>
               <input type="date" id="custom-date">
             </div>
           </div>
         </div>
 
         <div class="edit-actions">
-          <button id="open-now" class="open-now-btn">🚀 Open Now</button>
-          <button id="save-edit" class="save-btn">💾 Save Changes</button>
+          <button id="open-now" class="open-now-btn" data-i18n="edit.openNow">🚀 Open Now</button>
+          <button id="save-edit" class="save-btn" data-i18n="edit.saveChanges">💾 Save Changes</button>
         </div>
       </div>
     </div>
@@ -189,7 +189,7 @@
   <!-- Emoji Picker -->
   <div id="emoji-picker" class="emoji-picker" style="display: none;">
     <div class="emoji-picker-header">
-      <span>Choose an emoji</span>
+      <span data-i18n="emoji.choose">Choose an emoji</span>
       <button id="close-emoji-picker" class="close-emoji-btn">✕</button>
     </div>
     <div class="emoji-grid" id="emoji-grid">
@@ -201,41 +201,43 @@
   <div id="settings-modal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
-        <h2>Settings</h2>
+        <h2 data-i18n="nav.settings">Settings</h2>
         <button id="close-modal" class="close-btn">✕</button>
       </div>
 
       <div class="modal-body">
         <div class="settings-section">
-          <h3>Preset Buttons</h3>
+          <h3 data-i18n="settings.presets">Preset Buttons</h3>
           <div id="preset-settings" class="preset-settings">
             <!-- Preset settings will be rendered dynamically -->
           </div>
-          <button id="add-preset" class="add-btn">+ Add Preset</button>
+          <button id="add-preset" class="add-btn" data-i18n="settings.addPreset">+ Add Preset</button>
         </div>
 
         <div class="settings-section">
-          <h3>Completed Tabs</h3>
+          <h3 data-i18n="settings.completed">Completed Tabs</h3>
           <label class="setting-label">
             <input type="checkbox" id="show-completed">
-            <span>Show completed tabs briefly</span>
+            <span data-i18n="settings.showCompleted">Show completed tabs briefly</span>
           </label>
           <div class="setting-row" id="completed-duration-row">
-            <label>Duration (seconds):</label>
+            <label data-i18n="settings.duration">Duration (seconds):</label>
             <input type="number" id="completed-duration" min="1" max="60" value="5">
           </div>
         </div>
 
         <div class="settings-actions">
-          <button id="reset-settings" class="reset-btn">Reset to Default</button>
-          <button id="save-settings" class="save-btn">Save Settings</button>
+          <button id="reset-settings" class="reset-btn" data-i18n="settings.reset">Reset to Default</button>
+          <button id="save-settings" class="save-btn" data-i18n="settings.save">Save Settings</button>
         </div>
       </div>
     </div>
   </div>
 
+  <script src="../lib/messages.js"></script>
   <script src="locales.js"></script>
   <script src="sounds.js"></script>
+  <script src="../lib/queueStagger.js"></script>
   <script src="popup.js"></script>
 </body>
 </html>

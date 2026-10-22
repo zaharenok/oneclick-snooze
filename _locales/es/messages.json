@@ -1,0 +1,329 @@
+{
+  "extName": {
+    "message": "Guarda pestañas para más tarde (Tab Snooze)"
+  },
+  "extDescription": {
+    "message": "Pospone pestañas con un clic: ciérralas ya y Chrome las reabre más tarde automáticamente. Guarda pestañas para más tarde."
+  },
+  "actionTitle": {
+    "message": "Pospón esta pestaña"
+  },
+  "nav_dashboard": {
+    "message": "Panel"
+  },
+  "nav_snoozed": {
+    "message": "Pospuestas"
+  },
+  "nav_history": {
+    "message": "Historial"
+  },
+  "nav_settings": {
+    "message": "Configuración"
+  },
+  "section_quickPresets": {
+    "message": "Accesos rápidos"
+  },
+  "section_smartPresets": {
+    "message": "Accesos inteligentes"
+  },
+  "section_customPresets": {
+    "message": "Tus accesos"
+  },
+  "preset_1hour": {
+    "message": "1 hora"
+  },
+  "preset_3hours": {
+    "message": "3 horas"
+  },
+  "preset_6hours": {
+    "message": "6 horas"
+  },
+  "preset_laterToday": {
+    "message": "Más tarde hoy"
+  },
+  "preset_thisEvening": {
+    "message": "Esta noche"
+  },
+  "preset_tomorrow": {
+    "message": "Mañana"
+  },
+  "preset_nextWeekend": {
+    "message": "Próximo fin de semana"
+  },
+  "preset_nextWeek": {
+    "message": "Próxima semana"
+  },
+  "preset_inMonth": {
+    "message": "En un mes"
+  },
+  "preset_someday": {
+    "message": "Algún día"
+  },
+  "preset_pickDate": {
+    "message": "Elegir fecha"
+  },
+  "preset_custom": {
+    "message": "Personalizado"
+  },
+  "preset_minutes": {
+    "message": "$1 minutos"
+  },
+  "empty_noSnoozed": {
+    "message": "No hay pestañas pospuestas"
+  },
+  "empty_goToDashboard": {
+    "message": "Ve al Panel para posponer esta pestaña"
+  },
+  "empty_noHistory": {
+    "message": "Sin historial"
+  },
+  "empty_noHistoryDesc": {
+    "message": "Las pestañas completadas aparecerán aquí"
+  },
+  "history_title": {
+    "message": "📜 Abiertas recientemente"
+  },
+  "history_clear": {
+    "message": "Limpiar"
+  },
+  "history_clearConfirm": {
+    "message": "¿Borrar todo el historial? Esto no se puede deshacer."
+  },
+  "settings_presets": {
+    "message": "Botones de acceso"
+  },
+  "settings_addPreset": {
+    "message": "+ Añadir acceso"
+  },
+  "settings_completed": {
+    "message": "Pestañas completadas"
+  },
+  "settings_showCompleted": {
+    "message": "Mostrar pestañas completadas brevemente"
+  },
+  "settings_duration": {
+    "message": "Duración (segundos):"
+  },
+  "settings_reset": {
+    "message": "Restablecer"
+  },
+  "settings_save": {
+    "message": "Guardar"
+  },
+  "settings_resetConfirm": {
+    "message": "¿Restablecer todos los ajustes a los valores predeterminados?"
+  },
+  "settings_notifications": {
+    "message": "Notificaciones"
+  },
+  "settings_about": {
+    "message": "Acerca de"
+  },
+  "settings_community": {
+    "message": "Comunidad"
+  },
+  "settings_sound": {
+    "message": "Efectos de sonido"
+  },
+  "settings_soundEnabled": {
+    "message": "Activar sonidos"
+  },
+  "settings_soundDesc": {
+    "message": "Reproducir sonidos al posponer pestañas"
+  },
+  "settings_soundsOn": {
+    "message": "Sonidos activados"
+  },
+  "settings_soundsOff": {
+    "message": "Sonidos desactivados"
+  },
+  "settings_desktopNotifications": {
+    "message": "Notificaciones de escritorio"
+  },
+  "settings_desktopNotificationsDesc": {
+    "message": "Mostrar notificación al reabrir la pestaña"
+  },
+  "settings_version": {
+    "message": "Versión"
+  },
+  "settings_author": {
+    "message": "Hecho con"
+  },
+  "settingsPage_presetsTitle": {
+    "message": "Gestionar accesos"
+  },
+  "settingsPage_presetsDesc": {
+    "message": "Personaliza tus botones de posposición rápida"
+  },
+  "settingsPage_notificationsTitle": {
+    "message": "Notificaciones"
+  },
+  "settingsPage_notificationsDesc": {
+    "message": "Gestiona tus alertas"
+  },
+  "settingsPage_aboutTitle": {
+    "message": "Acerca de"
+  },
+  "settingsPage_aboutDesc": {
+    "message": "Versión e información"
+  },
+  "settingsPage_communityTitle": {
+    "message": "Comunidad"
+  },
+  "settingsPage_communityDesc": {
+    "message": "Obtén ayuda y únete"
+  },
+  "settingsPage_soundTitle": {
+    "message": "Efectos de sonido"
+  },
+  "settingsPage_soundDesc": {
+    "message": "Elige entre modo con sonido o silencioso"
+  },
+  "edit_title": {
+    "message": "Editar pestaña pospuesta"
+  },
+  "edit_reschedule": {
+    "message": "Reprogramar"
+  },
+  "edit_customTime": {
+    "message": "Hora personalizada"
+  },
+  "edit_scheduledFor": {
+    "message": "📅 Programado para:"
+  },
+  "edit_todayAt": {
+    "message": "Hoy a las"
+  },
+  "edit_orPickDate": {
+    "message": "O elegir fecha"
+  },
+  "edit_openNow": {
+    "message": "🚀 Abrir ahora"
+  },
+  "edit_saveChanges": {
+    "message": "💾 Guardar cambios"
+  },
+  "time_today": {
+    "message": "Hoy"
+  },
+  "time_tomorrow": {
+    "message": "Mañana"
+  },
+  "time_at": {
+    "message": "a las"
+  },
+  "time_now": {
+    "message": "ahora"
+  },
+  "status_opened": {
+    "message": "✓ Abierta"
+  },
+  "status_comingSoon": {
+    "message": "¡Próximamente!"
+  },
+  "error_invalidUrl": {
+    "message": "No se puede posponer esta página. Solo se pueden posponer páginas web normales."
+  },
+  "error_invalidPreset": {
+    "message": "Configuración de acceso no válida"
+  },
+  "error_minPresets": {
+    "message": "Debes tener al menos un acceso"
+  },
+  "error_allowNotifications": {
+    "message": "Permite las notificaciones para usar esta función."
+  },
+  "tooltip_openNow": {
+    "message": "Abrir ahora"
+  },
+  "tooltip_cancelSnooze": {
+    "message": "Cancelar posposición"
+  },
+  "tooltip_chooseEmoji": {
+    "message": "Elegir emoji"
+  },
+  "tooltip_remove": {
+    "message": "Eliminar"
+  },
+  "notif_restored": {
+    "message": "\"$1\" se ha restaurado."
+  },
+  "notif_testBody": {
+    "message": "Notificación de prueba: tu pestaña está lista."
+  },
+  "notif_testButton": {
+    "message": "🔔 Probar notificación"
+  },
+  "notif_tip": {
+    "message": "💡 Consejo: asegúrate de que el navegador permita las notificaciones de esta extensión."
+  },
+  "about_tagline": {
+    "message": "Reduce el desorden de pestañas con un solo clic"
+  },
+  "about_rate": {
+    "message": "⭐ Valorar extensión"
+  },
+  "about_share": {
+    "message": "📤 Compartir"
+  },
+  "about_shareText": {
+    "message": "¡Echa un vistazo a esta increíble extensión para gestionar pestañas!"
+  },
+  "about_linkCopied": {
+    "message": "¡Enlace copiado al portapapeles! Compártelo con tus amigos."
+  },
+  "emoji_choose": {
+    "message": "Elige un emoji"
+  },
+  "presetSetting_enabled": {
+    "message": "Activado"
+  },
+  "settings_language": {
+    "message": "Idioma"
+  },
+  "settingsPage_languageTitle": {
+    "message": "Idioma"
+  },
+  "settingsPage_languageDesc": {
+    "message": "Elige tu idioma preferido"
+  },
+  "settings_auto": {
+    "message": "Auto-snooze"
+  },
+  "settingsPage_autoDesc": {
+    "message": "Snooze automático de pestañas según tus reglas"
+  },
+  "auto_enable": {
+    "message": "Activar auto-snooze"
+  },
+  "auto_enableDesc": {
+    "message": "Mientras esté activado, una comprobación en segundo plano cada 15 minutos pospone pestañas según estas reglas."
+  },
+  "auto_maxTabs": {
+    "message": "Máximo de pestañas abiertas"
+  },
+  "auto_maxTabsHint": {
+    "message": "Si hay más pestañas, se posponen las más antiguas."
+  },
+  "auto_idleHours": {
+    "message": "Horas de inactividad"
+  },
+  "auto_idleHoursHint": {
+    "message": "Las pestañas que lleven esas horas sin abrirse se posponen."
+  },
+  "auto_duration": {
+    "message": "Posponer hasta"
+  },
+  "auto_help": {
+    "message": "El auto-snooze revisa tus pestañas cada 15 minutos. Si hay más pestañas que el límite, o una pestaña lleva horas sin abrirse, se cierra y se restaura más tarde automáticamente."
+  },
+  "auto_helpExcluded": {
+    "message": "Nunca se posponen: la pestaña activa, las pestañas fijadas, las pestañas con sonido y las páginas del navegador (chrome://…)."
+  },
+  "notif_autoSnoozed1": {
+    "message": "🤖 Auto-snooze: 1 pestaña pospuesta"
+  },
+  "notif_autoSnoozedN": {
+    "message": "🤖 Auto-snooze: $1 pestañas pospuestas"
+  }
+}

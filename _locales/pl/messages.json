@@ -1,0 +1,329 @@
+{
+  "extName": {
+    "message": "Zapisz karty na później (Tab Snooze)"
+  },
+  "extDescription": {
+    "message": "Odkładaj karty jednym kliknięciem: zamknij teraz, Chrome otworzy je później automatycznie. Karty na później, bez bałaganu."
+  },
+  "actionTitle": {
+    "message": "Odłóż tę kartę"
+  },
+  "nav_dashboard": {
+    "message": "Pulpit"
+  },
+  "nav_snoozed": {
+    "message": "Odłożone"
+  },
+  "nav_history": {
+    "message": "Historia"
+  },
+  "nav_settings": {
+    "message": "Ustawienia"
+  },
+  "section_quickPresets": {
+    "message": "Szybkie szablony"
+  },
+  "section_smartPresets": {
+    "message": "Inteligentne szablony"
+  },
+  "section_customPresets": {
+    "message": "Twoje szablony"
+  },
+  "preset_1hour": {
+    "message": "1 godzina"
+  },
+  "preset_3hours": {
+    "message": "3 godziny"
+  },
+  "preset_6hours": {
+    "message": "6 godzin"
+  },
+  "preset_laterToday": {
+    "message": "Później dziś"
+  },
+  "preset_thisEvening": {
+    "message": "Dziś wieczorem"
+  },
+  "preset_tomorrow": {
+    "message": "Jutro"
+  },
+  "preset_nextWeekend": {
+    "message": "Następny weekend"
+  },
+  "preset_nextWeek": {
+    "message": "Następny tydzień"
+  },
+  "preset_inMonth": {
+    "message": "Za miesiąc"
+  },
+  "preset_someday": {
+    "message": "Kiedyś"
+  },
+  "preset_pickDate": {
+    "message": "Wybierz datę"
+  },
+  "preset_custom": {
+    "message": "Niestandardowy"
+  },
+  "preset_minutes": {
+    "message": "$1 minut"
+  },
+  "empty_noSnoozed": {
+    "message": "Brak odłożonych kart"
+  },
+  "empty_goToDashboard": {
+    "message": "Przejdź do pulpitu, aby odłożyć tę kartę"
+  },
+  "empty_noHistory": {
+    "message": "Historia jest pusta"
+  },
+  "empty_noHistoryDesc": {
+    "message": "Zakończone karty pojawią się tutaj"
+  },
+  "history_title": {
+    "message": "📜 Ostatnio otwarte"
+  },
+  "history_clear": {
+    "message": "Wyczyść"
+  },
+  "history_clearConfirm": {
+    "message": "Wyczyścić całą historię? Tej operacji nie można cofnąć."
+  },
+  "settings_presets": {
+    "message": "Przyciski szablonów"
+  },
+  "settings_addPreset": {
+    "message": "+ Dodaj szablon"
+  },
+  "settings_completed": {
+    "message": "Zakończone karty"
+  },
+  "settings_showCompleted": {
+    "message": "Pokazuj zakończone karty przez chwilę"
+  },
+  "settings_duration": {
+    "message": "Czas trwania (sekundy):"
+  },
+  "settings_reset": {
+    "message": "Przywróć domyślne"
+  },
+  "settings_save": {
+    "message": "Zapisz ustawienia"
+  },
+  "settings_resetConfirm": {
+    "message": "Przywrócić wszystkie ustawienia do domyślnych?"
+  },
+  "settings_notifications": {
+    "message": "Powiadomienia"
+  },
+  "settings_about": {
+    "message": "O programie"
+  },
+  "settings_community": {
+    "message": "Społeczność i pomoc"
+  },
+  "settings_sound": {
+    "message": "Efekty dźwiękowe"
+  },
+  "settings_soundEnabled": {
+    "message": "Włącz dźwięki"
+  },
+  "settings_soundDesc": {
+    "message": "Odtwarzaj dźwięki podczas odkładania kart"
+  },
+  "settings_soundsOn": {
+    "message": "Dźwięki włączone"
+  },
+  "settings_soundsOff": {
+    "message": "Dźwięki wyłączone"
+  },
+  "settings_desktopNotifications": {
+    "message": "Powiadomienia pulpitu"
+  },
+  "settings_desktopNotificationsDesc": {
+    "message": "Pokazuj powiadomienie po ponownym otwarciu karty"
+  },
+  "settings_version": {
+    "message": "Wersja"
+  },
+  "settings_author": {
+    "message": "Stworzone z"
+  },
+  "settingsPage_presetsTitle": {
+    "message": "Zarządzanie szablonami"
+  },
+  "settingsPage_presetsDesc": {
+    "message": "Dostosuj przyciski szybkiego odkładania"
+  },
+  "settingsPage_notificationsTitle": {
+    "message": "Powiadomienia"
+  },
+  "settingsPage_notificationsDesc": {
+    "message": "Zarządzaj sposobem otrzymywania alertów"
+  },
+  "settingsPage_aboutTitle": {
+    "message": "O programie"
+  },
+  "settingsPage_aboutDesc": {
+    "message": "Wersja i informacje"
+  },
+  "settingsPage_communityTitle": {
+    "message": "Społeczność"
+  },
+  "settingsPage_communityDesc": {
+    "message": "Uzyskaj pomoc i dołącz do naszej społeczności"
+  },
+  "settingsPage_soundTitle": {
+    "message": "Efekty dźwiękowe"
+  },
+  "settingsPage_soundDesc": {
+    "message": "Wybierz między dźwiękiem a trybem cichym"
+  },
+  "edit_title": {
+    "message": "Edytuj odłożoną kartę"
+  },
+  "edit_reschedule": {
+    "message": "Zaplanuj ponownie"
+  },
+  "edit_customTime": {
+    "message": "Niestandardowa godzina"
+  },
+  "edit_scheduledFor": {
+    "message": "📅 Zaplanowano na:"
+  },
+  "edit_todayAt": {
+    "message": "Dziś o"
+  },
+  "edit_orPickDate": {
+    "message": "Lub wybierz datę"
+  },
+  "edit_openNow": {
+    "message": "🚀 Otwórz teraz"
+  },
+  "edit_saveChanges": {
+    "message": "💾 Zapisz zmiany"
+  },
+  "time_today": {
+    "message": "Dziś"
+  },
+  "time_tomorrow": {
+    "message": "Jutro"
+  },
+  "time_at": {
+    "message": "o"
+  },
+  "time_now": {
+    "message": "teraz"
+  },
+  "status_opened": {
+    "message": "✓ Otwarto"
+  },
+  "status_comingSoon": {
+    "message": "Wkrótce!"
+  },
+  "error_invalidUrl": {
+    "message": "Nie można odłożyć tej strony. Odkładać można tylko zwykłe strony internetowe."
+  },
+  "error_invalidPreset": {
+    "message": "Nieprawidłowa konfiguracja szablonu"
+  },
+  "error_minPresets": {
+    "message": "Musi być co najmniej jeden szablon"
+  },
+  "error_allowNotifications": {
+    "message": "Zezwól na powiadomienia, aby użyć tej funkcji."
+  },
+  "tooltip_openNow": {
+    "message": "Otwórz teraz"
+  },
+  "tooltip_cancelSnooze": {
+    "message": "Anuluj odłożenie"
+  },
+  "tooltip_chooseEmoji": {
+    "message": "Wybierz emoji"
+  },
+  "tooltip_remove": {
+    "message": "Usuń"
+  },
+  "notif_restored": {
+    "message": "\"$1\" została przywrócona."
+  },
+  "notif_testBody": {
+    "message": "Powiadomienie testowe — Twoja karta jest gotowa!"
+  },
+  "notif_testButton": {
+    "message": "🔔 Testuj powiadomienie"
+  },
+  "notif_tip": {
+    "message": "💡 Wskazówka: upewnij się, że przeglądarka zezwala na powiadomienia z tego rozszerzenia."
+  },
+  "about_tagline": {
+    "message": "Zredukuj bałagan w kartach jednym kliknięciem"
+  },
+  "about_rate": {
+    "message": "⭐ Oceń rozszerzenie"
+  },
+  "about_share": {
+    "message": "📤 Udostępnij"
+  },
+  "about_shareText": {
+    "message": "Wypróbuj to świetne rozszerzenie do zarządzania kartami!"
+  },
+  "about_linkCopied": {
+    "message": "Link skopiowany do schowka! Udostępnij go znajomym."
+  },
+  "emoji_choose": {
+    "message": "Wybierz emoji"
+  },
+  "presetSetting_enabled": {
+    "message": "Włączone"
+  },
+  "settings_language": {
+    "message": "Język"
+  },
+  "settingsPage_languageTitle": {
+    "message": "Język"
+  },
+  "settingsPage_languageDesc": {
+    "message": "Wybierz swój preferowany język"
+  },
+  "settings_auto": {
+    "message": "Auto-drzemka"
+  },
+  "settingsPage_autoDesc": {
+    "message": "Automatycznie usypiaj karty według reguł"
+  },
+  "auto_enable": {
+    "message": "Włącz auto-drzemkę"
+  },
+  "auto_enableDesc": {
+    "message": "Gdy włączone, sprawdzanie w tle co 15 minut usypia karty według poniższych reguł."
+  },
+  "auto_maxTabs": {
+    "message": "Maksymalna liczba kart"
+  },
+  "auto_maxTabsHint": {
+    "message": "Ponad limit usypiane są najstarsze karty."
+  },
+  "auto_idleHours": {
+    "message": "Godziny bezczynności"
+  },
+  "auto_idleHoursHint": {
+    "message": "Karty nieotwierane przez tyle godzin są usypiane."
+  },
+  "auto_duration": {
+    "message": "Drzemka do"
+  },
+  "auto_help": {
+    "message": "Auto-drzemka sprawdza karty co 15 minut. Gdy kart jest więcej niż limit albo karta nie była otwarta przez wskazane godziny, zostaje zamknięta i później przywrócona automatycznie."
+  },
+  "auto_helpExcluded": {
+    "message": "Nigdy nie usypiane: aktywna karta, przypięte karty, karty z dźwiękiem i strony przeglądarki (chrome://…)."
+  },
+  "notif_autoSnoozed1": {
+    "message": "🤖 Auto-drzemka: 1 karta uśpiona"
+  },
+  "notif_autoSnoozedN": {
+    "message": "🤖 Auto-drzemka: uśpiono kart: $1"
+  }
+}

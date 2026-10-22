@@ -1,0 +1,329 @@
+{
+  "extName": {
+    "message": "Lưu tab để đọc sau (Tab Snooze)"
+  },
+  "extDescription": {
+    "message": "Tạm ẩn tab bằng một cú nhấp: đóng ngay, Chrome sẽ tự mở lại sau. Lưu tab để đọc sau, không lộn xộn."
+  },
+  "actionTitle": {
+    "message": "Tạm ẩn tab này"
+  },
+  "nav_dashboard": {
+    "message": "Bảng điều khiển"
+  },
+  "nav_snoozed": {
+    "message": "Đã tạm ẩn"
+  },
+  "nav_history": {
+    "message": "Lịch sử"
+  },
+  "nav_settings": {
+    "message": "Cài đặt"
+  },
+  "section_quickPresets": {
+    "message": "Cài đặt nhanh"
+  },
+  "section_smartPresets": {
+    "message": "Cài đặt thông minh"
+  },
+  "section_customPresets": {
+    "message": "Cài đặt của bạn"
+  },
+  "preset_1hour": {
+    "message": "1 giờ"
+  },
+  "preset_3hours": {
+    "message": "3 giờ"
+  },
+  "preset_6hours": {
+    "message": "6 giờ"
+  },
+  "preset_laterToday": {
+    "message": "Hôm nay, sau đó"
+  },
+  "preset_thisEvening": {
+    "message": "Tối nay"
+  },
+  "preset_tomorrow": {
+    "message": "Ngày mai"
+  },
+  "preset_nextWeekend": {
+    "message": "Cuối tuần sau"
+  },
+  "preset_nextWeek": {
+    "message": "Tuần sau"
+  },
+  "preset_inMonth": {
+    "message": "Sau một tháng"
+  },
+  "preset_someday": {
+    "message": "Một ngày nào đó"
+  },
+  "preset_pickDate": {
+    "message": "Chọn ngày"
+  },
+  "preset_custom": {
+    "message": "Tùy chỉnh"
+  },
+  "preset_minutes": {
+    "message": "$1 phút"
+  },
+  "empty_noSnoozed": {
+    "message": "Không có tab nào đang tạm ẩn"
+  },
+  "empty_goToDashboard": {
+    "message": "Mở Bảng điều khiển để tạm ẩn tab này"
+  },
+  "empty_noHistory": {
+    "message": "Chưa có lịch sử"
+  },
+  "empty_noHistoryDesc": {
+    "message": "Các tab đã hoàn tất sẽ xuất hiện ở đây"
+  },
+  "history_title": {
+    "message": "📜 Mở gần đây"
+  },
+  "history_clear": {
+    "message": "Xóa"
+  },
+  "history_clearConfirm": {
+    "message": "Xóa toàn bộ lịch sử? Hành động này không thể hoàn tác."
+  },
+  "settings_presets": {
+    "message": "Nút cài đặt trước"
+  },
+  "settings_addPreset": {
+    "message": "+ Thêm cài đặt trước"
+  },
+  "settings_completed": {
+    "message": "Tab đã hoàn tất"
+  },
+  "settings_showCompleted": {
+    "message": "Hiển thị tab đã hoàn tất trong giây lát"
+  },
+  "settings_duration": {
+    "message": "Thời lượng (giây):"
+  },
+  "settings_reset": {
+    "message": "Đặt lại mặc định"
+  },
+  "settings_save": {
+    "message": "Lưu cài đặt"
+  },
+  "settings_resetConfirm": {
+    "message": "Đặt lại toàn bộ cài đặt về mặc định?"
+  },
+  "settings_notifications": {
+    "message": "Thông báo"
+  },
+  "settings_about": {
+    "message": "Giới thiệu"
+  },
+  "settings_community": {
+    "message": "Cộng đồng & Hỗ trợ"
+  },
+  "settings_sound": {
+    "message": "Hiệu ứng âm thanh"
+  },
+  "settings_soundEnabled": {
+    "message": "Bật âm thanh"
+  },
+  "settings_soundDesc": {
+    "message": "Phát âm thanh khi tạm ẩn tab"
+  },
+  "settings_soundsOn": {
+    "message": "Âm thanh BẬT"
+  },
+  "settings_soundsOff": {
+    "message": "Âm thanh TẮT"
+  },
+  "settings_desktopNotifications": {
+    "message": "Thông báo trên màn hình"
+  },
+  "settings_desktopNotificationsDesc": {
+    "message": "Hiển thị thông báo khi tab mở lại"
+  },
+  "settings_version": {
+    "message": "Phiên bản"
+  },
+  "settings_author": {
+    "message": "Được tạo với"
+  },
+  "settingsPage_presetsTitle": {
+    "message": "Quản lý cài đặt trước"
+  },
+  "settingsPage_presetsDesc": {
+    "message": "Tùy chỉnh các nút tạm ẩn nhanh"
+  },
+  "settingsPage_notificationsTitle": {
+    "message": "Thông báo"
+  },
+  "settingsPage_notificationsDesc": {
+    "message": "Quản lý cách bạn nhận cảnh báo"
+  },
+  "settingsPage_aboutTitle": {
+    "message": "Giới thiệu"
+  },
+  "settingsPage_aboutDesc": {
+    "message": "Phiên bản và thông tin"
+  },
+  "settingsPage_communityTitle": {
+    "message": "Cộng đồng"
+  },
+  "settingsPage_communityDesc": {
+    "message": "Nhận hỗ trợ và tham gia cộng đồng của chúng tôi"
+  },
+  "settingsPage_soundTitle": {
+    "message": "Hiệu ứng âm thanh"
+  },
+  "settingsPage_soundDesc": {
+    "message": "Chọn giữa âm thanh hoặc chế độ im lặng"
+  },
+  "edit_title": {
+    "message": "Chỉnh sửa tab đang tạm ẩn"
+  },
+  "edit_reschedule": {
+    "message": "Đặt lại lịch"
+  },
+  "edit_customTime": {
+    "message": "Thời gian tùy chỉnh"
+  },
+  "edit_scheduledFor": {
+    "message": "📅 Đã lên lịch cho:"
+  },
+  "edit_todayAt": {
+    "message": "Hôm nay lúc"
+  },
+  "edit_orPickDate": {
+    "message": "Hoặc chọn ngày"
+  },
+  "edit_openNow": {
+    "message": "🚀 Mở ngay"
+  },
+  "edit_saveChanges": {
+    "message": "💾 Lưu thay đổi"
+  },
+  "time_today": {
+    "message": "Hôm nay"
+  },
+  "time_tomorrow": {
+    "message": "Ngày mai"
+  },
+  "time_at": {
+    "message": "lúc"
+  },
+  "time_now": {
+    "message": "ngay bây giờ"
+  },
+  "status_opened": {
+    "message": "✓ Đã mở"
+  },
+  "status_comingSoon": {
+    "message": "Sắp ra mắt!"
+  },
+  "error_invalidUrl": {
+    "message": "Không thể tạm ẩn trang này. Chỉ các trang web thông thường mới có thể tạm ẩn."
+  },
+  "error_invalidPreset": {
+    "message": "Cấu hình cài đặt trước không hợp lệ"
+  },
+  "error_minPresets": {
+    "message": "Bạn phải có ít nhất một cài đặt trước"
+  },
+  "error_allowNotifications": {
+    "message": "Vui lòng cho phép thông báo để sử dụng tính năng này."
+  },
+  "tooltip_openNow": {
+    "message": "Mở ngay"
+  },
+  "tooltip_cancelSnooze": {
+    "message": "Hủy tạm ẩn"
+  },
+  "tooltip_chooseEmoji": {
+    "message": "Chọn emoji"
+  },
+  "tooltip_remove": {
+    "message": "Xóa"
+  },
+  "notif_restored": {
+    "message": "\"$1\" đã được mở lại."
+  },
+  "notif_testBody": {
+    "message": "Thông báo thử – tab của bạn đã sẵn sàng!"
+  },
+  "notif_testButton": {
+    "message": "🔔 Thử thông báo"
+  },
+  "notif_tip": {
+    "message": "💡 Mẹo: Đảm bảo trình duyệt cho phép thông báo từ tiện ích mở rộng này."
+  },
+  "about_tagline": {
+    "message": "Giảm bớt tab lộn xộn chỉ với một cú nhấp"
+  },
+  "about_rate": {
+    "message": "⭐ Đánh giá tiện ích"
+  },
+  "about_share": {
+    "message": "📤 Chia sẻ"
+  },
+  "about_shareText": {
+    "message": "Xem tiện ích quản lý tab tuyệt vời này!"
+  },
+  "about_linkCopied": {
+    "message": "Đã sao chép liên kết vào bộ nhớ tạm! Hãy chia sẻ với bạn bè của bạn."
+  },
+  "emoji_choose": {
+    "message": "Chọn một emoji"
+  },
+  "presetSetting_enabled": {
+    "message": "Đã bật"
+  },
+  "settings_language": {
+    "message": "Ngôn ngữ"
+  },
+  "settingsPage_languageTitle": {
+    "message": "Ngôn ngữ"
+  },
+  "settingsPage_languageDesc": {
+    "message": "Chọn ngôn ngữ bạn muốn"
+  },
+  "settings_auto": {
+    "message": "Tự động ngủ tạm"
+  },
+  "settingsPage_autoDesc": {
+    "message": "Tự động hoãn tab theo quy tắc của bạn"
+  },
+  "auto_enable": {
+    "message": "Bật tự động ngủ tạm"
+  },
+  "auto_enableDesc": {
+    "message": "Khi bật, nền sẽ kiểm tra mỗi 15 phút và hoãn tab theo các quy tắc dưới đây."
+  },
+  "auto_maxTabs": {
+    "message": "Số tab mở tối đa"
+  },
+  "auto_maxTabsHint": {
+    "message": "Nếu nhiều tab hơn giới hạn, các tab cũ nhất sẽ bị hoãn."
+  },
+  "auto_idleHours": {
+    "message": "Số giờ không hoạt động"
+  },
+  "auto_idleHoursHint": {
+    "message": "Tab không được mở trong số giờ đó sẽ bị hoãn."
+  },
+  "auto_duration": {
+    "message": "Hoãn đến"
+  },
+  "auto_help": {
+    "message": "Tự động ngủ tạm kiểm tra tab mỗi 15 phút. Nếu số tab vượt giới hạn hoặc một tab không được mở trong số giờ đã đặt, nó sẽ bị đóng và tự động mở lại sau."
+  },
+  "auto_helpExcluded": {
+    "message": "Không bao giờ hoãn: tab đang hoạt động, tab đã ghim, tab đang phát âm thanh và trang trình duyệt (chrome://…)."
+  },
+  "notif_autoSnoozed1": {
+    "message": "🤖 Tự động ngủ tạm: đã hoãn 1 tab"
+  },
+  "notif_autoSnoozedN": {
+    "message": "🤖 Tự động ngủ tạm: đã hoãn $1 tab"
+  }
+}

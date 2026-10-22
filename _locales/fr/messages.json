@@ -1,0 +1,329 @@
+{
+  "extName": {
+    "message": "Enregistrer des onglets pour plus tard"
+  },
+  "extDescription": {
+    "message": "Mettez un onglet en veille en un clic : fermez-le, Chrome le rouvre plus tard automatiquement. Enregistrez pour plus tard."
+  },
+  "actionTitle": {
+    "message": "Mettre cet onglet en veille"
+  },
+  "nav_dashboard": {
+    "message": "Tableau de bord"
+  },
+  "nav_snoozed": {
+    "message": "En veille"
+  },
+  "nav_history": {
+    "message": "Historique"
+  },
+  "nav_settings": {
+    "message": "Paramètres"
+  },
+  "section_quickPresets": {
+    "message": "Préréglages rapides"
+  },
+  "section_smartPresets": {
+    "message": "Préréglages intelligents"
+  },
+  "section_customPresets": {
+    "message": "Vos préréglages"
+  },
+  "preset_1hour": {
+    "message": "1 heure"
+  },
+  "preset_3hours": {
+    "message": "3 heures"
+  },
+  "preset_6hours": {
+    "message": "6 heures"
+  },
+  "preset_laterToday": {
+    "message": "Plus tard aujourd'hui"
+  },
+  "preset_thisEvening": {
+    "message": "Ce soir"
+  },
+  "preset_tomorrow": {
+    "message": "Demain"
+  },
+  "preset_nextWeekend": {
+    "message": "Le prochain week-end"
+  },
+  "preset_nextWeek": {
+    "message": "La semaine prochaine"
+  },
+  "preset_inMonth": {
+    "message": "Dans un mois"
+  },
+  "preset_someday": {
+    "message": "Un jour"
+  },
+  "preset_pickDate": {
+    "message": "Choisir une date"
+  },
+  "preset_custom": {
+    "message": "Personnalisé"
+  },
+  "preset_minutes": {
+    "message": "$1 minutes"
+  },
+  "empty_noSnoozed": {
+    "message": "Aucun onglet en veille"
+  },
+  "empty_goToDashboard": {
+    "message": "Allez au tableau de bord pour mettre cet onglet en veille"
+  },
+  "empty_noHistory": {
+    "message": "Pas encore d'historique"
+  },
+  "empty_noHistoryDesc": {
+    "message": "Les onglets terminés apparaîtront ici"
+  },
+  "history_title": {
+    "message": "📜 Récemment ouverts"
+  },
+  "history_clear": {
+    "message": "Effacer"
+  },
+  "history_clearConfirm": {
+    "message": "Effacer tout l'historique ? Cette action est irréversible."
+  },
+  "settings_presets": {
+    "message": "Boutons de préréglage"
+  },
+  "settings_addPreset": {
+    "message": "+ Ajouter un préréglage"
+  },
+  "settings_completed": {
+    "message": "Onglets terminés"
+  },
+  "settings_showCompleted": {
+    "message": "Afficher brièvement les onglets terminés"
+  },
+  "settings_duration": {
+    "message": "Durée (secondes) :"
+  },
+  "settings_reset": {
+    "message": "Réinitialiser par défaut"
+  },
+  "settings_save": {
+    "message": "Enregistrer les paramètres"
+  },
+  "settings_resetConfirm": {
+    "message": "Réinitialiser tous les paramètres par défaut ?"
+  },
+  "settings_notifications": {
+    "message": "Notifications"
+  },
+  "settings_about": {
+    "message": "À propos"
+  },
+  "settings_community": {
+    "message": "Communauté et assistance"
+  },
+  "settings_sound": {
+    "message": "Effets sonores"
+  },
+  "settings_soundEnabled": {
+    "message": "Activer les sons"
+  },
+  "settings_soundDesc": {
+    "message": "Jouer des sons lors de la mise en veille des onglets"
+  },
+  "settings_soundsOn": {
+    "message": "Sons activés"
+  },
+  "settings_soundsOff": {
+    "message": "Sons désactivés"
+  },
+  "settings_desktopNotifications": {
+    "message": "Notifications de bureau"
+  },
+  "settings_desktopNotificationsDesc": {
+    "message": "Afficher une notification quand un onglet se rouvre"
+  },
+  "settings_version": {
+    "message": "Version"
+  },
+  "settings_author": {
+    "message": "Conçu avec"
+  },
+  "settingsPage_presetsTitle": {
+    "message": "Gérer les préréglages"
+  },
+  "settingsPage_presetsDesc": {
+    "message": "Personnalisez vos boutons de mise en veille rapide"
+  },
+  "settingsPage_notificationsTitle": {
+    "message": "Notifications"
+  },
+  "settingsPage_notificationsDesc": {
+    "message": "Gérez la façon dont vous recevez les alertes"
+  },
+  "settingsPage_aboutTitle": {
+    "message": "À propos"
+  },
+  "settingsPage_aboutDesc": {
+    "message": "Version et informations"
+  },
+  "settingsPage_communityTitle": {
+    "message": "Communauté"
+  },
+  "settingsPage_communityDesc": {
+    "message": "Obtenez de l'aide et rejoignez notre communauté"
+  },
+  "settingsPage_soundTitle": {
+    "message": "Effets sonores"
+  },
+  "settingsPage_soundDesc": {
+    "message": "Choisissez entre le mode son et le mode silencieux"
+  },
+  "edit_title": {
+    "message": "Modifier l'onglet en veille"
+  },
+  "edit_reschedule": {
+    "message": "Reprogrammer"
+  },
+  "edit_customTime": {
+    "message": "Heure personnalisée"
+  },
+  "edit_scheduledFor": {
+    "message": "📅 Prévu pour :"
+  },
+  "edit_todayAt": {
+    "message": "Aujourd'hui à"
+  },
+  "edit_orPickDate": {
+    "message": "Ou choisir une date"
+  },
+  "edit_openNow": {
+    "message": "🚀 Ouvrir maintenant"
+  },
+  "edit_saveChanges": {
+    "message": "💾 Enregistrer"
+  },
+  "time_today": {
+    "message": "Aujourd'hui"
+  },
+  "time_tomorrow": {
+    "message": "Demain"
+  },
+  "time_at": {
+    "message": "à"
+  },
+  "time_now": {
+    "message": "maintenant"
+  },
+  "status_opened": {
+    "message": "✓ Ouvert"
+  },
+  "status_comingSoon": {
+    "message": "Bientôt disponible !"
+  },
+  "error_invalidUrl": {
+    "message": "Impossible de mettre cette page en veille. Seules les pages web classiques peuvent être mises en veille."
+  },
+  "error_invalidPreset": {
+    "message": "Configuration de préréglage invalide"
+  },
+  "error_minPresets": {
+    "message": "Vous devez avoir au moins un préréglage"
+  },
+  "error_allowNotifications": {
+    "message": "Veuillez autoriser les notifications pour utiliser cette fonctionnalité."
+  },
+  "tooltip_openNow": {
+    "message": "Ouvrir maintenant"
+  },
+  "tooltip_cancelSnooze": {
+    "message": "Annuler la mise en veille"
+  },
+  "tooltip_chooseEmoji": {
+    "message": "Choisir un emoji"
+  },
+  "tooltip_remove": {
+    "message": "Supprimer"
+  },
+  "notif_restored": {
+    "message": "\"$1\" a été restauré."
+  },
+  "notif_testBody": {
+    "message": "Notification de test — votre onglet est prêt !"
+  },
+  "notif_testButton": {
+    "message": "🔔 Tester la notification"
+  },
+  "notif_tip": {
+    "message": "💡 Conseil : vérifiez que votre navigateur autorise les notifications de cette extension."
+  },
+  "about_tagline": {
+    "message": "Réduisez le désordre d'onglets en un clic"
+  },
+  "about_rate": {
+    "message": "⭐ Évaluer l'extension"
+  },
+  "about_share": {
+    "message": "📤 Partager"
+  },
+  "about_shareText": {
+    "message": "Découvrez cette super extension de gestion d'onglets !"
+  },
+  "about_linkCopied": {
+    "message": "Lien copié dans le presse-papiers ! Partagez-le avec vos amis."
+  },
+  "emoji_choose": {
+    "message": "Choisir un emoji"
+  },
+  "presetSetting_enabled": {
+    "message": "Activé"
+  },
+  "settings_language": {
+    "message": "Langue"
+  },
+  "settingsPage_languageTitle": {
+    "message": "Langue"
+  },
+  "settingsPage_languageDesc": {
+    "message": "Choisissez votre langue préférée"
+  },
+  "settings_auto": {
+    "message": "Auto-snooze"
+  },
+  "settingsPage_autoDesc": {
+    "message": "Snooze automatique des onglets selon vos règles"
+  },
+  "auto_enable": {
+    "message": "Activer l'auto-snooze"
+  },
+  "auto_enableDesc": {
+    "message": "Tant que c'est activé, une vérification en arrière-plan toutes les 15 minutes met les onglets en veille selon les règles ci-dessous."
+  },
+  "auto_maxTabs": {
+    "message": "Nombre max d'onglets ouverts"
+  },
+  "auto_maxTabsHint": {
+    "message": "Au-delà, les onglets les plus anciens sont mis en veille."
+  },
+  "auto_idleHours": {
+    "message": "Heures d'inactivité"
+  },
+  "auto_idleHoursHint": {
+    "message": "Les onglets non ouverts depuis ce nombre d'heures sont mis en veille."
+  },
+  "auto_duration": {
+    "message": "Snooze jusqu'à"
+  },
+  "auto_help": {
+    "message": "L'auto-snooze vérifie vos onglets toutes les 15 minutes. Au-delà de la limite, ou si un onglet n'a pas été ouvert depuis des heures, il est fermé puis restauré automatiquement plus tard."
+  },
+  "auto_helpExcluded": {
+    "message": "Jamais mis en veille : onglet actif, onglets épinglés, onglets avec son et pages du navigateur (chrome://…)."
+  },
+  "notif_autoSnoozed1": {
+    "message": "🤖 Auto-snooze : 1 onglet mis en veille"
+  },
+  "notif_autoSnoozedN": {
+    "message": "🤖 Auto-snooze : $1 onglets mis en veille"
+  }
+}

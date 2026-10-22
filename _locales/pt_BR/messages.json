@@ -1,0 +1,329 @@
+{
+  "extName": {
+    "message": "Salve abas para depois - Tab Snooze"
+  },
+  "extDescription": {
+    "message": "Adie abas com um clique: feche agora, o Chrome reabre depois automaticamente. Salve abas para depois, sem bagunça."
+  },
+  "actionTitle": {
+    "message": "Adiar esta aba"
+  },
+  "nav_dashboard": {
+    "message": "Painel"
+  },
+  "nav_snoozed": {
+    "message": "Adiadas"
+  },
+  "nav_history": {
+    "message": "Histórico"
+  },
+  "nav_settings": {
+    "message": "Configurações"
+  },
+  "section_quickPresets": {
+    "message": "Predefinições rápidas"
+  },
+  "section_smartPresets": {
+    "message": "Predefinições inteligentes"
+  },
+  "section_customPresets": {
+    "message": "Suas predefinições"
+  },
+  "preset_1hour": {
+    "message": "1 hora"
+  },
+  "preset_3hours": {
+    "message": "3 horas"
+  },
+  "preset_6hours": {
+    "message": "6 horas"
+  },
+  "preset_laterToday": {
+    "message": "Mais tarde hoje"
+  },
+  "preset_thisEvening": {
+    "message": "Hoje à noite"
+  },
+  "preset_tomorrow": {
+    "message": "Amanhã"
+  },
+  "preset_nextWeekend": {
+    "message": "Próximo fim de semana"
+  },
+  "preset_nextWeek": {
+    "message": "Próxima semana"
+  },
+  "preset_inMonth": {
+    "message": "Em um mês"
+  },
+  "preset_someday": {
+    "message": "Um dia"
+  },
+  "preset_pickDate": {
+    "message": "Escolher data"
+  },
+  "preset_custom": {
+    "message": "Personalizada"
+  },
+  "preset_minutes": {
+    "message": "$1 minutos"
+  },
+  "empty_noSnoozed": {
+    "message": "Nenhuma aba adiada"
+  },
+  "empty_goToDashboard": {
+    "message": "Vá ao Painel para adiar esta aba"
+  },
+  "empty_noHistory": {
+    "message": "Nenhum histórico ainda"
+  },
+  "empty_noHistoryDesc": {
+    "message": "As abas concluídas aparecerão aqui"
+  },
+  "history_title": {
+    "message": "📜 Abertas recentemente"
+  },
+  "history_clear": {
+    "message": "Limpar"
+  },
+  "history_clearConfirm": {
+    "message": "Limpar todo o histórico? Isso não pode ser desfeito."
+  },
+  "settings_presets": {
+    "message": "Botões de predefinição"
+  },
+  "settings_addPreset": {
+    "message": "+ Adicionar predefinição"
+  },
+  "settings_completed": {
+    "message": "Abas concluídas"
+  },
+  "settings_showCompleted": {
+    "message": "Mostrar abas concluídas brevemente"
+  },
+  "settings_duration": {
+    "message": "Duração (segundos):"
+  },
+  "settings_reset": {
+    "message": "Restaurar padrão"
+  },
+  "settings_save": {
+    "message": "Salvar configurações"
+  },
+  "settings_resetConfirm": {
+    "message": "Restaurar todas as configurações para o padrão?"
+  },
+  "settings_notifications": {
+    "message": "Notificações"
+  },
+  "settings_about": {
+    "message": "Sobre"
+  },
+  "settings_community": {
+    "message": "Comunidade e suporte"
+  },
+  "settings_sound": {
+    "message": "Efeitos sonoros"
+  },
+  "settings_soundEnabled": {
+    "message": "Ativar sons"
+  },
+  "settings_soundDesc": {
+    "message": "Reproduzir sons ao adiar abas"
+  },
+  "settings_soundsOn": {
+    "message": "Sons ativados"
+  },
+  "settings_soundsOff": {
+    "message": "Sons desativados"
+  },
+  "settings_desktopNotifications": {
+    "message": "Notificações do desktop"
+  },
+  "settings_desktopNotificationsDesc": {
+    "message": "Mostrar notificação quando a aba for reaberta"
+  },
+  "settings_version": {
+    "message": "Versão"
+  },
+  "settings_author": {
+    "message": "Feito com"
+  },
+  "settingsPage_presetsTitle": {
+    "message": "Gerenciar predefinições"
+  },
+  "settingsPage_presetsDesc": {
+    "message": "Personalize seus botões de adiamento rápido"
+  },
+  "settingsPage_notificationsTitle": {
+    "message": "Notificações"
+  },
+  "settingsPage_notificationsDesc": {
+    "message": "Gerencie como você recebe alertas"
+  },
+  "settingsPage_aboutTitle": {
+    "message": "Sobre"
+  },
+  "settingsPage_aboutDesc": {
+    "message": "Versão e informações"
+  },
+  "settingsPage_communityTitle": {
+    "message": "Comunidade"
+  },
+  "settingsPage_communityDesc": {
+    "message": "Obtenha ajuda e participe da nossa comunidade"
+  },
+  "settingsPage_soundTitle": {
+    "message": "Efeitos sonoros"
+  },
+  "settingsPage_soundDesc": {
+    "message": "Escolha entre som ou modo silencioso"
+  },
+  "edit_title": {
+    "message": "Editar aba adiada"
+  },
+  "edit_reschedule": {
+    "message": "Reagendar"
+  },
+  "edit_customTime": {
+    "message": "Horário personalizado"
+  },
+  "edit_scheduledFor": {
+    "message": "📅 Agendada para:"
+  },
+  "edit_todayAt": {
+    "message": "Hoje às"
+  },
+  "edit_orPickDate": {
+    "message": "Ou escolha uma data"
+  },
+  "edit_openNow": {
+    "message": "🚀 Abrir agora"
+  },
+  "edit_saveChanges": {
+    "message": "💾 Salvar alterações"
+  },
+  "time_today": {
+    "message": "Hoje"
+  },
+  "time_tomorrow": {
+    "message": "Amanhã"
+  },
+  "time_at": {
+    "message": "às"
+  },
+  "time_now": {
+    "message": "agora"
+  },
+  "status_opened": {
+    "message": "✓ Aberta"
+  },
+  "status_comingSoon": {
+    "message": "Em breve!"
+  },
+  "error_invalidUrl": {
+    "message": "Não é possível adiar esta página. Somente páginas web normais podem ser adiadas."
+  },
+  "error_invalidPreset": {
+    "message": "Configuração de predefinição inválida"
+  },
+  "error_minPresets": {
+    "message": "Você precisa ter pelo menos uma predefinição"
+  },
+  "error_allowNotifications": {
+    "message": "Permita notificações para usar este recurso."
+  },
+  "tooltip_openNow": {
+    "message": "Abrir agora"
+  },
+  "tooltip_cancelSnooze": {
+    "message": "Cancelar adiamento"
+  },
+  "tooltip_chooseEmoji": {
+    "message": "Escolher emoji"
+  },
+  "tooltip_remove": {
+    "message": "Remover"
+  },
+  "notif_restored": {
+    "message": "\"$1\" foi restaurada."
+  },
+  "notif_testBody": {
+    "message": "Notificação de teste - sua aba está pronta!"
+  },
+  "notif_testButton": {
+    "message": "🔔 Testar notificação"
+  },
+  "notif_tip": {
+    "message": "💡 Dica: verifique se o navegador permite notificações desta extensão."
+  },
+  "about_tagline": {
+    "message": "Reduza a bagunça de abas com um clique"
+  },
+  "about_rate": {
+    "message": "⭐ Avaliar extensão"
+  },
+  "about_share": {
+    "message": "📤 Compartilhar"
+  },
+  "about_shareText": {
+    "message": "Confira esta incrível extensão de gerenciamento de abas!"
+  },
+  "about_linkCopied": {
+    "message": "Link copiado para a área de transferência! Compartilhe com seus amigos."
+  },
+  "emoji_choose": {
+    "message": "Escolha um emoji"
+  },
+  "presetSetting_enabled": {
+    "message": "Ativada"
+  },
+  "settings_language": {
+    "message": "Idioma"
+  },
+  "settingsPage_languageTitle": {
+    "message": "Idioma"
+  },
+  "settingsPage_languageDesc": {
+    "message": "Escolha seu idioma preferido"
+  },
+  "settings_auto": {
+    "message": "Soneca automática"
+  },
+  "settingsPage_autoDesc": {
+    "message": "Adia abas automaticamente pelas suas regras"
+  },
+  "auto_enable": {
+    "message": "Ativar soneca automática"
+  },
+  "auto_enableDesc": {
+    "message": "Enquanto ativo, uma verificação em segundo plano a cada 15 minutos adia abas conforme as regras abaixo."
+  },
+  "auto_maxTabs": {
+    "message": "Máximo de abas abertas"
+  },
+  "auto_maxTabsHint": {
+    "message": "Se houver mais abas, as mais antigas são adiadas."
+  },
+  "auto_idleHours": {
+    "message": "Horas de inatividade"
+  },
+  "auto_idleHoursHint": {
+    "message": "Abas não abertas por esse número de horas são adiadas."
+  },
+  "auto_duration": {
+    "message": "Adiar até"
+  },
+  "auto_help": {
+    "message": "A soneca automática verifica suas abas a cada 15 minutos. Se houver mais abas que o limite, ou uma aba não for aberta por horas, ela é fechada e reaberta automaticamente depois."
+  },
+  "auto_helpExcluded": {
+    "message": "Nunca adiadas: a aba ativa, abas fixadas, abas com som e páginas do navegador (chrome://…)."
+  },
+  "notif_autoSnoozed1": {
+    "message": "🤖 Soneca automática: 1 aba adiada"
+  },
+  "notif_autoSnoozedN": {
+    "message": "🤖 Soneca automática: $1 abas adiadas"
+  }
+}
