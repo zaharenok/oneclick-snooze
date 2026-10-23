@@ -38,6 +38,9 @@
   "preset_6hours": {
     "message": "6 ore"
   },
+  "preset_12hours": {
+    "message": "12 ore"
+  },
   "preset_laterToday": {
     "message": "Più tardi oggi"
   },

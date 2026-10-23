@@ -38,6 +38,9 @@
   "preset_6hours": {
     "message": "6 giờ"
   },
+  "preset_12hours": {
+    "message": "12 giờ"
+  },
   "preset_laterToday": {
     "message": "Hôm nay, sau đó"
   },

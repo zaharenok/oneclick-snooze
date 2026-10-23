@@ -42,7 +42,7 @@ async function loadSettings() {
         showCompleted: true,
         completedDuration: 5,
         soundEnabled: true,
-        autoMode: { enabled: false, maxTabs: 10, idleHours: 2, snoozePreset: '6h' }
+        autoMode: { enabled: false, maxTabs: 10, idleHours: 12, snoozePreset: '12h' }
       };
       currentSettings = { ...DEFAULT_SETTINGS, ...(result.settings || {}) };
       // Deep-merge autoMode: settings saved before v1.5.0 have no autoMode key
@@ -977,7 +977,7 @@ function resetSettings() {
       ],
       showCompleted: true,
       completedDuration: 5,
-      autoMode: { enabled: false, maxTabs: 10, idleHours: 2, snoozePreset: '6h' }
+      autoMode: { enabled: false, maxTabs: 10, idleHours: 12, snoozePreset: '12h' }
     };
     saveSettings(DEFAULT_SETTINGS).then(() => {
       renderPresetButtons();
@@ -1024,7 +1024,7 @@ function renderAutoStrip() {
   const strip = document.getElementById('auto-strip');
   if (!strip || !currentSettings) return;
 
-  const auto = currentSettings.autoMode || { enabled: false, maxTabs: 10, idleHours: 2, snoozePreset: '6h' };
+  const auto = currentSettings.autoMode || { enabled: false, maxTabs: 10, idleHours: 12, snoozePreset: '12h' };
   strip.style.display = 'flex';
 
   if (!auto.enabled) {
@@ -1041,10 +1041,11 @@ function renderAutoStrip() {
     '1h': 'preset.1hour',
     '3h': 'preset.3hours',
     '6h': 'preset.6hours',
+    '12h': 'preset.12hours',
     'tomorrow': 'preset.tomorrow',
     'nextweek': 'preset.nextWeek'
   };
-  const durationLabel = i18n.get(durationKeys[auto.snoozePreset] || 'preset.6hours');
+  const durationLabel = i18n.get(durationKeys[auto.snoozePreset] || 'preset.12hours');
 
   // Next periodic check time from the live alarm (hidden if not scheduled yet)
   chrome.alarms.get('automode', (alarm) => {
@@ -1247,11 +1248,12 @@ function openAutoModeSettings() {
   // Initialize modal handlers
   initModalHandlers();
 
-  const auto = currentSettings.autoMode || { enabled: false, maxTabs: 10, idleHours: 2, snoozePreset: '6h' };
+  const auto = currentSettings.autoMode || { enabled: false, maxTabs: 10, idleHours: 12, snoozePreset: '12h' };
   const durationOptions = [
     ['1h', i18n.get('preset.1hour')],
     ['3h', i18n.get('preset.3hours')],
     ['6h', i18n.get('preset.6hours')],
+    ['12h', i18n.get('preset.12hours')],
     ['tomorrow', i18n.get('preset.tomorrow')],
     ['nextweek', i18n.get('preset.nextWeek')]
   ];
@@ -1304,8 +1306,8 @@ function openAutoModeSettings() {
     currentSettings.autoMode = {
       enabled: !!document.getElementById('auto-enabled')?.checked,
       maxTabs: clampInt(document.getElementById('auto-max-tabs')?.value, 3, 100, 10),
-      idleHours: clampInt(document.getElementById('auto-idle-hours')?.value, 1, 48, 2),
-      snoozePreset: document.getElementById('auto-duration')?.value || '6h'
+      idleHours: clampInt(document.getElementById('auto-idle-hours')?.value, 1, 48, 12),
+      snoozePreset: document.getElementById('auto-duration')?.value || '12h'
     };
     // saveSettings notifies the service worker to re-arm the periodic alarm
     saveSettings(currentSettings).then(() => {

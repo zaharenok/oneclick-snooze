@@ -38,6 +38,10 @@ class AlarmManager {
         scheduled.setTime(now.getTime() + 6 * 60 * 60 * 1000);
         break;
 
+      case '12h':
+        scheduled.setTime(now.getTime() + 12 * 60 * 60 * 1000);
+        break;
+
       default:
         throw new Error(`Unknown preset: ${preset}`);
     }

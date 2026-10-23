@@ -51,6 +51,10 @@
     "message": "6 Hours",
     "description": "Quick preset button: snooze for 6 hours."
   },
+  "preset_12hours": {
+    "message": "12 Hours",
+    "description": "Quick preset: snooze for 12 hours."
+  },
   "preset_laterToday": {
     "message": "Later Today",
     "description": "Smart preset: snooze until later today."

@@ -38,6 +38,9 @@
   "preset_6hours": {
     "message": "6 小時"
   },
+  "preset_12hours": {
+    "message": "12 小時"
+  },
   "preset_laterToday": {
     "message": "今天稍後"
   },

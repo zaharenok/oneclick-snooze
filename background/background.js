@@ -88,7 +88,7 @@ const AUTO_MODE_PERIOD_MIN = 15;
 function getAutoModeSettings() {
   return new Promise((resolve) => {
     chrome.storage.local.get('settings', (result) => {
-      const defaults = { enabled: false, maxTabs: 10, idleHours: 2, snoozePreset: '6h' };
+      const defaults = { enabled: false, maxTabs: 10, idleHours: 12, snoozePreset: '12h' };
       resolve({ ...defaults, ...((result.settings && result.settings.autoMode) || {}) });
     });
   });
@@ -118,6 +118,7 @@ async function runAutoModeCheck() {
     '1h': 'preset_1hour',
     '3h': 'preset_3hours',
     '6h': 'preset_6hours',
+    '12h': 'preset_12hours',
     'tomorrow': 'preset_tomorrow',
     'nextweek': 'preset_nextWeek'
   };

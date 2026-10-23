@@ -38,6 +38,9 @@
   "preset_6hours": {
     "message": "6 Jam"
   },
+  "preset_12hours": {
+    "message": "12 Jam"
+  },
   "preset_laterToday": {
     "message": "Nanti Hari Ini"
   },
