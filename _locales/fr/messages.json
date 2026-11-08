@@ -104,6 +104,9 @@
   "settings_showCompleted": {
     "message": "Afficher brièvement les onglets terminés"
   },
+  "settings_focusRestored": {
+    "message": "Activer l'onglet restauré"
+  },
   "settings_duration": {
     "message": "Durée (secondes) :"
   },

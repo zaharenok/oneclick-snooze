@@ -104,6 +104,9 @@
   "settings_showCompleted": {
     "message": "Показывать завершенные вкладки"
   },
+  "settings_focusRestored": {
+    "message": "Активировать восстановленную вкладку"
+  },
   "settings_duration": {
     "message": "Длительность (секунд):"
   },

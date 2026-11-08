@@ -104,6 +104,9 @@
   "settings_showCompleted": {
     "message": "Pokazuj zakończone karty przez chwilę"
   },
+  "settings_focusRestored": {
+    "message": "Aktywuj przywróconą kartę"
+  },
   "settings_duration": {
     "message": "Czas trwania (sekundy):"
   },

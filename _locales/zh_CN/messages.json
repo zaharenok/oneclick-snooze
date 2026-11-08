@@ -104,6 +104,9 @@
   "settings_showCompleted": {
     "message": "短暂显示已完成的标签页"
   },
+  "settings_focusRestored": {
+    "message": "激活恢复的标签页"
+  },
   "settings_duration": {
     "message": "持续时间（秒）："
   },

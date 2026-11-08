@@ -104,6 +104,9 @@
   "settings_showCompleted": {
     "message": "Mostrar pestañas completadas brevemente"
   },
+  "settings_focusRestored": {
+    "message": "Enfocar la pestaña restaurada"
+  },
   "settings_duration": {
     "message": "Duración (segundos):"
   },

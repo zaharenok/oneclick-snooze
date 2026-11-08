@@ -104,6 +104,9 @@
   "settings_showCompleted": {
     "message": "短暫顯示已完成的分頁"
   },
+  "settings_focusRestored": {
+    "message": "將還原的分頁設為使用中"
+  },
   "settings_duration": {
     "message": "顯示時間 (秒):"
   },

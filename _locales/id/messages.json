@@ -104,6 +104,9 @@
   "settings_showCompleted": {
     "message": "Tampilkan tab yang selesai sebentar"
   },
+  "settings_focusRestored": {
+    "message": "Fokuskan tab yang dipulihkan"
+  },
   "settings_duration": {
     "message": "Durasi (detik):"
   },

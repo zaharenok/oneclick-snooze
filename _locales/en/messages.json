@@ -139,6 +139,10 @@
     "message": "Show completed tabs briefly",
     "description": "Checkbox label: show a tab briefly after it reopens."
   },
+  "settings_focusRestored": {
+    "message": "Focus restored tab",
+    "description": "Checkbox label: when ON, a restored tab opens in the foreground. Default is background."
+  },
   "settings_duration": {
     "message": "Duration (seconds):",
     "description": "Label for the numeric input controlling how long completed tabs show."

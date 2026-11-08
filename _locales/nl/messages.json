@@ -104,6 +104,9 @@
   "settings_showCompleted": {
     "message": "Toon voltooide tabbladen kort"
   },
+  "settings_focusRestored": {
+    "message": "Hersteld tabblad focussen"
+  },
   "settings_duration": {
     "message": "Duur (seconden):"
   },

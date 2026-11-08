@@ -25,6 +25,9 @@ async function restoreOverdueTabs(options = {}) {
   if (_restoreLock) return;
   _restoreLock = true;
   try {
+    // One read per drain: whole queue shares the focus behavior
+    const { settings } = await chrome.storage.local.get('settings');
+    const focusRestored = settings?.focusRestoredTab === true;
     for (;;) {
       const { snoozedTabs = [] } = await chrome.storage.local.get('snoozedTabs');
       const due = AlarmManager.selectNextDueTab(snoozedTabs, Date.now());
@@ -37,7 +40,7 @@ async function restoreOverdueTabs(options = {}) {
       await chrome.storage.local.set({ snoozedTabs: updated });
 
       try {
-        await chrome.tabs.create({ url: due.url });
+        await chrome.tabs.create({ url: due.url, active: focusRestored });
 
         if (notify) {
           chrome.runtime.sendMessage({

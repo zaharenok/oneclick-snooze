@@ -104,6 +104,9 @@
   "settings_showCompleted": {
     "message": "Abgeschlossene Tabs kurz anzeigen"
   },
+  "settings_focusRestored": {
+    "message": "Wiederhergestellten Tab fokussieren"
+  },
   "settings_duration": {
     "message": "Dauer (Sekunden):"
   },

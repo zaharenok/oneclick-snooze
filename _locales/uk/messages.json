@@ -104,6 +104,9 @@
   "settings_showCompleted": {
     "message": "Коротко показувати завершені вкладки"
   },
+  "settings_focusRestored": {
+    "message": "Активувати відновлену вкладку"
+  },
   "settings_duration": {
     "message": "Тривалість (секунди):"
   },

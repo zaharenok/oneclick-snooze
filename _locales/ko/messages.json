@@ -104,6 +104,9 @@
   "settings_showCompleted": {
     "message": "완료된 탭을 잠시 표시"
   },
+  "settings_focusRestored": {
+    "message": "복원된 탭 활성화"
+  },
   "settings_duration": {
     "message": "표시 시간(초):"
   },

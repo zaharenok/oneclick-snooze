@@ -104,6 +104,9 @@
   "settings_showCompleted": {
     "message": "Tamamlanan sekmeleri kısa süre göster"
   },
+  "settings_focusRestored": {
+    "message": "Geri yüklenen sekmeyi odakla"
+  },
   "settings_duration": {
     "message": "Süre (saniye):"
   },

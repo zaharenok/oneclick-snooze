@@ -104,6 +104,9 @@
   "settings_showCompleted": {
     "message": "完了したタブを一時的に表示"
   },
+  "settings_focusRestored": {
+    "message": "復元したタブを前面に表示"
+  },
   "settings_duration": {
     "message": "表示時間 (秒):"
   },

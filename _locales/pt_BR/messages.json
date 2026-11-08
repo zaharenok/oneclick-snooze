@@ -104,6 +104,9 @@
   "settings_showCompleted": {
     "message": "Mostrar abas concluídas brevemente"
   },
+  "settings_focusRestored": {
+    "message": "Focar a aba restaurada"
+  },
   "settings_duration": {
     "message": "Duração (segundos):"
   },

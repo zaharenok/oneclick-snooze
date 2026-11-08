@@ -104,6 +104,9 @@
   "settings_showCompleted": {
     "message": "Mostra brevemente le schede completate"
   },
+  "settings_focusRestored": {
+    "message": "Attiva la scheda ripristinata"
+  },
   "settings_duration": {
     "message": "Durata (secondi):"
   },

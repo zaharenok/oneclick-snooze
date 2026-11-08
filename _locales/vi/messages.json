@@ -104,6 +104,9 @@
   "settings_showCompleted": {
     "message": "Hiển thị tab đã hoàn tất trong giây lát"
   },
+  "settings_focusRestored": {
+    "message": "Kích hoạt tab đã khôi phục"
+  },
   "settings_duration": {
     "message": "Thời lượng (giây):"
   },

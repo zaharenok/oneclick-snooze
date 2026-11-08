@@ -42,6 +42,7 @@ async function loadSettings() {
         showCompleted: true,
         completedDuration: 5,
         soundEnabled: true,
+        focusRestoredTab: false,
         autoMode: { enabled: false, maxTabs: 10, idleHours: 12, snoozePreset: '12h' }
       };
       currentSettings = { ...DEFAULT_SETTINGS, ...(result.settings || {}) };
@@ -850,6 +851,7 @@ function openSettings() {
   renderPresetSettings();
 
   document.getElementById('show-completed').checked = currentSettings.showCompleted;
+  document.getElementById('focus-restored').checked = currentSettings.focusRestoredTab ?? false;
   document.getElementById('completed-duration').value = currentSettings.completedDuration;
   document.getElementById('completed-duration-row').style.display =
     currentSettings.showCompleted ? 'flex' : 'none';
@@ -958,7 +960,8 @@ function saveSettingsFromModal() {
   const newSettings = {
     presets: newPresets,
     showCompleted: document.getElementById('show-completed').checked,
-    completedDuration: parseInt(document.getElementById('completed-duration').value) || 5
+    completedDuration: parseInt(document.getElementById('completed-duration').value) || 5,
+    focusRestoredTab: document.getElementById('focus-restored').checked,
   };
 
   saveSettings(newSettings).then(() => {
@@ -977,6 +980,7 @@ function resetSettings() {
       ],
       showCompleted: true,
       completedDuration: 5,
+      focusRestoredTab: false,
       autoMode: { enabled: false, maxTabs: 10, idleHours: 12, snoozePreset: '12h' }
     };
     saveSettings(DEFAULT_SETTINGS).then(() => {
@@ -1407,6 +1411,10 @@ function openPresetsSettings() {
         <label>${i18n.get('settings.duration')}</label>
         <input type="number" id="completed-duration" min="1" max="60" value="5">
       </div>
+      <label class="setting-label">
+        <input type="checkbox" id="focus-restored">
+        <span>${i18n.get('settings.focusRestored')}</span>
+      </label>
     </div>
 
     <div class="settings-actions">
@@ -1418,6 +1426,7 @@ function openPresetsSettings() {
   renderPresetSettings();
 
   document.getElementById('show-completed').checked = currentSettings.showCompleted;
+  document.getElementById('focus-restored').checked = currentSettings.focusRestoredTab ?? false;
   document.getElementById('completed-duration').value = currentSettings.completedDuration;
   document.getElementById('completed-duration-row').style.display =
     currentSettings.showCompleted ? 'flex' : 'none';
@@ -1494,6 +1503,10 @@ function openCompletedSettings() {
         <label>${i18n.get('settings.duration')}</label>
         <input type="number" id="completed-duration" min="1" max="60" value="${currentSettings.completedDuration}">
       </div>
+      <label class="setting-label">
+        <input type="checkbox" id="focus-restored" ${currentSettings.focusRestoredTab ? 'checked' : ''}>
+        <span>${i18n.get('settings.focusRestored')}</span>
+      </label>
     </div>
 
     <div class="settings-actions">
@@ -1516,6 +1529,7 @@ function openCompletedSettings() {
       const newSettings = {
         ...currentSettings,
         showCompleted: document.getElementById('show-completed').checked,
+        focusRestoredTab: document.getElementById('focus-restored').checked,
         completedDuration: parseInt(document.getElementById('completed-duration').value) || 5
       };
 
